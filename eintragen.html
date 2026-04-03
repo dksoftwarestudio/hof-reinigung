@@ -276,6 +276,18 @@ footer a:hover{
   color:var(--blue);
 }
 
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
 /* BUTTON TO TOP */
 #toTopBtn{
   position:fixed;
@@ -346,7 +358,7 @@ footer a:hover{
 
 <div class="wrap">
 
-  <div class="hero">
+  <div class="hero reveal">
     <h1>Unternehmen eintragen</h1>
     <p>
       Tragen Sie Ihr Unternehmen ein und erreichen Sie lokale Kunden in Hof direkt über diese Seite.
@@ -354,10 +366,10 @@ footer a:hover{
     </p>
   </div>
 
-  <div class="hero-image"></div>
+  <div class="hero-image reveal"></div>
 
   <div class="section">
-    <div class="info-card">
+    <div class="info-card reveal">
       <h2>Für wen ist diese Seite gedacht?</h2>
       <p>
         Diese Plattform richtet sich an lokale Reinigungsfirmen in Hof und Umgebung,
@@ -367,7 +379,7 @@ footer a:hover{
   </div>
 
   <div class="section">
-    <div class="pricing-card">
+    <div class="pricing-card reveal">
       <h2>Premium Platzierung – mehr Sichtbarkeit</h2>
       <p>
         Wählen Sie zwischen einem Standard-Eintrag und einer hervorgehobenen Premium-Platzierung.
@@ -405,7 +417,7 @@ footer a:hover{
   </div>
 
   <div class="section">
-    <div class="form-wrap">
+    <div class="form-wrap reveal">
       <h2>Anfrage senden</h2>
       <p>
         Senden Sie uns Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen zurück.
@@ -467,6 +479,22 @@ footer a:hover{
 <button id="toTopBtn" aria-label="Nach oben">↑</button>
 
 <script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 80) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
 const toTopBtn = document.getElementById("toTopBtn");
 
 window.addEventListener("scroll", () => {
