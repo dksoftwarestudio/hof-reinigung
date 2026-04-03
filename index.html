@@ -105,14 +105,6 @@ body{
   font-weight:600;
 }
 
-.hero-actions{
-  margin-top:18px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
 .section{
   margin-top:22px;
 }
@@ -315,134 +307,6 @@ body{
   line-height:1.8;
 }
 
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.42);
-  z-index:1200;
-  padding:20px;
-  align-items:center;
-  justify-content:center;
-}
-
-.modal.active{
-  display:flex;
-}
-
-.modal-card{
-  width:100%;
-  max-width:520px;
-  background:#fff;
-  border-radius:20px;
-  border:1px solid var(--border);
-  box-shadow:0 25px 60px rgba(0,0,0,0.20);
-  overflow:hidden;
-  animation:fadeUp 0.22s ease;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(18px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-.modal-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:20px 22px 10px;
-}
-
-.modal-title{
-  margin:0;
-  font-size:24px;
-  color:var(--textDark);
-}
-
-.modal-close{
-  width:38px;
-  height:38px;
-  border:none;
-  border-radius:10px;
-  background:#F3F5F8;
-  color:var(--textDark);
-  font-size:24px;
-  line-height:1;
-  cursor:pointer;
-}
-
-.modal-body{
-  padding:0 22px 22px;
-}
-
-.modal-subtitle{
-  margin:0 0 18px;
-  color:var(--muted);
-  line-height:1.6;
-  font-size:15px;
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.form-group{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.form-group.full{
-  grid-column:1 / -1;
-}
-
-.form-group label{
-  font-size:13px;
-  font-weight:700;
-  color:var(--textDark);
-}
-
-.form-group input,
-.form-group textarea{
-  width:100%;
-  padding:12px 14px;
-  border:1px solid #DADFE6;
-  border-radius:12px;
-  background:#fff;
-  color:var(--textDark);
-  font-size:14px;
-  font-family:Arial, sans-serif;
-}
-
-.form-group textarea{
-  min-height:120px;
-  resize:vertical;
-}
-
-.form-note{
-  margin-top:14px;
-  font-size:12px;
-  color:#7a7a7a;
-  line-height:1.6;
-}
-
-.form-actions{
-  margin-top:18px;
-  display:flex;
-  gap:10px;
-  justify-content:flex-end;
-  flex-wrap:wrap;
-}
-
 #toTopBtn{
   position:fixed;
   bottom:30px;
@@ -535,22 +399,6 @@ footer a:hover{
     text-align:center;
   }
 
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .form-actions{
-    flex-direction:column;
-  }
-
-  .modal-header{
-    padding:18px 18px 10px;
-  }
-
-  .modal-body{
-    padding:0 18px 18px;
-  }
-
   #toTopBtn{
     right:18px;
     bottom:18px;
@@ -587,13 +435,7 @@ footer a:hover{
     </div>
 
     <div class="hero-lead">
-      Wir verbinden Sie mit passenden Anbietern – schnell und kostenlos.
-    </div>
-
-    <div class="hero-actions">
-      <button class="btn primary" type="button" onclick="openForm()">
-        Kostenlose Anfrage senden
-      </button>
+      Lokale Anbieter im Überblick – ohne Vermittlung und ohne Zwischenstelle.
     </div>
   </div>
 
@@ -728,52 +570,6 @@ footer a:hover{
 
 </div>
 
-<div class="modal" id="requestModal" aria-hidden="true">
-  <div class="modal-card">
-    <div class="modal-header">
-      <h3 class="modal-title">Kostenlose Anfrage</h3>
-      <button class="modal-close" type="button" aria-label="Schließen" onclick="closeForm()">&times;</button>
-    </div>
-
-    <div class="modal-body">
-      <p class="modal-subtitle">
-        Senden Sie uns Ihre Anfrage. Wir helfen Ihnen, passende Reinigungsfirmen in Hof zu finden.
-      </p>
-
-      <form action="https://formspree.io/f/mjgpagzy" method="POST">
-        <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
-        <input type="hidden" name="_next" value="danke.html">
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="customerName">Name</label>
-            <input type="text" id="customerName" name="Name" placeholder="Ihr Name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="customerContact">Telefon oder E-Mail</label>
-            <input type="text" id="customerContact" name="Kontakt" placeholder="Telefon oder E-Mail" required>
-          </div>
-
-          <div class="form-group full">
-            <label for="customerRequest">Was soll gereinigt werden?</label>
-            <textarea id="customerRequest" name="Anfrage" placeholder="z. B. Wohnung, Fenster, Treppenhaus oder Büro" required></textarea>
-          </div>
-        </div>
-
-        <div class="form-note">
-          Ihre Anfrage wird direkt an DK Software Studio gesendet und anschließend an passende Anbieter weitergeleitet.
-        </div>
-
-        <div class="form-actions">
-          <button class="btn secondary" type="button" onclick="closeForm()">Abbrechen</button>
-          <button class="btn primary" type="submit">Anfrage senden</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 <button id="toTopBtn" aria-label="Nach oben">↑</button>
 
 <script>
@@ -808,32 +604,6 @@ toTopBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
-});
-
-const requestModal = document.getElementById("requestModal");
-
-function openForm() {
-  requestModal.classList.add("active");
-  requestModal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-
-function closeForm() {
-  requestModal.classList.remove("active");
-  requestModal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-}
-
-requestModal.addEventListener("click", (e) => {
-  if (e.target === requestModal) {
-    closeForm();
-  }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && requestModal.classList.contains("active")) {
-    closeForm();
-  }
 });
 </script>
 
