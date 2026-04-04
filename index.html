@@ -51,9 +51,18 @@ body{
 }
 
 .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-weight:700;
   font-size:18px;
   color:var(--textDark);
+}
+
+.logo img{
+  height:34px;
+  width:auto;
+  display:block;
 }
 
 .header-right{
@@ -316,6 +325,145 @@ body{
   line-height:1.8;
 }
 
+/* REQUEST BOARD */
+.request-board{
+  margin-top:22px;
+}
+
+.request-board-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px 24px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+}
+
+.request-head h2{
+  margin:0 0 10px;
+  color:var(--textDark);
+  font-size:28px;
+}
+
+.request-head p{
+  margin:0 0 20px;
+  color:var(--muted);
+  line-height:1.7;
+  max-width:760px;
+}
+
+.request-layout{
+  display:grid;
+  grid-template-columns:1.35fr 0.9fr;
+  gap:18px;
+  align-items:start;
+}
+
+.request-form-wrap,
+.request-list-card{
+  background:#F7F9FC;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+}
+
+.request-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.request-group{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.request-group.full{
+  grid-column:1 / -1;
+}
+
+.request-group label{
+  font-size:13px;
+  font-weight:700;
+  color:var(--textDark);
+}
+
+.request-group input,
+.request-group select,
+.request-group textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  color:var(--textDark);
+  font-size:14px;
+  font-family:Arial, sans-serif;
+}
+
+.request-group textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.btn-row.left{
+  justify-content:flex-start;
+}
+
+.request-note{
+  margin-top:12px;
+  font-size:12px;
+  color:#7a7a7a;
+  line-height:1.6;
+}
+
+.request-list-card h3{
+  margin:0 0 8px;
+  font-size:22px;
+  color:var(--textDark);
+}
+
+.request-list-intro{
+  margin:0 0 16px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.request-item{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:12px;
+}
+
+.request-item:last-child{
+  margin-bottom:0;
+}
+
+.request-badge{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:var(--blueLight);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+}
+
+.request-item h4{
+  margin:0 0 8px;
+  color:var(--textDark);
+  font-size:18px;
+}
+
+.request-item p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
 #toTopBtn{
   position:fixed;
   bottom:30px;
@@ -399,6 +547,18 @@ footer a:hover{
     grid-template-columns:1fr;
   }
 
+  .request-layout{
+    grid-template-columns:1fr;
+  }
+
+  .request-grid{
+    grid-template-columns:1fr;
+  }
+
+  .request-head h2{
+    font-size:24px;
+  }
+
   .btn-row{
     flex-direction:column;
     align-items:stretch;
@@ -406,6 +566,10 @@ footer a:hover{
 
   .btn{
     text-align:center;
+  }
+
+  .logo img{
+    height:30px;
   }
 
   #toTopBtn{
@@ -421,7 +585,10 @@ footer a:hover{
 <body>
 
 <div class="header">
-  <div class="logo">Reinigung Hof</div>
+  <div class="logo">
+    <img src="logo.png" alt="Reinigung Hof">
+    <span>Reinigung Hof</span>
+  </div>
 
   <div class="header-right">
     <div class="header-note">Anbieter im Überblick</div>
@@ -447,6 +614,96 @@ footer a:hover{
       Lokale Anbieter im Überblick – ohne Vermittlung und ohne Zwischenstelle.
     </div>
   </div>
+
+  <section class="request-board reveal">
+    <div class="request-board-card">
+      <div class="request-head">
+        <h2>Kostenlose Anfrage stellen</h2>
+        <p>
+          Sie suchen eine Reinigungsfirma in Hof? Senden Sie Ihre Anfrage direkt über diese Seite.
+          Ohne Vermittlung – lokale Firmen können sich bei Ihnen melden.
+        </p>
+      </div>
+
+      <div class="request-layout">
+        <div class="request-form-wrap">
+          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST">
+            <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
+            <input type="hidden" name="_next" value="danke.html">
+
+            <div class="request-grid">
+              <div class="request-group">
+                <label for="kunde-name">Name</label>
+                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-email">E-Mail</label>
+                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-ort">Ort</label>
+                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-art">Art der Reinigung</label>
+                <select id="kunde-art" name="Art der Reinigung">
+                  <option value="Wohnungsreinigung">Wohnungsreinigung</option>
+                  <option value="Büroreinigung">Büroreinigung</option>
+                  <option value="Fensterreinigung">Fensterreinigung</option>
+                  <option value="Grundreinigung">Grundreinigung</option>
+                  <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="request-group full">
+                <label for="kunde-anfrage">Ihre Anfrage</label>
+                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required></textarea>
+              </div>
+            </div>
+
+            <div class="btn-row left">
+              <button class="btn primary" type="submit">Anfrage senden</button>
+            </div>
+
+            <div class="request-note">
+              Ihre Anfrage wird an uns gesendet und kann anonymisiert als aktuelle Anfrage auf der Plattform veröffentlicht werden.
+            </div>
+          </form>
+        </div>
+
+        <div class="request-list-wrap">
+          <div class="request-list-card">
+            <h3>Aktuelle Anfragen</h3>
+            <p class="request-list-intro">
+              Beispiele für aktuelle Gesuche auf der Plattform.
+            </p>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Wohnungsreinigung gesucht</h4>
+              <p>3-Zimmer-Wohnung in Hof, einmalige Reinigung in den nächsten Tagen.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Fensterreinigung</h4>
+              <p>Fensterreinigung für Privathaushalt in Hof, Termin flexibel.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Büroreinigung angefragt</h4>
+              <p>Kleines Büro in Hof sucht regelmäßige Reinigung, 1× pro Woche.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="section">
     <div class="section-title">Hervorgehobene Anbieter</div>
