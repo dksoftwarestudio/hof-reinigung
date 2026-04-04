@@ -615,96 +615,6 @@ footer a:hover{
     </div>
   </div>
 
-  <section class="request-board reveal">
-    <div class="request-board-card">
-      <div class="request-head">
-        <h2>Kostenlose Anfrage stellen</h2>
-        <p>
-          Sie suchen eine Reinigungsfirma in Hof? Senden Sie Ihre Anfrage direkt über diese Seite.
-          Ohne Vermittlung – lokale Firmen können sich bei Ihnen melden.
-        </p>
-      </div>
-
-      <div class="request-layout">
-        <div class="request-form-wrap">
-          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST">
-            <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
-            <input type="hidden" name="_next" value="danke.html">
-
-            <div class="request-grid">
-              <div class="request-group">
-                <label for="kunde-name">Name</label>
-                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required>
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-email">E-Mail</label>
-                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required>
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-ort">Ort</label>
-                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required>
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-art">Art der Reinigung</label>
-                <select id="kunde-art" name="Art der Reinigung">
-                  <option value="Wohnungsreinigung">Wohnungsreinigung</option>
-                  <option value="Büroreinigung">Büroreinigung</option>
-                  <option value="Fensterreinigung">Fensterreinigung</option>
-                  <option value="Grundreinigung">Grundreinigung</option>
-                  <option value="Treppenhausreinigung">Treppenhausreinigung</option>
-                  <option value="Sonstiges">Sonstiges</option>
-                </select>
-              </div>
-
-              <div class="request-group full">
-                <label for="kunde-anfrage">Ihre Anfrage</label>
-                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required></textarea>
-              </div>
-            </div>
-
-            <div class="btn-row left">
-              <button class="btn primary" type="submit">Anfrage senden</button>
-            </div>
-
-            <div class="request-note">
-              Ihre Anfrage wird an uns gesendet und kann anonymisiert als aktuelle Anfrage auf der Plattform veröffentlicht werden.
-            </div>
-          </form>
-        </div>
-
-        <div class="request-list-wrap">
-          <div class="request-list-card">
-            <h3>Aktuelle Anfragen</h3>
-            <p class="request-list-intro">
-              Beispiele für aktuelle Gesuche auf der Plattform.
-            </p>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Wohnungsreinigung gesucht</h4>
-              <p>3-Zimmer-Wohnung in Hof, einmalige Reinigung in den nächsten Tagen.</p>
-            </div>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Fensterreinigung</h4>
-              <p>Fensterreinigung für Privathaushalt in Hof, Termin flexibel.</p>
-            </div>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Büroreinigung angefragt</h4>
-              <p>Kleines Büro in Hof sucht regelmäßige Reinigung, 1× pro Woche.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <div class="section">
     <div class="section-title">Hervorgehobene Anbieter</div>
 
@@ -795,6 +705,96 @@ footer a:hover{
 
     </div>
   </div>
+
+  <section class="request-board reveal">
+    <div class="request-board-card">
+      <div class="request-head">
+        <h2>Kostenlose Anfrage stellen</h2>
+        <p>
+          Sie suchen eine Reinigungsfirma in Hof? Senden Sie Ihre Anfrage direkt über diese Seite.
+          Ohne Vermittlung – lokale Firmen können sich bei Ihnen melden.
+        </p>
+      </div>
+
+      <div class="request-layout">
+        <div class="request-form-wrap">
+          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST">
+            <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
+            <input type="hidden" name="_next" value="danke.html">
+
+            <div class="request-grid">
+              <div class="request-group">
+                <label for="kunde-name">Name</label>
+                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-email">E-Mail</label>
+                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-ort">Ort</label>
+                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required>
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-art">Art der Reinigung</label>
+                <select id="kunde-art" name="Art der Reinigung">
+                  <option value="Wohnungsreinigung">Wohnungsreinigung</option>
+                  <option value="Büroreinigung">Büroreinigung</option>
+                  <option value="Fensterreinigung">Fensterreinigung</option>
+                  <option value="Grundreinigung">Grundreinigung</option>
+                  <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="request-group full">
+                <label for="kunde-anfrage">Ihre Anfrage</label>
+                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required></textarea>
+              </div>
+            </div>
+
+            <div class="btn-row left">
+              <button class="btn primary" type="submit">Anfrage senden</button>
+            </div>
+
+            <div class="request-note">
+              Ihre Anfrage wird an uns gesendet und kann anonymisiert als aktuelle Anfrage auf der Plattform veröffentlicht werden.
+            </div>
+          </form>
+        </div>
+
+        <div class="request-list-wrap">
+          <div class="request-list-card">
+            <h3>Aktuelle Anfragen</h3>
+            <p class="request-list-intro">
+              Beispiele für aktuelle Gesuche auf der Plattform.
+            </p>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Wohnungsreinigung gesucht</h4>
+              <p>3-Zimmer-Wohnung in Hof, einmalige Reinigung in den nächsten Tagen.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Fensterreinigung</h4>
+              <p>Fensterreinigung für Privathaushalt in Hof, Termin flexibel.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Büroreinigung angefragt</h4>
+              <p>Kleines Büro in Hof sucht regelmäßige Reinigung, 1× pro Woche.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="section">
     <div class="info-card reveal">
