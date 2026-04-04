@@ -408,6 +408,23 @@ body{
   line-height:1.6;
 }
 
+.request-status{
+  display:none;
+  margin-top:12px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.request-status.success{
+  display:block;
+  color:#1A53AD;
+}
+
+.request-status.error{
+  display:block;
+  color:#b00020;
+}
+
 .request-list-card h3{
   margin:0 0 8px;
   font-size:22px;
@@ -702,29 +719,29 @@ footer a:hover{
 
       <div class="request-layout">
         <div class="request-form-wrap">
-          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST">
+          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
             <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
-            <input type="hidden" name="_next" value="https://hof-reinigung.de/danke.html">
+            <input type="hidden" name="_language" value="de">
 
             <div class="request-grid">
               <div class="request-group">
                 <label for="kunde-name">Name</label>
-                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required>
+                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required autocomplete="off">
               </div>
 
               <div class="request-group">
                 <label for="kunde-email">E-Mail</label>
-                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required>
+                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required autocomplete="off">
               </div>
 
               <div class="request-group">
                 <label for="kunde-ort">Ort</label>
-                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required>
+                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required autocomplete="off">
               </div>
 
               <div class="request-group">
                 <label for="kunde-art">Art der Reinigung</label>
-                <select id="kunde-art" name="Art der Reinigung">
+                <select id="kunde-art" name="Art der Reinigung" autocomplete="off">
                   <option value="Wohnungsreinigung">Wohnungsreinigung</option>
                   <option value="Büroreinigung">Büroreinigung</option>
                   <option value="Fensterreinigung">Fensterreinigung</option>
@@ -736,13 +753,15 @@ footer a:hover{
 
               <div class="request-group full">
                 <label for="kunde-anfrage">Ihre Anfrage</label>
-                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required></textarea>
+                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required autocomplete="off"></textarea>
               </div>
             </div>
 
             <div class="btn-row left">
               <button class="btn primary" type="submit">Anfrage senden</button>
             </div>
+
+            <div id="request-status" class="request-status" aria-live="polite"></div>
 
             <div class="request-note">
               Ihre Anfrage wird an uns gesendet und kann anonymisiert als aktuelle Anfrage auf der Plattform veröffentlicht werden.
@@ -855,6 +874,42 @@ toTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+const requestForm = document.querySelector('.request-form');
+const requestStatus = document.getElementById('request-status');
+
+if (requestForm) {
+  requestForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    requestStatus.className = 'request-status';
+    requestStatus.textContent = '';
+
+    const formData = new FormData(requestForm);
+
+    try {
+      const response = await fetch(requestForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        requestForm.reset();
+        document.getElementById('kunde-ort').value = 'Hof';
+        window.location.href = 'danke.html';
+      } else {
+        requestStatus.className = 'request-status error';
+        requestStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+      }
+    } catch (error) {
+      requestStatus.className = 'request-status error';
+      requestStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+    }
+  });
+}
 </script>
 
 </body>
