@@ -174,7 +174,6 @@ body{
   line-height:1.6;
 }
 
-/* BENEFITS / PRO-CONTRA */
 .compare-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -317,6 +316,24 @@ body{
   text-align:center;
 }
 
+.form-status{
+  display:none;
+  margin-top:12px;
+  font-size:13px;
+  line-height:1.5;
+  text-align:center;
+}
+
+.form-status.success{
+  display:block;
+  color:#1A53AD;
+}
+
+.form-status.error{
+  display:block;
+  color:#b00020;
+}
+
 footer{
   margin-top:30px;
   text-align:center;
@@ -334,7 +351,6 @@ footer a:hover{
   color:var(--blue);
 }
 
-/* REVEAL */
 .reveal{
   opacity:0;
   transform:translateY(30px);
@@ -346,7 +362,6 @@ footer a:hover{
   transform:translateY(0);
 }
 
-/* BUTTON TO TOP */
 #toTopBtn{
   position:fixed;
   bottom:30px;
@@ -519,29 +534,29 @@ footer a:hover{
         Senden Sie uns Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen zurück.
       </p>
 
-      <form class="form-card" action="https://formspree.io/f/mjgpagzy" method="POST">
+      <form class="form-card" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
         <input type="hidden" name="_subject" value="Neue Anfrage über hof-reinigung.de">
-        <input type="hidden" name="_next" value="https://hof-reinigung.de/danke.html">
+        <input type="hidden" name="_language" value="de">
 
         <div class="form-grid">
           <div class="form-group">
             <label for="firma">Firmenname</label>
-            <input type="text" id="firma" name="Firmenname" placeholder="z. B. Muster Reinigung Hof" required>
+            <input type="text" id="firma" name="Firmenname" placeholder="z. B. Muster Reinigung Hof" required autocomplete="off">
           </div>
 
           <div class="form-group">
             <label for="email">E-Mail</label>
-            <input type="email" id="email" name="E-Mail" placeholder="ihre@email.de" required>
+            <input type="email" id="email" name="E-Mail" placeholder="ihre@email.de" required autocomplete="off">
           </div>
 
           <div class="form-group">
             <label for="googleprofil">Google-Profil Link</label>
-            <input type="url" id="googleprofil" name="Google-Profil" placeholder="https://...">
+            <input type="url" id="googleprofil" name="Google-Profil" placeholder="https://..." autocomplete="off">
           </div>
 
           <div class="form-group">
             <label for="paket">Paket</label>
-            <select id="paket" name="Paket">
+            <select id="paket" name="Paket" autocomplete="off">
               <option value="Standard">Standard</option>
               <option value="Premium">Premium</option>
             </select>
@@ -549,13 +564,15 @@ footer a:hover{
 
           <div class="form-group full">
             <label for="nachricht">Kurze Beschreibung</label>
-            <textarea id="nachricht" name="Nachricht" placeholder="Kurze Infos zu Ihrem Unternehmen, Leistungen oder Wünschen"></textarea>
+            <textarea id="nachricht" name="Nachricht" placeholder="Kurze Infos zu Ihrem Unternehmen, Leistungen oder Wünschen" autocomplete="off"></textarea>
           </div>
         </div>
 
         <div class="btn-row">
           <button class="btn primary" type="submit">Anfrage senden</button>
         </div>
+
+        <div id="company-form-status" class="form-status" aria-live="polite"></div>
 
         <div class="form-note">
           Ihre Anfrage wird direkt an DK Software Studio gesendet.
@@ -607,6 +624,41 @@ toTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+const companyForm = document.querySelector('.form-card');
+const companyFormStatus = document.getElementById('company-form-status');
+
+if (companyForm) {
+  companyForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    companyFormStatus.className = 'form-status';
+    companyFormStatus.textContent = '';
+
+    const formData = new FormData(companyForm);
+
+    try {
+      const response = await fetch(companyForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        companyForm.reset();
+        window.location.href = 'danke.html';
+      } else {
+        companyFormStatus.className = 'form-status error';
+        companyFormStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+      }
+    } catch (error) {
+      companyFormStatus.className = 'form-status error';
+      companyFormStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+    }
+  });
+}
 </script>
 
 </body>
