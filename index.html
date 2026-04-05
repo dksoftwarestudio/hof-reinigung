@@ -42,9 +42,20 @@ body{
 }
 
 .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-weight:700;
   font-size:18px;
   color:var(--textDark);
+  text-decoration:none;
+}
+
+.logo-mark{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:block;
 }
 
 .header-right{
@@ -567,6 +578,12 @@ footer a:hover{
     text-align:center;
   }
 
+  .logo-mark{
+    width:34px;
+    height:34px;
+    flex-basis:34px;
+  }
+
   #toTopBtn{
     right:18px;
     bottom:18px;
@@ -580,7 +597,18 @@ footer a:hover{
 <body>
 
 <div class="header">
-  <div class="logo">Reinigung Hof</div>
+  <a href="index.html" class="logo" aria-label="Reinigung Hof">
+    <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="24" fill="#1A53AD"/>
+      <path d="M24 10
+               C19 17, 15 21, 15 27
+               C15 34, 19 38, 24 38
+               C29 38, 33 34, 33 27
+               C33 21, 29 17, 24 10Z"
+            fill="#FFFFFF"/>
+    </svg>
+    <span>Reinigung Hof</span>
+  </a>
 
   <div class="header-right">
     <div class="header-note">Anbieter im Überblick</div>
@@ -594,17 +622,17 @@ footer a:hover{
     <h1>Reinigungsfirmen in Hof</h1>
 
     <p>
-  Finden Sie lokale Reinigungsfirmen in Hof schnell und einfach.
-  Diese Website ist eine unabhängige Plattform zur Übersicht lokaler Anbieter in Hof.
-</p>
+      Finden Sie lokale Reinigungsfirmen in Hof schnell und einfach.
+      Diese Website ist eine unabhängige Plattform zur Übersicht lokaler Anbieter in Hof.
+    </p>
 
     <div class="hero-meta">
       Lokale Anbieter · Direktkontakt · Ohne Vermittlung
     </div>
 
-   <div class="hero-lead">
-  Unabhängige Plattform zur Übersicht lokaler Reinigungsdienste in Hof.
-</div>
+    <div class="hero-lead">
+      Unabhängige Plattform zur Übersicht lokaler Reinigungsdienste in Hof.
+    </div>
   </div>
 
   <div class="section">
@@ -754,12 +782,12 @@ footer a:hover{
 
             <div id="request-status" class="request-status" aria-live="polite"></div>
 
-           <div class="request-note">
-  Ihre Anfrage wird zentral über diese Plattform erfasst und an passende Anbieter in Hof weitergeleitet.<br><br>
-  <strong>Betreiber:</strong> DK Software Studio<br>
-  <strong>Kontakt:</strong>
-  <a href="mailto:dksoftware.studio@gmail.com">dksoftware.studio@gmail.com</a>
-</div>
+            <div class="request-note">
+              Ihre Anfrage wird zentral über diese Plattform erfasst und an passende Anbieter in Hof weitergeleitet.<br><br>
+              <strong>Betreiber:</strong> DK Software Studio<br>
+              <strong>Kontakt:</strong>
+              <a href="mailto:dksoftware.studio@gmail.com">dksoftware.studio@gmail.com</a>
+            </div>
           </form>
         </div>
 
@@ -793,7 +821,7 @@ footer a:hover{
     </div>
   </section>
 
-   <div class="section">
+  <div class="section">
     <div class="info-card reveal">
       <h3>Warum eine Reinigungsfirma beauftragen?</h3>
       <p>
