@@ -505,6 +505,83 @@ body{
   pointer-events:auto;
 }
 
+/* COOKIE BANNER */
+.cookie-banner{
+  position:fixed;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  max-width:760px;
+  margin:0 auto;
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.12);
+  padding:18px 18px 16px;
+  z-index:2000;
+  display:none;
+}
+
+.cookie-banner.show{
+  display:block;
+}
+
+.cookie-banner h3{
+  margin:0 0 8px;
+  font-size:18px;
+  color:var(--textDark);
+}
+
+.cookie-banner p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:14px;
+}
+
+.cookie-banner p a{
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.cookie-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.cookie-btn{
+  appearance:none;
+  border:none;
+  cursor:pointer;
+  border-radius:10px;
+  padding:11px 18px;
+  font-size:14px;
+  font-weight:700;
+  transition:0.2s ease;
+}
+
+.cookie-btn.accept{
+  background:var(--blue);
+  color:#fff;
+  box-shadow:0 10px 25px rgba(26,83,173,0.22);
+}
+
+.cookie-btn.accept:hover{
+  transform:translateY(-2px);
+}
+
+.cookie-btn.reject{
+  background:#EEF2F8;
+  color:var(--textDark);
+}
+
+.cookie-btn.reject:hover{
+  transform:translateY(-2px);
+}
+
 footer{
   margin-top:30px;
   text-align:center;
@@ -584,6 +661,18 @@ footer a:hover{
     width:34px;
     height:34px;
     flex-basis:34px;
+  }
+
+  .cookie-banner{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    padding:16px 14px 14px;
+  }
+
+  .cookie-actions{
+    flex-direction:column;
+    align-items:stretch;
   }
 
   #toTopBtn{
@@ -876,9 +965,61 @@ footer a:hover{
 
 </div>
 
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+  <h3>Cookie-Einstellungen</h3>
+  <p>
+    Diese Website verwendet optionale Analyse-Cookies, um die Nutzung der Seite zu verstehen und zu verbessern.
+    Sie können zustimmen oder ablehnen. Weitere Informationen finden Sie in der
+    <a href="datenschutz.html">Datenschutzerklärung</a>.
+  </p>
+  <div class="cookie-actions">
+    <button id="acceptCookies" class="cookie-btn accept" type="button">Akzeptieren</button>
+    <button id="rejectCookies" class="cookie-btn reject" type="button">Ablehnen</button>
+  </div>
+</div>
+
 <button id="toTopBtn" aria-label="Nach oben">↑</button>
 
 <script>
+const GA_ID = 'G-GZ2FXMBG67';
+const COOKIE_KEY = 'hof_cookie_choice';
+
+function loadGoogleAnalytics() {
+  if (window.gaLoaded) return;
+  window.gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID, { anonymize_ip: true });
+}
+
+const cookieBanner = document.getElementById('cookieBanner');
+const savedCookieChoice = localStorage.getItem(COOKIE_KEY);
+
+if (savedCookieChoice === 'accepted') {
+  loadGoogleAnalytics();
+} else if (!savedCookieChoice) {
+  cookieBanner.classList.add('show');
+}
+
+document.getElementById('acceptCookies').addEventListener('click', () => {
+  localStorage.setItem(COOKIE_KEY, 'accepted');
+  cookieBanner.classList.remove('show');
+  loadGoogleAnalytics();
+});
+
+document.getElementById('rejectCookies').addEventListener('click', () => {
+  localStorage.setItem(COOKIE_KEY, 'rejected');
+  cookieBanner.classList.remove('show');
+});
+
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
