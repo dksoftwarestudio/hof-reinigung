@@ -38,9 +38,22 @@ body{
 }
 
 .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-weight:700;
   font-size:18px;
   color:var(--textDark);
+  text-decoration:none;
+}
+
+.logo-mark{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:block;
+  object-fit:contain;
+  border-radius:50%;
 }
 
 .back-link{
@@ -392,6 +405,11 @@ footer a:hover{
 }
 
 @media (max-width:700px){
+  .header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
   .hero{
     padding:34px 22px;
   }
@@ -413,6 +431,12 @@ footer a:hover{
     grid-template-columns:1fr;
   }
 
+  .logo-mark{
+    width:34px;
+    height:34px;
+    flex-basis:34px;
+  }
+
   #toTopBtn{
     right:18px;
     bottom:18px;
@@ -426,7 +450,10 @@ footer a:hover{
 <body>
 
 <div class="header">
-  <div class="logo">Reinigung Hof</div>
+  <a href="index.html" class="logo" aria-label="Reinigung Hof">
+    <img src="logo-reinigung.png" alt="Reinigung Hof Logo" class="logo-mark">
+    <span>Reinigung Hof</span>
+  </a>
   <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
 </div>
 
@@ -484,9 +511,9 @@ footer a:hover{
       </div>
 
       <div class="pricing-hint">
-  Die Preise verstehen sich als Richtwerte und können je nach Umfang und Platzierung variieren.
-  Details werden individuell nach Anfrage abgestimmt.
-</div>
+        Die Preise verstehen sich als Richtwerte und können je nach Umfang und Platzierung variieren.
+        Details werden individuell nach Anfrage abgestimmt.
+      </div>
     </div>
   </div>
 
@@ -581,13 +608,13 @@ footer a:hover{
     </div>
   </div>
 
- <footer>
-  © 2026 hof-reinigung.de · by 
-  <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
-  <a href="kontakt.html">Kontakt</a> · 
-  <a href="impressum.html">Impressum</a> · 
-  <a href="datenschutz.html">Datenschutz</a>
-</footer>
+  <footer>
+    © 2026 hof-reinigung.de · by 
+    <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
+    <a href="kontakt.html">Kontakt</a> · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
 
 </div>
 
