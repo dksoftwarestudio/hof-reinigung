@@ -20,6 +20,10 @@
 
 *{box-sizing:border-box;}
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -321,6 +325,15 @@ body{
   transform:translateY(-2px);
 }
 
+.btn.secondary{
+  background:#EEF2F8;
+  color:var(--textDark);
+}
+
+.btn.secondary:hover{
+  transform:translateY(-2px);
+}
+
 .form-note{
   margin-top:12px;
   font-size:12px;
@@ -437,6 +450,15 @@ footer a:hover{
     flex-basis:34px;
   }
 
+  .btn-row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    text-align:center;
+  }
+
   #toTopBtn{
     right:18px;
     bottom:18px;
@@ -465,6 +487,20 @@ footer a:hover{
       Tragen Sie Ihr Unternehmen ein und erreichen Sie lokale Kunden in Hof direkt über diese Seite.
       Ohne Vermittlung – Interessenten kontaktieren Sie direkt.
     </p>
+
+    <div class="btn-row" style="justify-content:center; margin-top:18px;">
+      <a class="btn primary"
+         href="https://wa.me/491624012037?text=Hallo,%20ich%20m%C3%B6chte%20mein%20Unternehmen%20bei%20hof-reinigung.de%20eintragen."
+         target="_blank"
+         rel="noopener">
+        WhatsApp schreiben
+      </a>
+
+      <a class="btn secondary"
+         href="#company-form">
+        Anfrage senden
+      </a>
+    </div>
   </div>
 
   <div class="hero-image reveal"></div>
@@ -560,7 +596,7 @@ footer a:hover{
         Senden Sie uns Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen zurück.
       </p>
 
-      <form class="form-card" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
+      <form id="company-form" class="form-card" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
         <input type="hidden" name="_subject" value="Neue Anfrage über hof-reinigung.de">
         <input type="hidden" name="_language" value="de">
 
@@ -596,6 +632,13 @@ footer a:hover{
 
         <div class="btn-row">
           <button class="btn primary" type="submit">Anfrage senden</button>
+
+          <a class="btn secondary"
+             href="https://wa.me/491624012037?text=Hallo,%20ich%20m%C3%B6chte%20mein%20Unternehmen%20bei%20hof-reinigung.de%20eintragen."
+             target="_blank"
+             rel="noopener">
+            WhatsApp
+          </a>
         </div>
 
         <div id="company-form-status" class="form-status" aria-live="polite"></div>
