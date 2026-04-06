@@ -309,6 +309,7 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:16px;
+  align-items:stretch; /* 👈 ключ */
 }
 
 .col-box{
@@ -316,6 +317,8 @@ body{
   border:1px solid var(--border);
   border-radius:14px;
   padding:18px;
+  display:flex;              /* 👈 добавляем */
+  flex-direction:column;     /* 👈 добавляем */
 }
 
 .col-box h4{
