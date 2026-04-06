@@ -309,7 +309,6 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:16px;
-  align-items:stretch; /* 👈 ключ */
 }
 
 .col-box{
@@ -317,8 +316,6 @@ body{
   border:1px solid var(--border);
   border-radius:14px;
   padding:18px;
-  display:flex;              /* 👈 добавляем */
-  flex-direction:column;     /* 👈 добавляем */
 }
 
 .col-box h4{
@@ -932,27 +929,27 @@ footer a:hover{
         klare Leistungen und eine bessere Absicherung als private Angebote ohne Rechnung.
       </p>
 
-      <div class="columns">
-        <div class="col-box">
-          <h4>Vorteile professioneller Anbieter</h4>
-          <ul>
-            <li>Rechnung und klare Leistungen</li>
-            <li>Mehr Sicherheit bei Schäden</li>
-            <li>Zuverlässigere Terminplanung</li>
-            <li>Transparente Kommunikation</li>
-          </ul>
-        </div>
+     <div class="columns">
+  <div class="col-box">
+    <h4>Vorteile professioneller Anbieter</h4>
+    <ul>
+      <li>Klare Leistungen und Planung</li>
+      <li>Zuverlässige Terminabsprachen</li>
+      <li>Saubere und regelmäßige Pflege</li>
+      <li>Transparente Kommunikation</li>
+    </ul>
+  </div>
 
-        <div class="col-box">
-          <h4>Private Angebote</h4>
-          <ul>
-            <li>Oft keine Rechnung</li>
-            <li>Unklare Absicherung</li>
-            <li>Schwankende Qualität möglich</li>
-            <li>Kurzfristige Änderungen eher möglich</li>
-          </ul>
-        </div>
-      </div>
+  <div class="col-box">
+    <h4>Private Angebote</h4>
+    <ul>
+      <li>Oft keine klare Struktur</li>
+      <li>Unterschiedliche Verfügbarkeit</li>
+      <li>Qualität kann schwanken</li>
+      <li>Kurzfristige Änderungen möglich</li>
+    </ul>
+  </div>
+</div>
     </div>
   </div>
 
