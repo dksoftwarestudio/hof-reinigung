@@ -225,7 +225,7 @@ body{
   gap:12px;
   flex-wrap:wrap;
   align-items:center;
-  margin-top:24px; /* ← ДОБАВЬ ЭТУ СТРОКУ */
+  margin-top:24px;
 }
 
 .btn{
@@ -330,6 +330,31 @@ body{
   padding-left:18px;
   color:var(--muted);
   line-height:1.8;
+}
+
+/* RECOMMENDED SPECIALIST */
+.recommend-card{
+  background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border:1px solid rgba(26,83,173,0.12);
+}
+
+.recommend-label{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(26,83,173,0.08);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.3px;
+}
+
+.external-note{
+  margin-top:14px;
+  font-size:12px;
+  color:#8a8a8a;
+  line-height:1.5;
 }
 
 /* REQUEST BOARD */
@@ -714,7 +739,7 @@ footer a:hover{
 <div class="wrap">
 
  <div class="hero reveal">
-  <h1>Reinigungsfirmen in Hof (Saale) </h1>
+  <h1>Reinigungsfirmen in Hof (Saale)</h1>
 
   <p>
     Finden Sie zuverlässige Reinigungsfirmen in Hof schnell und unkompliziert.
@@ -733,45 +758,45 @@ footer a:hover{
   <div class="section">
     <div class="section-title">Hervorgehobene Anbieter</div>
 
-   <div class="cards">
-  <div class="card premium-card reveal">
-    <div class="premium-top" style="
-      background:
-      linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-      url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80')
-      center/cover no-repeat;">
-    </div>
+    <div class="cards">
+      <div class="card premium-card reveal">
+        <div class="premium-top" style="
+          background:
+          linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+          url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80')
+          center/cover no-repeat;">
+        </div>
 
-    <div class="card-inner">
-      <div class="badge">Empfohlen</div>
+        <div class="card-inner">
+          <div class="badge">Empfohlen</div>
 
-      <h2 class="premium-title">Fensterreinigung Bilusiak – Hof</h2>
+          <h2 class="premium-title">Fensterreinigung Bilusiak – Hof</h2>
 
-      <p class="desc">
-        Professionelle Fensterreinigung in Hof und Umgebung.
-        Zuverlässiger Service für Privathaushalte, Wohnungen und gewerbliche Objekte.
-      </p>
+          <p class="desc">
+            Professionelle Fensterreinigung in Hof und Umgebung.
+            Zuverlässiger Service für Privathaushalte, Wohnungen und gewerbliche Objekte.
+          </p>
 
-      <div class="meta">
-        <span>Fensterreinigung</span>
-        <span>Glasreinigung</span>
-        <span>Privat &amp; Gewerbe</span>
-      </div>
+          <div class="meta">
+            <span>Fensterreinigung</span>
+            <span>Glasreinigung</span>
+            <span>Privat &amp; Gewerbe</span>
+          </div>
 
-      <div class="rating-line">⭐ 5.0 · Google Bewertung · Verifizierter Anbieter</div>
+          <div class="rating-line">⭐ 5.0 · Google Bewertung · Verifizierter Anbieter</div>
 
-      <div class="btn-row">
-        <a class="btn primary"
-           href="https://www.google.com/search?q=Fensterreinigung+Bilusiak+Hof"
-           target="_blank"
-           rel="noopener">
-          Google-Profil ansehen
-        </a>
+          <div class="btn-row">
+            <a class="btn primary"
+               href="https://www.google.com/search?q=Fensterreinigung+Bilusiak+Hof"
+               target="_blank"
+               rel="noopener">
+              Google-Profil ansehen
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
   <div class="section">
     <div class="section-title">Weitere Anbieter</div>
@@ -821,6 +846,44 @@ footer a:hover{
     </div>
   </div>
 
+  <div class="section">
+    <div class="section-title">Empfohlene Spezialisten</div>
+
+    <div class="cards">
+      <div class="card recommend-card reveal">
+        <div class="card-inner">
+          <div class="recommend-label">Empfohlen</div>
+
+          <h3 class="standard-title">Schimmel-Experte in Hof</h3>
+
+          <p class="desc">
+            Fachgerechte Analyse und gezielte Beseitigung von Schimmel in Hof und Umgebung.
+            Geeignet für Wohnungen, Häuser und Innenräume mit Feuchtigkeits- oder Schimmelproblemen.
+          </p>
+
+          <div class="meta">
+            <span>Schimmelanalyse</span>
+            <span>Gezielte Beseitigung</span>
+            <span>Hof (Saale)</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn primary"
+               href="https://www.kleinanzeigen.de/s-anzeige/schimmel-experte-hof-fachgerechte-analyse-gezielte-beseitigung/3368963811-239-7246?utm_source=sharesheet&utm_medium=social&utm_campaign=socialbuttons&utm_content=app_android"
+               target="_blank"
+               rel="noopener">
+              Anzeige ansehen
+            </a>
+          </div>
+
+          <div class="external-note">
+            Externe Anzeige (Kleinanzeigen). Wir stellen nur den Kontakt her und übernehmen keine Haftung für externe Inhalte.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="request" class="request-board reveal">
     <div class="request-board-card">
       <div class="request-head">
@@ -861,6 +924,7 @@ footer a:hover{
                   <option value="Fensterreinigung">Fensterreinigung</option>
                   <option value="Grundreinigung">Grundreinigung</option>
                   <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                  <option value="Schimmel / Feuchtigkeit">Schimmel / Feuchtigkeit</option>
                   <option value="Sonstiges">Sonstiges</option>
                 </select>
               </div>
@@ -930,27 +994,27 @@ footer a:hover{
         klare Leistungen und eine bessere Absicherung als private Angebote ohne Rechnung.
       </p>
 
-     <div class="columns">
-  <div class="col-box">
-    <h4>Vorteile professioneller Anbieter</h4>
-    <ul>
-      <li>Klare Leistungen und Planung</li>
-      <li>Zuverlässige Terminabsprachen</li>
-      <li>Saubere und regelmäßige Pflege</li>
-      <li>Transparente Kommunikation</li>
-    </ul>
-  </div>
+      <div class="columns">
+        <div class="col-box">
+          <h4>Vorteile professioneller Anbieter</h4>
+          <ul>
+            <li>Klare Leistungen und Planung</li>
+            <li>Zuverlässige Terminabsprachen</li>
+            <li>Saubere und regelmäßige Pflege</li>
+            <li>Transparente Kommunikation</li>
+          </ul>
+        </div>
 
-  <div class="col-box">
-    <h4>Private Angebote</h4>
-    <ul>
-      <li>Oft keine klare Struktur</li>
-      <li>Unterschiedliche Verfügbarkeit</li>
-      <li>Qualität kann schwanken</li>
-      <li>Kurzfristige Änderungen möglich</li>
-    </ul>
-  </div>
-</div>
+        <div class="col-box">
+          <h4>Private Angebote</h4>
+          <ul>
+            <li>Oft keine klare Struktur</li>
+            <li>Unterschiedliche Verfügbarkeit</li>
+            <li>Qualität kann schwanken</li>
+            <li>Kurzfristige Änderungen möglich</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
