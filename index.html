@@ -357,6 +357,65 @@ body{
   line-height:1.5;
 }
 
+/* MORE SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+
+.service-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px 18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  text-align:center;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px rgba(0,0,0,0.08);
+}
+
+.service-card.current{
+  border:1px solid rgba(26,83,173,0.16);
+  background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.service-icon{
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 16px;
+}
+
+.service-title{
+  margin:0 0 10px;
+  font-size:20px;
+  font-weight:700;
+  color:var(--textDark);
+}
+
+.service-text{
+  margin:0 0 16px;
+  font-size:14px;
+  line-height:1.6;
+  color:var(--muted);
+}
+
+.service-badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(26,83,173,0.08);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+}
+
 /* REQUEST BOARD */
 .request-board{
   margin-top:22px;
@@ -670,6 +729,10 @@ footer a:hover{
   }
 
   .columns{
+    grid-template-columns:1fr;
+  }
+
+  .services-grid{
     grid-template-columns:1fr;
   }
 
@@ -1013,6 +1076,44 @@ footer a:hover{
             <li>Qualität kann schwanken</li>
             <li>Kurzfristige Änderungen möglich</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="info-card reveal">
+      <h3>Weitere Services in Hof</h3>
+      <p>
+        Entdecken Sie weitere lokale Dienstleistungen in Hof (Saale).
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card current">
+          <img src="logo-reinigung.png" alt="Reinigung Hof" class="service-icon">
+          <h4 class="service-title">Reinigung Hof</h4>
+          <p class="service-text">
+            Reinigungsfirmen für Haushalt, Fenster und Büro.
+          </p>
+          <span class="service-badge">Aktuell</span>
+        </div>
+
+        <div class="service-card">
+          <img src="logo-gartenservice.png" alt="Gartenservice Hof" class="service-icon">
+          <h4 class="service-title">Gartenservice Hof</h4>
+          <p class="service-text">
+            Hilfe für Gartenpflege, Hecken und Außenbereiche.
+          </p>
+          <a href="https://hof-gartenservice.de" class="btn secondary">Mehr erfahren</a>
+        </div>
+
+        <div class="service-card">
+          <img src="logo-handwerker.png" alt="Handwerker Hof" class="service-icon">
+          <h4 class="service-title">Handwerker Hof</h4>
+          <p class="service-text">
+            Lokale Hilfe für Reparaturen, Renovierung und Hausservice.
+          </p>
+          <a href="https://hof-handwerker.de" class="btn secondary">Mehr erfahren</a>
         </div>
       </div>
     </div>
