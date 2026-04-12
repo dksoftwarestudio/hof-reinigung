@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unternehmen eintragen – Reinigung Hof</title>
+<meta name="description" content="Reinigungsfirma in Hof eintragen – lokale Plattform für Reinigungsfirmen. Erhalten Sie neue Kundenanfragen aus Hof und Umgebung. Aktuell kostenlos in der Aufbauphase.">
 
 <style>
 :root{
@@ -74,16 +75,16 @@ body{
 }
 
 .hero{
-  background:var(--card);
+  background:linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   border-radius:18px;
   padding:42px 34px;
-  box-shadow:var(--shadow);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
   border:1px solid var(--border);
   text-align:center;
 }
 
 .hero h1{
-  font-size:38px;
+  font-size:35px;
   margin:0 0 14px;
   line-height:1.1;
   font-weight:600;
@@ -98,16 +99,32 @@ body{
   line-height:1.7;
 }
 
+.hero-cta{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hero-note{
+  margin:14px auto 0;
+  max-width:720px;
+  font-size:13px;
+  line-height:1.6;
+  color:#7a7a7a;
+}
+
 .hero-image{
   margin-top:18px;
-  height:230px;
+  height:190px;
   border-radius:18px;
   overflow:hidden;
   background:
     linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.12)),
     url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80")
     center/cover no-repeat;
-  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
   border:1px solid var(--border);
 }
 
@@ -118,17 +135,19 @@ body{
 .info-card,
 .pricing-card,
 .benefits-card,
+.how-card,
 .form-wrap{
-  background:var(--card);
+  background:linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   border:1px solid var(--border);
   border-radius:18px;
-  padding:28px 24px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  padding:22px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
 }
 
 .info-card h2,
 .pricing-card h2,
 .benefits-card h2,
+.how-card h2,
 .form-wrap h2{
   margin:0 0 10px;
   color:var(--textDark);
@@ -138,6 +157,7 @@ body{
 .info-card p,
 .pricing-card p,
 .benefits-card p,
+.how-card p,
 .form-wrap p{
   margin:0 0 16px;
   color:var(--muted);
@@ -156,6 +176,12 @@ body{
   border:1px solid var(--border);
   border-radius:16px;
   padding:20px;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.price-box:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
 .price-box h3{
@@ -184,6 +210,27 @@ body{
   line-height:1.8;
 }
 
+.premium-points{
+  margin-top:18px;
+  padding:16px 18px;
+  border-radius:14px;
+  background:#F7F9FC;
+  border:1px solid var(--border);
+}
+
+.premium-points h3{
+  margin:0 0 10px;
+  color:var(--textDark);
+  font-size:18px;
+}
+
+.premium-points ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
 .pricing-hint{
   margin-top:18px;
   font-size:13px;
@@ -202,7 +249,21 @@ body{
   border-radius:16px;
   padding:20px;
   border:1px solid var(--border);
-  background:#F7F9FC;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.compare-box:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.compare-box.weak{
+  background:#f3f4f6;
+}
+
+.compare-box.strong{
+  background:#eaf2ff;
+  border-color:rgba(26,83,173,0.14);
 }
 
 .compare-box h3{
@@ -213,11 +274,6 @@ body{
 
 .compare-box.weak h3{
   color:#6B7280;
-}
-
-.compare-box.strong{
-  background:var(--blueLight);
-  border-color:rgba(26,83,173,0.14);
 }
 
 .compare-box.strong h3{
@@ -243,6 +299,46 @@ body{
 
 .benefits-note strong{
   color:var(--textDark);
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  margin-top:18px;
+}
+
+.step-box{
+  background:#F7F9FC;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+}
+
+.step-number{
+  display:inline-flex;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background:rgba(26,83,173,0.10);
+  color:var(--blue);
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.step-box h3{
+  margin:0 0 8px;
+  color:var(--textDark);
+  font-size:17px;
+}
+
+.step-box p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
 }
 
 .form-card{
@@ -287,10 +383,19 @@ body{
   color:var(--textDark);
   font-size:14px;
   font-family:Arial, sans-serif;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(26,83,173,0.15);
+  outline:none;
 }
 
 .form-group textarea{
-  min-height:120px;
+  min-height:100px;
   resize:vertical;
 }
 
@@ -347,6 +452,14 @@ body{
 
 .form-note{
   margin-top:12px;
+  font-size:12px;
+  color:#7a7a7a;
+  line-height:1.6;
+  text-align:center;
+}
+
+.form-trust{
+  margin-top:10px;
   font-size:12px;
   color:#7a7a7a;
   line-height:1.6;
@@ -428,6 +541,14 @@ footer a:hover{
   pointer-events:auto;
 }
 
+@media (max-width:900px){
+  .pricing-grid,
+  .compare-grid,
+  .steps{
+    grid-template-columns:1fr;
+  }
+}
+
 @media (max-width:700px){
   .header{
     flex-direction:column;
@@ -446,11 +567,6 @@ footer a:hover{
     height:170px;
   }
 
-  .pricing-grid,
-  .compare-grid{
-    grid-template-columns:1fr;
-  }
-
   .form-grid{
     grid-template-columns:1fr;
   }
@@ -461,7 +577,8 @@ footer a:hover{
     flex-basis:34px;
   }
 
-  .btn-row{
+  .btn-row,
+  .hero-cta{
     flex-direction:column;
     align-items:stretch;
   }
@@ -484,7 +601,7 @@ footer a:hover{
 
 <div class="header">
   <a href="index.html" class="logo" aria-label="Reinigung Hof">
-    <img src="logo-reinigung.png" alt="Reinigung Hof Logo" class="logo-mark">
+    <img src="logo-reinigung.png" alt="Reinigung Hof Logo" class="logo-mark" loading="lazy">
     <span>Reinigung Hof</span>
   </a>
   <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
@@ -492,13 +609,22 @@ footer a:hover{
 
 <div class="wrap">
 
- <div class="hero reveal">
-  <h1>Unternehmen eintragen</h1>
-  <p>
-    Tragen Sie Ihr Unternehmen ein und erreichen Sie lokale Kunden in Hof direkt über diese Seite.
-    Ohne Vermittlung – Interessenten kontaktieren Sie direkt.
-  </p>
-</div>
+  <div class="hero reveal">
+    <h1>Unternehmen eintragen</h1>
+    <p>
+      Tragen Sie Ihr Unternehmen ein und erreichen Sie lokale Kunden in Hof direkt über diese Seite.
+      Ohne Vermittlung – Interessenten kontaktieren Sie direkt.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#company-form" class="btn primary">Jetzt eintragen</a>
+      <a href="index.html" class="btn secondary">Zur Übersicht</a>
+    </div>
+
+    <div class="hero-note">
+      Aktuell kostenlos in der Aufbauphase · Direkter Kontakt · Regionale Sichtbarkeit in Hof
+    </div>
+  </div>
 
   <div class="hero-image reveal"></div>
 
@@ -522,8 +648,8 @@ footer a:hover{
       <div class="pricing-grid">
         <div class="price-box">
           <h3>Standard</h3>
-          <div class="price">auf Anfrage</div>
-          <div class="price-note">individuelle Preisgestaltung</div>
+          <div class="price">kostenlos</div>
+          <div class="price-note">aktuell in der Aufbauphase</div>
           <ul>
             <li>Eintrag in der Übersicht</li>
             <li>Google-Profil oder Website</li>
@@ -543,8 +669,18 @@ footer a:hover{
         </div>
       </div>
 
+      <div class="premium-points">
+        <h3>Warum Premium?</h3>
+        <ul>
+          <li>Ganz oben in der Übersicht</li>
+          <li>Größere Darstellung Ihres Unternehmens</li>
+          <li>Mehr Aufmerksamkeit bei lokalen Interessenten</li>
+          <li>Exklusive Platzierung nur für wenige Anbieter</li>
+        </ul>
+      </div>
+
       <div class="pricing-hint">
-        Erste Anfrage kostenlos und unverbindlich. Die Konditionen werden individuell nach Umfang und gewünschter Platzierung abgestimmt.
+        Standard-Einträge sind aktuell kostenlos in der Aufbauphase. Premium-Platzierungen und individuelle Erweiterungen stimmen wir direkt mit Ihnen ab.
       </div>
     </div>
   </div>
@@ -582,6 +718,36 @@ footer a:hover{
       <div class="benefits-note">
         <strong>Kurz gesagt:</strong> Ihr Profil ist nicht einfach nur ein Eintrag,
         sondern eine zusätzliche Möglichkeit, online gefunden zu werden und neue Kunden in Hof zu erreichen.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="how-card reveal">
+      <h2>Wie funktioniert die Vermittlung?</h2>
+      <p>
+        Die Plattform ist bewusst einfach aufgebaut. Interessenten finden Ihre Darstellung direkt auf der Seite
+        und nehmen anschließend Kontakt auf oder senden eine Anfrage über das Formular.
+      </p>
+
+      <div class="steps">
+        <div class="step-box">
+          <div class="step-number">1</div>
+          <h3>Eintrag anfragen</h3>
+          <p>Sie senden Ihre Firmendaten, Ihr Google-Profil oder Ihre Website und Ihre gewünschte Platzierung.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-number">2</div>
+          <h3>Prüfung &amp; Veröffentlichung</h3>
+          <p>Wir bereiten den Eintrag auf und veröffentlichen ihn passend auf der regionalen Plattform.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-number">3</div>
+          <h3>Lokale Anfragen erhalten</h3>
+          <p>Interessenten aus Hof und Umgebung finden Ihren Eintrag und können direkt Kontakt aufnehmen.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -642,6 +808,10 @@ footer a:hover{
 
         <div class="form-note">
           Ihre Anfrage wird direkt an DK Software Studio gesendet.
+        </div>
+
+        <div class="form-trust">
+          Kostenlos &amp; unverbindlich · Keine Vermittlungsgebühren in der Aufbauphase · Direkter Kontakt
         </div>
       </form>
     </div>
