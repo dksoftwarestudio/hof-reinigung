@@ -31,16 +31,6 @@ body{
   color:var(--text);
 }
 
-.header{
-  background:#ffffff;
-  border-bottom:1px solid var(--border);
-  padding:16px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-
 .logo{
   display:flex;
   align-items:center;
@@ -126,6 +116,22 @@ body{
   font-size:17px;
   line-height:1.6;
   font-weight:600;
+}
+
+.hero-cta{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hero-note{
+  margin:16px auto 0;
+  max-width:720px;
+  font-size:14px;
+  line-height:1.6;
+  color:#7a7a7a;
 }
 
 .section{
@@ -342,6 +348,45 @@ body{
   line-height:1.8;
 }
 
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+
+.step-box{
+  background:#F7F9FC;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+}
+
+.step-number{
+  display:inline-flex;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background:rgba(26,83,173,0.10);
+  color:var(--blue);
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.step-box h4{
+  margin:0 0 8px;
+  color:var(--textDark);
+  font-size:17px;
+}
+
+.step-box p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+}
+
 /* RECOMMENDED SPECIALIST */
 .recommend-card{
   background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
@@ -509,6 +554,13 @@ body{
 
 .btn-row.left{
   justify-content:flex-start;
+}
+
+.form-trust{
+  margin-top:12px;
+  font-size:12px;
+  color:#7a7a7a;
+  line-height:1.6;
 }
 
 .request-note{
@@ -707,15 +759,23 @@ footer a:hover{
 
 @media (max-width:700px){
   .header{
-    flex-direction:column;
-    align-items:flex-start;
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .logo{
+    justify-content:center;
   }
 
   .header-right{
-    width:100%;
-    justify-content:space-between;
-    flex-wrap:wrap;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     gap:10px;
+  }
+
+  .header-note{
+    justify-self:auto;
   }
 
   .hero{
@@ -738,7 +798,8 @@ footer a:hover{
     font-size:24px;
   }
 
-  .columns{
+  .columns,
+  .steps{
     grid-template-columns:1fr;
   }
 
@@ -758,7 +819,8 @@ footer a:hover{
     font-size:24px;
   }
 
-  .btn-row{
+  .btn-row,
+  .hero-cta{
     flex-direction:column;
     align-items:stretch;
   }
@@ -812,19 +874,28 @@ footer a:hover{
 <div class="wrap">
 
  <div class="hero reveal">
-  <h1>Reinigung in Hof (Saale) finden</h1>
+  <h1>Reinigung in Hof finden – schnell &amp; regional</h1>
 
   <p>
     hof-reinigung.de ist eine regionale Plattform für Stadt und Landkreis Hof.
-    Hier finden Privatkunden passende Reinigungsfirmen aus der Region – direkt, einfach und ohne bundesweite Massenplattform.
+    Hier finden Sie lokale Reinigungsfirmen direkt – ohne bundesweite Massenplattform und ohne unnötige Umwege.
   </p>
 
   <div class="hero-meta">
-    Region Hof (Saale) · Lokale Anbieter · Direkte Anfrage
+    Nur Anbieter aus Hof und Umgebung · Direkte Anfrage · Keine Massenvermittlung
   </div>
 
   <div class="hero-lead">
     Regional. Klar. Direkt.
+  </div>
+
+  <div class="hero-cta">
+    <a href="#request" class="btn primary">Kostenlose Anfrage stellen</a>
+    <a href="eintragen.html" class="btn secondary">Als Firma eintragen</a>
+  </div>
+
+  <div class="hero-note">
+    Ein regionales Projekt von DK Software Studio aus Hof. Privatkunden und Anbieter treten direkt miteinander in Kontakt.
   </div>
 </div>
 
@@ -837,6 +908,138 @@ footer a:hover{
       </p>
     </div>
   </div>
+
+  <div class="section">
+    <div class="info-card reveal">
+      <h3>So funktioniert’s</h3>
+
+      <div class="steps">
+        <div class="step-box">
+          <div class="step-number">1</div>
+          <h4>Anfrage stellen</h4>
+          <p>Beschreiben Sie kurz, welche Reinigung Sie in Hof oder Umgebung benötigen.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-number">2</div>
+          <h4>Lokale Anbieter melden sich</h4>
+          <p>Passende Reinigungsfirmen aus Hof und Umgebung können direkt auf Ihre Anfrage reagieren.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-number">3</div>
+          <h4>Passendes Angebot wählen</h4>
+          <p>Sie vergleichen die Rückmeldungen und entscheiden selbst, welcher Anbieter am besten passt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="request" class="request-board reveal">
+    <div class="request-board-card">
+      <div class="request-head">
+        <h2>Kostenlose Anfrage stellen</h2>
+        <p>
+          Sie suchen eine Reinigungsfirma in Hof oder Umgebung?
+          Senden Sie Ihre Anfrage direkt über diese Plattform – passende lokale Anbieter können sich bei Ihnen melden.
+        </p>
+      </div>
+
+      <div class="request-layout">
+        <div class="request-form-wrap">
+          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
+            <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
+            <input type="hidden" name="_language" value="de">
+
+            <div class="request-grid">
+              <div class="request-group">
+                <label for="kunde-name">Name</label>
+                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required autocomplete="off">
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-email">E-Mail</label>
+                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required autocomplete="off">
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-ort">Ort</label>
+                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required autocomplete="off">
+              </div>
+
+              <div class="request-group">
+                <label for="kunde-art">Art der Reinigung</label>
+                <select id="kunde-art" name="Art der Reinigung" autocomplete="off">
+                  <option value="Wohnungsreinigung">Wohnungsreinigung</option>
+                  <option value="Büroreinigung">Büroreinigung</option>
+                  <option value="Fensterreinigung">Fensterreinigung</option>
+                  <option value="Grundreinigung">Grundreinigung</option>
+                  <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                  <option value="Schimmel / Feuchtigkeit">Schimmel / Feuchtigkeit</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="request-group full">
+                <label for="kunde-anfrage">Ihre Anfrage</label>
+                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Zum Beispiel: Fensterreinigung für eine 3-Zimmer-Wohnung in Hof. Gewünschter Termin in den nächsten 7 Tagen." required autocomplete="off"></textarea>
+              </div>
+            </div>
+
+            <div class="btn-row left">
+              <button class="btn primary" type="submit">Anfrage senden</button>
+              <a class="btn whatsapp"
+                 href="https://wa.me/491624012037?text=Hallo,%20ich%20interessiere%20mich%20für%20eine%20Reinigung%20in%20Hof."
+                 target="_blank"
+                 rel="noopener">
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="form-trust">
+              Kostenlos &amp; unverbindlich · Ihre Anfrage wird an passende Anbieter aus Hof und Umgebung weitergeleitet.
+            </div>
+
+            <div id="request-status" class="request-status" aria-live="polite"></div>
+
+            <div class="request-note">
+              Ihre Anfrage wird zentral über diese Plattform erfasst und an passende Anbieter in Hof weitergeleitet.<br><br>
+              <strong>Betreiber:</strong> DK Software Studio<br>
+              <strong>Kontakt:</strong>
+              <a href="mailto:dksoftware.studio@gmail.com">dksoftware.studio@gmail.com</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="request-list-wrap">
+          <div class="request-list-card">
+            <h3>Aktuelle Anfragen</h3>
+            <p class="request-list-intro">
+              Beispiele für aktuelle Gesuche auf der Plattform.
+            </p>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Wohnungsreinigung gesucht</h4>
+              <p>3-Zimmer-Wohnung in Hof, einmalige Reinigung in den nächsten Tagen.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Fensterreinigung</h4>
+              <p>Fensterreinigung für Privathaushalt in Hof, Termin flexibel.</p>
+            </div>
+
+            <div class="request-item">
+              <div class="request-badge">Neu</div>
+              <h4>Büroreinigung angefragt</h4>
+              <p>Kleines Büro in Hof sucht regelmäßige Reinigung, 1× pro Woche.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="section">
     <div class="section-title">Hervorgehobene Anbieter</div>
@@ -967,108 +1170,6 @@ footer a:hover{
     </div>
   </div>
 
-  <section id="request" class="request-board reveal">
-    <div class="request-board-card">
-      <div class="request-head">
-        <h2>Kostenlose Anfrage stellen</h2>
-        <p>
-          Sie suchen eine Reinigungsfirma in Hof oder Umgebung?
-          Senden Sie Ihre Anfrage direkt über diese Plattform – passende lokale Anbieter können sich bei Ihnen melden.
-        </p>
-      </div>
-
-      <div class="request-layout">
-        <div class="request-form-wrap">
-          <form class="request-form" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
-            <input type="hidden" name="_subject" value="Neue Kundenanfrage über hof-reinigung.de">
-            <input type="hidden" name="_language" value="de">
-
-            <div class="request-grid">
-              <div class="request-group">
-                <label for="kunde-name">Name</label>
-                <input type="text" id="kunde-name" name="Name" placeholder="Ihr Name" required autocomplete="off">
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-email">E-Mail</label>
-                <input type="email" id="kunde-email" name="E-Mail" placeholder="ihre@email.de" required autocomplete="off">
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-ort">Ort</label>
-                <input type="text" id="kunde-ort" name="Ort" placeholder="z. B. Hof" value="Hof" required autocomplete="off">
-              </div>
-
-              <div class="request-group">
-                <label for="kunde-art">Art der Reinigung</label>
-                <select id="kunde-art" name="Art der Reinigung" autocomplete="off">
-                  <option value="Wohnungsreinigung">Wohnungsreinigung</option>
-                  <option value="Büroreinigung">Büroreinigung</option>
-                  <option value="Fensterreinigung">Fensterreinigung</option>
-                  <option value="Grundreinigung">Grundreinigung</option>
-                  <option value="Treppenhausreinigung">Treppenhausreinigung</option>
-                  <option value="Schimmel / Feuchtigkeit">Schimmel / Feuchtigkeit</option>
-                  <option value="Sonstiges">Sonstiges</option>
-                </select>
-              </div>
-
-              <div class="request-group full">
-                <label for="kunde-anfrage">Ihre Anfrage</label>
-                <textarea id="kunde-anfrage" name="Anfrage" placeholder="Beschreiben Sie kurz, was gereinigt werden soll, wie groß die Fläche ist und wann Sie Unterstützung brauchen." required autocomplete="off"></textarea>
-              </div>
-            </div>
-
-            <div class="btn-row left">
-              <button class="btn primary" type="submit">Anfrage senden</button>
-              <a class="btn whatsapp"
-                 href="https://wa.me/491624012037?text=Hallo,%20ich%20interessiere%20mich%20für%20eine%20Reinigung%20in%20Hof."
-                 target="_blank"
-                 rel="noopener">
-                WhatsApp
-              </a>
-            </div>
-
-            <div id="request-status" class="request-status" aria-live="polite"></div>
-
-            <div class="request-note">
-              Ihre Anfrage wird zentral über diese Plattform erfasst und an passende Anbieter in Hof weitergeleitet.<br><br>
-              <strong>Betreiber:</strong> DK Software Studio<br>
-              <strong>Kontakt:</strong>
-              <a href="mailto:dksoftware.studio@gmail.com">dksoftware.studio@gmail.com</a>
-            </div>
-          </form>
-        </div>
-
-        <div class="request-list-wrap">
-          <div class="request-list-card">
-            <h3>Aktuelle Anfragen</h3>
-            <p class="request-list-intro">
-              Beispiele für aktuelle Gesuche auf der Plattform.
-            </p>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Wohnungsreinigung gesucht</h4>
-              <p>3-Zimmer-Wohnung in Hof, einmalige Reinigung in den nächsten Tagen.</p>
-            </div>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Fensterreinigung</h4>
-              <p>Fensterreinigung für Privathaushalt in Hof, Termin flexibel.</p>
-            </div>
-
-            <div class="request-item">
-              <div class="request-badge">Neu</div>
-              <h4>Büroreinigung angefragt</h4>
-              <p>Kleines Büro in Hof sucht regelmäßige Reinigung, 1× pro Woche.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <div class="section">
     <div class="info-card reveal">
       <h3>Warum eine Reinigungsfirma in Hof beauftragen?</h3>
@@ -1103,9 +1204,9 @@ footer a:hover{
 
   <div class="section">
     <div class="info-card reveal">
-      <h3>Weitere Services in Hof</h3>
+      <h3>Weitere lokale Projekte aus Hof (Saale)</h3>
       <p>
-        Entdecken Sie weitere lokale Dienstleistungen in Hof (Saale).
+        Entdecken Sie weitere lokale Dienstleistungen in Hof und Umgebung.
       </p>
 
       <div class="services-grid">
@@ -1159,10 +1260,10 @@ footer a:hover{
   </div>
 
   <footer>
-    © 2026 hof-reinigung.de · regionales Projekt aus Hof (Saale) · by 
+    © 2026 hof-reinigung.de · regionales Projekt aus Hof (Saale) · by
     <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
     <a href="kontakt.html">Kontakt</a> ·
-    <a href="impressum.html">Impressum</a> · 
+    <a href="impressum.html">Impressum</a> ·
     <a href="datenschutz.html">Datenschutz</a>
   </footer>
 
