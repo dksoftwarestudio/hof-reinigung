@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reinigung in Hof finden | hof-reinigung.de</title>
-<meta name="description" content="Reinigung in Hof finden – regionale Plattform für Reinigungsfirmen in Hof und Umgebung. Direkte Anfrage, lokale Anbieter, keine Massenplattform.">
+<meta name="description" content="Reinigungsfirma in Hof finden – regionale Anbieter für Wohnung, Büro, Fenster und Treppenhaus. Kostenlos anfragen und passende Firmen aus Hof erhalten.">
 
 <style>
 :root{
@@ -79,10 +79,10 @@ body{
 }
 
 .hero{
-  background:var(--card);
+  background:linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   border-radius:18px;
   padding:42px 34px;
-  box-shadow:var(--shadow);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
   border:1px solid var(--border);
   text-align:center;
 }
@@ -156,17 +156,17 @@ body{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
   transition:transform 0.25s ease, box-shadow 0.25s ease, opacity 0.6s ease;
 }
 
 .card:hover{
   transform:translateY(-3px);
-  box-shadow:0 18px 38px rgba(0,0,0,0.08);
+  box-shadow:0 14px 28px rgba(0,0,0,0.06);
 }
 
 .card-inner{
-  padding:24px;
+  padding:20px;
 }
 
 .premium-card{
@@ -176,7 +176,7 @@ body{
 }
 
 .premium-top{
-  height:180px;
+  height:170px;
   background:
     linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)),
     url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80")
@@ -226,11 +226,11 @@ body{
 
 .meta span{
   display:inline-block;
-  padding:8px 12px;
+  padding:6px 10px;
   border-radius:999px;
   background:#F7F9FC;
   color:#5b6570;
-  font-size:13px;
+  font-size:12px;
   border:1px solid var(--border);
 }
 
@@ -307,11 +307,11 @@ body{
 }
 
 .info-card{
-  background:var(--card);
+  background:linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   border:1px solid var(--border);
   border-radius:18px;
   padding:26px 24px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
 }
 
 .info-card h2,
@@ -436,7 +436,7 @@ body{
 
 .service-card:hover{
   transform:translateY(-3px);
-  box-shadow:0 18px 38px rgba(0,0,0,0.08);
+  box-shadow:0 14px 28px rgba(0,0,0,0.06);
 }
 
 .service-card.current{
@@ -445,8 +445,8 @@ body{
 }
 
 .service-icon{
-  width:82px;
-  height:82px;
+  width:76px;
+  height:76px;
   object-fit:contain;
   display:block;
   margin:0 auto 14px;
@@ -486,7 +486,7 @@ body{
   border:1px solid var(--border);
   border-radius:18px;
   padding:28px 24px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
 }
 
 .request-head h2{
@@ -550,6 +550,15 @@ body{
   color:var(--textDark);
   font-size:14px;
   font-family:Arial, sans-serif;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.request-group input:focus,
+.request-group select:focus,
+.request-group textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(26,83,173,0.15);
+  outline:none;
 }
 
 .request-group textarea{
@@ -862,7 +871,7 @@ footer a:hover{
 
 <div class="header">
   <a href="index.html" class="logo" aria-label="Reinigung Hof">
-    <img src="logo-reinigung.png" alt="Reinigung Hof Logo" class="logo-mark">
+    <img src="logo-reinigung.png" alt="Reinigung Hof Logo" class="logo-mark" loading="lazy">
     <span>Reinigung Hof</span>
   </a>
 
@@ -896,7 +905,7 @@ footer a:hover{
     </div>
 
     <div class="hero-note">
-      Ein regionales Projekt von DK Software Studio aus Hof. Privatkunden und Anbieter treten direkt miteinander in Kontakt.
+      Kostenlos &amp; unverbindlich · Nur lokale Anbieter aus Hof und Umgebung
     </div>
   </div>
 
@@ -1212,7 +1221,7 @@ footer a:hover{
 
       <div class="services-grid">
         <div class="service-card current">
-          <img src="logo-reinigung.png" alt="Reinigung Hof" class="service-icon">
+          <img src="logo-reinigung.png" alt="Reinigung Hof" class="service-icon" loading="lazy">
           <h4 class="service-title">Reinigung Hof</h4>
           <p class="service-text">
             Regionale Plattform für Reinigungsfirmen in Hof und Umgebung.
@@ -1221,7 +1230,7 @@ footer a:hover{
         </div>
 
         <div class="service-card">
-          <img src="logo-gartenservice.png" alt="Gartenservice Hof" class="service-icon">
+          <img src="logo-gartenservice.png" alt="Gartenservice Hof" class="service-icon" loading="lazy">
           <h4 class="service-title">Gartenservice Hof</h4>
           <p class="service-text">
             Hilfe für Gartenpflege, Hecken und Außenbereiche.
@@ -1230,7 +1239,7 @@ footer a:hover{
         </div>
 
         <div class="service-card">
-          <img src="logo-handwerker.png" alt="Handwerker Hof" class="service-icon">
+          <img src="logo-handwerker.png" alt="Handwerker Hof" class="service-icon" loading="lazy">
           <h4 class="service-title">Handwerker Hof</h4>
           <p class="service-text">
             Lokale Hilfe für Reparaturen, Renovierung und Hausservice.
