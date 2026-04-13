@@ -510,7 +510,8 @@ body{
 }
 
 .request-form-wrap,
-.request-list-card{
+.request-list-card,
+.feedback-form-wrap{
   background:#F7F9FC;
   border:1px solid var(--border);
   border-radius:16px;
@@ -584,19 +585,22 @@ body{
   line-height:1.6;
 }
 
-.request-status{
+.request-status,
+.feedback-status{
   display:none;
   margin-top:12px;
   font-size:13px;
   line-height:1.5;
 }
 
-.request-status.success{
+.request-status.success,
+.feedback-status.success{
   display:block;
   color:#1A53AD;
 }
 
-.request-status.error{
+.request-status.error,
+.feedback-status.error{
   display:block;
   color:#b00020;
 }
@@ -645,6 +649,79 @@ body{
 .request-item p{
   margin:0;
   color:var(--muted);
+  line-height:1.6;
+}
+
+/* FEEDBACK */
+.feedback-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px 24px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+
+.feedback-head h2{
+  margin:0 0 10px;
+  color:var(--textDark);
+  font-size:28px;
+}
+
+.feedback-head p{
+  margin:0 0 20px;
+  color:var(--muted);
+  line-height:1.7;
+  max-width:760px;
+}
+
+.rating-scale{
+  display:grid;
+  grid-template-columns:repeat(11, 1fr);
+  gap:8px;
+  margin:16px 0 18px;
+}
+
+.rating-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--textDark);
+  border-radius:10px;
+  min-height:44px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.rating-btn:hover{
+  border-color:rgba(26,83,173,0.35);
+  transform:translateY(-1px);
+}
+
+.rating-btn.active{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+  box-shadow:0 10px 20px rgba(26,83,173,0.18);
+}
+
+.rating-labels{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:12px;
+  color:#7a7a7a;
+  margin:-4px 0 14px;
+}
+
+.feedback-form-wrap textarea{
+  min-height:120px;
+}
+
+.feedback-note{
+  margin-top:12px;
+  font-size:12px;
+  color:#7a7a7a;
   line-height:1.6;
 }
 
@@ -825,7 +902,8 @@ footer a:hover{
     grid-template-columns:1fr;
   }
 
-  .request-head h2{
+  .request-head h2,
+  .feedback-head h2{
     font-size:24px;
   }
 
@@ -855,6 +933,10 @@ footer a:hover{
   .cookie-actions{
     flex-direction:column;
     align-items:stretch;
+  }
+
+  .rating-scale{
+    grid-template-columns:repeat(6, 1fr);
   }
 
   #toTopBtn{
@@ -1297,6 +1379,64 @@ footer a:hover{
     </div>
   </div>
 
+  <div class="section">
+    <div class="feedback-card reveal">
+      <div class="feedback-head">
+        <h2>Feedback zur Seite</h2>
+        <p>
+          Wie gefällt Ihnen diese Seite? Ihre Rückmeldung hilft uns, hof-reinigung.de Schritt für Schritt besser zu machen.
+        </p>
+      </div>
+
+      <div class="feedback-form-wrap">
+        <form id="feedbackForm" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
+          <input type="hidden" name="_subject" value="Neues Feedback über hof-reinigung.de">
+          <input type="hidden" name="_language" value="de">
+          <input type="hidden" name="Seite" value="hof-reinigung.de">
+          <input type="hidden" name="Bewertung" id="feedbackRating" value="">
+
+          <label style="font-size:13px;font-weight:700;color:var(--textDark);display:block;margin-bottom:8px;">
+            Wie bewerten Sie die Seite von 0 bis 10?
+          </label>
+
+          <div class="rating-scale">
+            <button type="button" class="rating-btn" data-value="0">0</button>
+            <button type="button" class="rating-btn" data-value="1">1</button>
+            <button type="button" class="rating-btn" data-value="2">2</button>
+            <button type="button" class="rating-btn" data-value="3">3</button>
+            <button type="button" class="rating-btn" data-value="4">4</button>
+            <button type="button" class="rating-btn" data-value="5">5</button>
+            <button type="button" class="rating-btn" data-value="6">6</button>
+            <button type="button" class="rating-btn" data-value="7">7</button>
+            <button type="button" class="rating-btn" data-value="8">8</button>
+            <button type="button" class="rating-btn" data-value="9">9</button>
+            <button type="button" class="rating-btn" data-value="10">10</button>
+          </div>
+
+          <div class="rating-labels">
+            <span>0 = gar nicht hilfreich</span>
+            <span>10 = sehr gut</span>
+          </div>
+
+          <div class="request-group full">
+            <label for="feedbackComment">Kommentar</label>
+            <textarea id="feedbackComment" name="Kommentar" placeholder="Was gefällt Ihnen? Was könnte besser sein?"></textarea>
+          </div>
+
+          <div class="btn-row left">
+            <button class="btn primary" type="submit">Feedback senden</button>
+          </div>
+
+          <div id="feedbackStatus" class="feedback-status" aria-live="polite"></div>
+
+          <div class="feedback-note">
+            Das Feedback wird direkt an DK Software Studio gesendet.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <footer>
     © 2026 hof-reinigung.de · regionales Projekt aus Hof (Saale) · by
     <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
@@ -1427,6 +1567,60 @@ if (requestForm) {
     } catch (error) {
       requestStatus.className = 'request-status error';
       requestStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+    }
+  });
+}
+
+const feedbackForm = document.getElementById('feedbackForm');
+const feedbackStatus = document.getElementById('feedbackStatus');
+const feedbackRatingInput = document.getElementById('feedbackRating');
+const ratingButtons = document.querySelectorAll('.rating-btn');
+
+ratingButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    ratingButtons.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    feedbackRatingInput.value = btn.dataset.value;
+  });
+});
+
+if (feedbackForm) {
+  feedbackForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    feedbackStatus.className = 'feedback-status';
+    feedbackStatus.textContent = '';
+
+    if (!feedbackRatingInput.value) {
+      feedbackStatus.className = 'feedback-status error';
+      feedbackStatus.textContent = 'Bitte wählen Sie zuerst eine Bewertung von 0 bis 10.';
+      return;
+    }
+
+    const formData = new FormData(feedbackForm);
+
+    try {
+      const response = await fetch(feedbackForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        feedbackForm.reset();
+        feedbackRatingInput.value = '';
+        ratingButtons.forEach((b) => b.classList.remove('active'));
+        feedbackStatus.className = 'feedback-status success';
+        feedbackStatus.textContent = 'Vielen Dank für Ihr Feedback.';
+      } else {
+        feedbackStatus.className = 'feedback-status error';
+        feedbackStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+      }
+    } catch (error) {
+      feedbackStatus.className = 'feedback-status error';
+      feedbackStatus.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
     }
   });
 }
