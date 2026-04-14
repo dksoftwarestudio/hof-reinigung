@@ -183,6 +183,26 @@ body{
     center/cover no-repeat;
 }
 
+.provider-photo{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
+}
+
+@media (min-width:701px){
+  .provider-photo{
+    height:260px;
+  }
+}
+
+@media (max-width:700px){
+  .provider-photo{
+    height:220px;
+  }
+}
+
 .badge{
   display:inline-block;
   padding:6px 12px;
@@ -1271,13 +1291,8 @@ footer a:hover{
         </div>
       </div>
 
-   <div class="card reveal">
-  <div class="premium-top" style="
-    background:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-    url('hosseini-1.jpg')
-    center/cover no-repeat;">
-  </div>
+ <div class="card reveal">
+  <img src="hosseini-1.jpg" alt="Hosseini Reinigung in Hof" class="provider-photo">
 
   <div class="card-inner">
     <h3 class="standard-title">Hosseini Reinigung</h3>
@@ -1293,27 +1308,14 @@ footer a:hover{
       <span>Gastronomie</span>
     </div>
 
-    <!-- TRUST BLOCK -->
     <div style="margin:10px 0 14px; font-size:14px; color:#555;">
-      ✔ Versichert · ✔ Antwort < 24h · ✔ Flexible Termine
+      ✔ Versichert · ✔ Antwort &lt; 24h · ✔ Flexible Termine
     </div>
 
     <div class="btn-row">
-      <a class="btn primary" href="mailto:hosseinireinigung@gmail.com">
-        Kontakt per E-Mail
-      </a>
-
-      <a class="btn secondary" href="tel:+491725861131">
-        📞 Anrufen
-      </a>
-
-      <a class="btn whatsapp"
-         href="https://wa.me/491725861131"
-         target="_blank"
-         rel="noopener">
-        WhatsApp
-      </a>
-
+      <a class="btn primary" href="mailto:hosseinireinigung@gmail.com">Kontakt per E-Mail</a>
+      <a class="btn secondary" href="tel:+491725861131">📞 Anrufen</a>
+      <a class="btn whatsapp" href="https://wa.me/491725861131" target="_blank" rel="noopener">WhatsApp</a>
       <span class="btn secondary">Standard</span>
     </div>
   </div>
