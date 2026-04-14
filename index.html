@@ -651,6 +651,16 @@ body{
   color:var(--muted);
   line-height:1.6;
 }
+  .request-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.request-form-wrap,
+.request-list-wrap {
+  min-width: 0; /* 🔥 ключевая строка */
+}
 
 /* FEEDBACK */
 .feedback-card{
