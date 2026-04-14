@@ -504,8 +504,8 @@ body{
 
 .request-layout{
   display:grid;
-  grid-template-columns:1.35fr 0.9fr;
-  gap:18px;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
   align-items:start;
 }
 
@@ -516,6 +516,10 @@ body{
   border:1px solid var(--border);
   border-radius:16px;
   padding:20px;
+}
+
+.request-list-wrap{
+  min-width:0;
 }
 
 .request-grid{
@@ -650,16 +654,6 @@ body{
   margin:0;
   color:var(--muted);
   line-height:1.6;
-}
-  .request-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.request-form-wrap,
-.request-list-wrap {
-  min-width: 0; /* 🔥 ключевая строка */
 }
 
 /* FEEDBACK */
