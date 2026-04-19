@@ -533,16 +533,10 @@ footer a:hover{
   color:var(--blue);
 }
 
-.js-enabled .reveal{
-  opacity:0;
-  transform:translateY(30px);
-  transition:opacity 0.6s ease, transform 0.6s ease;
-}
-
-.js-enabled .reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
+<body class="">
+<script>
+  document.documentElement.classList.add('js-enabled');
+</script>
 
 #toTopBtn{
   position:fixed;
@@ -627,9 +621,9 @@ footer a:hover{
 </style>
 </head>
 
-<body>
-  <script>
-  document.body.classList.add('js-enabled');
+<body class="">
+<script>
+  document.documentElement.classList.add('js-enabled');
 </script>
 
 <div class="header">
