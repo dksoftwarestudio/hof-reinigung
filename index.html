@@ -58,7 +58,17 @@ body{
   display:grid;
   grid-template-columns:auto 1fr auto;
   align-items:center;
-  gap:16px;
+}
+
+.header-note{
+  font-size:13px;
+  color:#7a7a7a;
+  text-align:center;
+}
+
+.header-right{
+  display:flex;
+  justify-content:flex-end;
 }
 
 @media (min-width:701px){
@@ -1105,10 +1115,13 @@ footer a:hover{
     <span>hof-reinigung.de</span>
   </a>
 
-  <div class="header-right">
-    <div class="header-note">Regionale Plattform für Reinigungsdienste in Hof (Saale)</div>
-    <a href="eintragen.html" class="btn secondary small">Unternehmen eintragen</a>
-  </div>
+ <div class="header-note">
+  Regionale Plattform für Reinigungsdienste in Hof (Saale)
+</div>
+
+<div class="header-right">
+  <a href="eintragen.html" class="btn secondary small">Unternehmen eintragen</a>
+</div>
 </div>
 
 <div class="wrap">
