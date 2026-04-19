@@ -64,11 +64,14 @@ body{
   font-size:13px;
   color:#7a7a7a;
   text-align:center;
+  padding:0 10px;
 }
 
 .header-right{
   display:flex;
   justify-content:flex-end;
+  align-items:center;
+  gap:16px;
 }
 
 @media (min-width:701px){
@@ -885,22 +888,22 @@ body{
 
 #toTopBtn{
   position:fixed;
-  bottom:30px;
-  right:30px;
-  width:50px;
-  height:50px;
+  bottom:20px;
+  right:20px;
+  width:48px;
+  height:48px;
   border:none;
   border-radius:12px;
-  background:var(--blue);
+  background:#1A53AD;
   color:#fff;
-  font-size:22px;
+  font-size:20px;
   font-weight:700;
   cursor:pointer;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
   opacity:0;
   pointer-events:none;
   transition:0.3s ease;
-  z-index:999;
+  z-index:9999;
 }
 
 #toTopBtn:hover{
