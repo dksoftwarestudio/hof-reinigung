@@ -232,6 +232,48 @@ body{
   border-top-left-radius:18px;
   border-top-right-radius:18px;
 }
+  /* ===== DESKTOP SIDE IMAGES ===== */
+
+.page-layout{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+}
+
+/* боковые картинки */
+.side-visual{
+  width:220px;
+  flex:0 0 220px;
+}
+
+.side-card{
+  position:sticky;
+  top:100px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+  border:1px solid var(--border);
+}
+
+.side-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  display:block;
+}
+
+/* центр */
+.main-content{
+  max-width:980px;
+  width:100%;
+}
+
+/* ❗ скрываем на мобильных */
+@media (max-width:1200px){
+  .side-visual{
+    display:none;
+  }
+}
 
 @media (min-width:701px){
   .provider-photo{
@@ -1042,13 +1084,22 @@ footer a:hover{
 </div>
 
 <div class="wrap">
+  <div class="page-layout">
 
-  <div class="hero reveal">
-    <h1>Reinigung in Hof finden – schnell &amp; einfach</h1>
+    <div class="side-visual">
+      <div class="side-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Reinigung Hof">
+      </div>
+    </div>
 
-    <p>
-      Finden Sie passende Reinigungsfirmen aus Hof und Umgebung – direkt, ohne lange Suche und ohne große Plattformen.
-    </p>
+    <div class="main-content">
+
+      <div class="hero reveal">
+        <h1>Reinigung in Hof finden – schnell &amp; einfach</h1>
+
+        <p>
+          Finden Sie passende Reinigungsfirmen aus Hof und Umgebung – direkt, ohne lange Suche und ohne große Plattformen.
+        </p>
 
     <div class="hero-meta">
       Lokale Anbieter · Direkte Anfrage · Kostenlos &amp; unverbindlich
@@ -1519,71 +1570,80 @@ footer a:hover{
     </div>
   </div>
 
-  <div class="section">
-    <div class="feedback-card reveal">
-      <div class="feedback-head">
-        <h2>Feedback zur Seite</h2>
-        <p>
-          Wie gefällt Ihnen diese Seite? Ihre Rückmeldung hilft uns, hof-reinigung.de Schritt für Schritt besser zu machen.
-        </p>
-      </div>
+ <div class="section">
+  <div class="feedback-card reveal">
 
-      <div class="feedback-form-wrap">
-        <form id="feedbackForm" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
-          <input type="hidden" name="_subject" value="Neues Feedback über hof-reinigung.de">
-          <input type="hidden" name="_language" value="de">
-          <input type="hidden" name="Seite" value="hof-reinigung.de">
-          <input type="hidden" name="Bewertung" id="feedbackRating" value="">
-
-          <label style="font-size:13px;font-weight:700;color:var(--textDark);display:block;margin-bottom:8px;">
-            Wie bewerten Sie die Seite von 0 bis 10?
-          </label>
-
-          <div class="rating-scale">
-            <button type="button" class="rating-btn" data-value="0">0</button>
-            <button type="button" class="rating-btn" data-value="1">1</button>
-            <button type="button" class="rating-btn" data-value="2">2</button>
-            <button type="button" class="rating-btn" data-value="3">3</button>
-            <button type="button" class="rating-btn" data-value="4">4</button>
-            <button type="button" class="rating-btn" data-value="5">5</button>
-            <button type="button" class="rating-btn" data-value="6">6</button>
-            <button type="button" class="rating-btn" data-value="7">7</button>
-            <button type="button" class="rating-btn" data-value="8">8</button>
-            <button type="button" class="rating-btn" data-value="9">9</button>
-            <button type="button" class="rating-btn" data-value="10">10</button>
-          </div>
-
-          <div class="rating-labels">
-            <span>0 = gar nicht hilfreich</span>
-            <span>10 = sehr gut</span>
-          </div>
-
-          <div class="request-group full">
-            <label for="feedbackComment">Kommentar</label>
-            <textarea id="feedbackComment" name="Kommentar" placeholder="Was gefällt Ihnen? Was könnte besser sein?"></textarea>
-          </div>
-
-          <div class="btn-row left">
-            <button class="btn primary" type="submit">Feedback senden</button>
-          </div>
-
-          <div id="feedbackStatus" class="feedback-status" aria-live="polite"></div>
-
-          <div class="feedback-note">
-            Das Feedback wird direkt an DK Software Studio gesendet.
-          </div>
-        </form>
-      </div>
+    <div class="feedback-head">
+      <h2>Ihre Meinung zählt</h2>
+      <p>
+        Helfen Sie uns, hof-reinigung.de zu verbessern.
+        Die Umfrage dauert nur wenige Sekunden.
+      </p>
     </div>
-  </div>
 
-  <footer>
-    © 2026 hof-reinigung.de · regionales Projekt aus Hof (Saale) · by
-    <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
-    <a href="kontakt.html">Kontakt</a> ·
-    <a href="impressum.html">Impressum</a> ·
-    <a href="datenschutz.html">Datenschutz</a>
-  </footer>
+    <div class="feedback-form-wrap">
+      <form id="feedbackForm" action="https://formspree.io/f/mjgpagzy" method="POST" autocomplete="off">
+
+        <input type="hidden" name="_subject" value="Feedback hof-reinigung.de">
+        <input type="hidden" name="_language" value="de">
+        <input type="hidden" name="Seite" value="hof-reinigung.de">
+        <input type="hidden" name="Bewertung" id="feedbackRating" value="">
+
+        <label style="font-size:13px;font-weight:700;color:var(--textDark);display:block;margin-bottom:8px;">
+          Wie bewerten Sie diese Seite?
+        </label>
+
+        <div class="rating-scale">
+          <button type="button" class="rating-btn" data-value="0">0</button>
+          <button type="button" class="rating-btn" data-value="1">1</button>
+          <button type="button" class="rating-btn" data-value="2">2</button>
+          <button type="button" class="rating-btn" data-value="3">3</button>
+          <button type="button" class="rating-btn" data-value="4">4</button>
+          <button type="button" class="rating-btn" data-value="5">5</button>
+          <button type="button" class="rating-btn" data-value="6">6</button>
+          <button type="button" class="rating-btn" data-value="7">7</button>
+          <button type="button" class="rating-btn" data-value="8">8</button>
+          <button type="button" class="rating-btn" data-value="9">9</button>
+          <button type="button" class="rating-btn" data-value="10">10</button>
+        </div>
+
+        <div class="rating-labels">
+          <span>schlecht</span>
+          <span>sehr gut</span>
+        </div>
+
+        <div class="request-group full">
+          <label for="feedbackComment">Optionaler Kommentar</label>
+          <textarea 
+            id="feedbackComment" 
+            name="Kommentar" 
+            placeholder="Was können wir besser machen?"></textarea>
+        </div>
+
+        <div class="btn-row left">
+          <button class="btn primary" type="submit">Feedback senden</button>
+        </div>
+
+        <div id="feedbackStatus" class="feedback-status" aria-live="polite"></div>
+
+        <div class="feedback-note">
+          Direktes Feedback an den Betreiber (DK Software Studio).
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 hof-reinigung.de · Regionale Plattform aus Hof (Saale) · by
+  <a href="https://dksoftwarestudio.com" target="_blank" rel="noopener">DK Software Studio</a><br>
+
+  <a href="kontakt.html">Kontakt</a> ·
+  <a href="impressum.html">Impressum</a> ·
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
 
 </div>
 
