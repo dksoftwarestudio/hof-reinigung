@@ -567,15 +567,13 @@ footer a:hover{
   display:block;
 }
 
-@media (max-width:700px){
-  .provider-photo{
-    height:220px;
+@media (max-width:700px) {
+  /* Layout-Anpassungen */
+  .wrap {
+    padding: 20px 15px 50px;
   }
 
-  .main-content{
-    width:100%;
-  }
-
+  /* Grid-Systeme auf einspaltig umstellen */
   .usp-grid,
   .trust-row,
   .advantage-grid,
@@ -583,116 +581,60 @@ footer a:hover{
   .pricing-grid,
   .steps,
   .columns,
-  .services-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  .usp-card,
-  .trust-box,
-  .advantage-box,
-  .compare-box,
-  .price-box,
-  .step-box,
-  .col-box,
-  .service-card{
-    padding:18px 16px;
-  }
-
-  .usp-card h3{
-    font-size:20px;
-  }
-
-  .btn{
-    width:100%;
-    text-align:center;
-  }
-}
-
-  .hero{
-    padding:34px 22px;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .hero-lead{
-    font-size:16px;
-  }
-
-  .usp-grid{
-    grid-template-columns:1fr !important;
-    gap:16px;
-  }
-
-  .usp-card{
-    padding:22px 18px;
-    min-width:0;
-  }
-
-  .usp-card h3{
-    font-size:20px;
-  }
-
-  .premium-top{
-    height:160px;
-  }
-
-  .provider-photo{
-    height:220px;
-  }
-
-  .columns,
-  .steps,
   .services-grid,
-  .request-layout,
-  .request-grid{
-    grid-template-columns:1fr;
+  .form-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .request-head h2,
-  .feedback-head h2{
-    font-size:24px;
+  /* Abstände und Polsterung */
+  .hero {
+    padding: 30px 20px;
   }
 
-  .btn-row,
-  .hero-cta{
-    flex-direction:column;
-    align-items:stretch;
+  .hero h1 {
+    font-size: 28px;
   }
 
-  .btn{
-    width:100%;
-    text-align:center;
+  .info-card, .pricing-card, .benefits-card, .form-wrap, .preview-card, .advantage-card {
+    padding: 22px 18px;
   }
 
-  .logo-mark{
-    width:34px;
-    height:34px;
-    flex-basis:34px;
+  /* Button-Anpassungen für mobile Griffigkeit */
+  .btn-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
 
-  .cookie-banner{
-    left:12px;
-    right:12px;
-    bottom:12px;
-    padding:16px 14px 14px;
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
   }
 
-  .cookie-actions{
-    flex-direction:column;
-    align-items:stretch;
+  /* Header & Logo */
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
   }
 
-  .rating-scale{
-    grid-template-columns:repeat(6, 1fr);
+  .logo-mark {
+    width: 34px;
+    height: 34px;
   }
 
-  #toTopBtn{
-    right:14px;
-    bottom:14px;
-    width:46px;
-    height:46px;
+  /* Preview-Karte */
+  .preview-top {
+    height: 150px;
+  }
+
+  /* "Nach oben" Button Position */
+  #toTopBtn {
+    right: 15px;
+    bottom: 15px;
+    width: 44px;
+    height: 44px;
   }
 }
 </style>
