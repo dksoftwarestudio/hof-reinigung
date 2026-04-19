@@ -452,6 +452,13 @@ body{
   border:none;
   cursor:pointer;
 }
+  .btn:focus-visible,
+.back-link:focus-visible,
+.logo:focus-visible{
+  outline:3px solid rgba(26,83,173,0.22);
+  outline-offset:3px;
+  border-radius:10px;
+}
 
 .btn.primary{
   background:var(--blue);
@@ -526,13 +533,13 @@ footer a:hover{
   color:var(--blue);
 }
 
-.reveal{
+.js-enabled .reveal{
   opacity:0;
   transform:translateY(30px);
   transition:opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.active{
+.js-enabled .reveal.active{
   opacity:1;
   transform:translateY(0);
 }
@@ -621,6 +628,9 @@ footer a:hover{
 </head>
 
 <body>
+  <script>
+  document.body.classList.add('js-enabled');
+</script>
 
 <div class="header">
   <a href="index.html" class="logo" aria-label="Reinigung Hof">
@@ -888,19 +898,18 @@ footer a:hover{
 <script>
 const reveals = document.querySelectorAll('.reveal');
 
-function revealOnScroll() {
-  reveals.forEach((el) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 80) {
-      el.classList.add('active');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
     }
   });
-}
+}, {
+  threshold: 0.1
+});
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+reveals.forEach((el) => observer.observe(el));
 
 const toTopBtn = document.getElementById("toTopBtn");
 
