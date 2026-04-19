@@ -118,7 +118,9 @@ body{
   .pricing-grid,
   .steps,
   .columns,
-  .services-grid{
+  .services-grid,
+  .request-layout,
+  .request-grid{
     grid-template-columns:1fr !important;
   }
 
@@ -129,7 +131,10 @@ body{
   .price-box,
   .step-box,
   .col-box,
-  .service-card{
+  .service-card,
+  .request-form-wrap,
+  .request-list-card,
+  .feedback-form-wrap{
     padding:18px 16px;
   }
 
@@ -140,6 +145,15 @@ body{
   .btn{
     width:100%;
     text-align:center;
+  }
+
+  .request-list-wrap{
+    min-width:0;
+  }
+
+  .request-item{
+    overflow-wrap:break-word;
+    word-break:break-word;
   }
 }
 
@@ -1049,7 +1063,6 @@ footer a:hover{
     height:34px;
     flex-basis:34px;
   }
-}
 
   .cookie-banner{
     left:12px;
