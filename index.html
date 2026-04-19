@@ -146,6 +146,47 @@ body{
   color:var(--blue);
 }
 
+/* NEW: USP BLOCKS */
+.usp-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:22px;
+}
+
+.usp-card{
+  background:linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px 22px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+  text-align:left;
+}
+
+.usp-card h3{
+  margin:0 0 12px;
+  font-size:22px;
+  color:var(--textDark);
+}
+
+.usp-card p{
+  margin:0 0 14px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:15px;
+}
+
+.usp-list{
+  margin:0;
+  padding-left:18px;
+  color:var(--textDark);
+  line-height:1.9;
+}
+
+.usp-list li{
+  margin-bottom:4px;
+}
+
 .cards{
   display:flex;
   flex-direction:column;
@@ -187,7 +228,7 @@ body{
   width:100%;
   display:block;
   object-fit:cover;
-  object-position:center 30%; /* 🔥 вот это главное */
+  object-position:center 30%;
   border-top-left-radius:18px;
   border-top-right-radius:18px;
 }
@@ -201,6 +242,18 @@ body{
 @media (max-width:700px){
   .provider-photo{
     height:220px;
+  }
+
+  .usp-grid{
+    grid-template-columns:1fr;
+  }
+
+  .usp-card{
+    padding:22px 18px;
+  }
+
+  .usp-card h3{
+    font-size:20px;
   }
 }
 
@@ -991,19 +1044,18 @@ footer a:hover{
 <div class="wrap">
 
   <div class="hero reveal">
-    <h1>Reinigung in Hof finden – schnell &amp; regional</h1>
+    <h1>Reinigung in Hof finden – schnell &amp; einfach</h1>
 
     <p>
-      hof-reinigung.de ist eine regionale Plattform für Stadt und Landkreis Hof.
-      Hier finden Sie lokale Reinigungsfirmen direkt – ohne bundesweite Massenplattform und ohne unnötige Umwege.
+      Finden Sie passende Reinigungsfirmen aus Hof und Umgebung – direkt, ohne lange Suche und ohne große Plattformen.
     </p>
 
     <div class="hero-meta">
-      Nur Anbieter aus Hof und Umgebung · Direkte Anfrage · Keine Massenvermittlung
+      Lokale Anbieter · Direkte Anfrage · Kostenlos &amp; unverbindlich
     </div>
 
     <div class="hero-lead">
-      Regional. Klar. Direkt.
+      Mehrere Anbieter vergleichen. Schnell die richtige Firma finden.
     </div>
 
     <div class="hero-cta">
@@ -1012,7 +1064,36 @@ footer a:hover{
     </div>
 
     <div class="hero-note">
-      Kostenlos &amp; unverbindlich · Nur lokale Anbieter aus Hof und Umgebung
+      Nur lokale Anbieter aus Hof und Umgebung · Keine Massenvermittlung
+    </div>
+  </div>
+
+  <!-- 🔥 NEU: USP BLOCK -->
+  <div class="usp-grid reveal">
+    <div class="usp-card">
+      <h3>Warum über uns?</h3>
+      <p>
+        Wir helfen Ihnen, schneller die passende Reinigungsfirma in Hof zu finden – ohne lange Suche.
+      </p>
+      <ul class="usp-list">
+        <li>Zeit sparen statt viele Firmen einzeln zu suchen</li>
+        <li>Mehrere Anbieter einfach vergleichen</li>
+        <li>Nur lokale Firmen aus Hof und Umgebung</li>
+        <li>Kostenlos und direkt anfragen</li>
+      </ul>
+    </div>
+
+    <div class="usp-card">
+      <h3>Für Reinigungsfirmen</h3>
+      <p>
+        Eine einfache Möglichkeit, direkte Kundenanfragen aus der Region zu erhalten.
+      </p>
+      <ul class="usp-list">
+        <li>Direkte Anfragen von Kunden aus Hof</li>
+        <li>Weniger Konkurrenz als auf großen Plattformen</li>
+        <li>Schneller Kontakt zu Interessenten</li>
+        <li>Mehr Sichtbarkeit in Ihrer Region</li>
+      </ul>
     </div>
   </div>
 
