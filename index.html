@@ -107,6 +107,14 @@ body{
     height:220px;
   }
 
+    .premium-top-split{
+    grid-template-columns:1fr;
+  }
+
+  .premium-map iframe{
+    min-height:220px;
+  }
+
   .main-content{
     width:100%;
   }
@@ -340,12 +348,27 @@ body{
   background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
 }
 
-.premium-top{
-  height:170px;
-  background:
-    linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)),
-    url("bilusiak.jpg")
-    center 10% / cover no-repeat;
+  .premium-top-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:260px;
+}
+
+.premium-photo{
+  min-width:0;
+}
+
+.premium-map{
+  min-width:0;
+  background:#f3f6fb;
+}
+
+.premium-map iframe{
+  width:100%;
+  height:100%;
+  min-height:260px;
+  border:0;
+  display:block;
 }
 
 .provider-photo{
@@ -1387,12 +1410,25 @@ footer a:hover{
     </div>
   </div>
 
- <div class="section">
+<div class="section">
   <div class="section-title">Hervorgehobene Anbieter</div>
 
   <div class="cards">
     <div class="card premium-card reveal">
-      <img src="runivo-team.jpg" alt="RUNIVO Reinigung in Hof" class="provider-photo">
+
+      <div class="premium-top-split">
+        <div class="premium-photo">
+          <img src="runivo-team.jpg" alt="RUNIVO Reinigung in Hof" class="provider-photo">
+        </div>
+
+        <div class="premium-map">
+          <iframe
+            src="https://www.google.com/maps?q=Schollenteichstraße+21,+95032+Hof&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
 
       <div class="card-inner">
         <div class="badge">Empfohlen</div>
@@ -1421,6 +1457,7 @@ footer a:hover{
           <a class="btn whatsapp" href="https://wa.me/491725861131" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
+
     </div>
   </div>
 </div>
