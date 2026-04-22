@@ -103,16 +103,26 @@ body{
 }
 
 @media (max-width:700px){
+
   .provider-photo{
     height:220px;
   }
 
-    .premium-top-split{
-    grid-template-columns:1fr;
+  /* отключаем split и делаем обычную карточку */
+  .premium-top-split{
+    display:block;
   }
 
-  .premium-map iframe{
-    min-height:220px;
+  /* полностью скрываем карту */
+  .premium-map{
+    display:none;
+  }
+
+  /* фото снова занимает всю ширину */
+  .provider-photo{
+    width:100%;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
   }
 
   .main-content{
@@ -131,6 +141,7 @@ body{
   .request-grid{
     grid-template-columns:1fr !important;
   }
+}
 
   .usp-card,
   .trust-box,
@@ -369,6 +380,7 @@ body{
   min-height:260px;
   border:0;
   display:block;
+  border-top-right-radius:18px;
 }
 
 .provider-photo{
@@ -377,10 +389,8 @@ body{
   object-fit:cover;
   object-position:center 30%;
   border-top-left-radius:18px;
-  border-top-right-radius:18px;
+  border-top-right-radius:0;
 }
-
-
 
 .badge{
   display:inline-block;
@@ -1455,6 +1465,14 @@ footer a:hover{
           <a class="btn primary" href="mailto:hosseinireinigung@gmail.com">Kontakt per E-Mail</a>
           <a class="btn secondary" href="tel:+491725861131">📞 Anrufen</a>
           <a class="btn whatsapp" href="https://wa.me/491725861131" target="_blank" rel="noopener">WhatsApp</a>
+
+          <!-- 🔥 ВАЖНО: кнопка карты -->
+          <a class="btn secondary"
+             href="https://www.google.com/maps/search/?api=1&query=Schollenteichstraße+21,+95032+Hof"
+             target="_blank"
+             rel="noopener">
+            Standort öffnen
+          </a>
         </div>
       </div>
 
