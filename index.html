@@ -62,6 +62,19 @@ body{
   align-items:center;
 }
 
+/* ВАЖНО — выравнивание колонок */
+.header > *:first-child{
+  justify-self:start;
+}
+
+.header-note{
+  text-align:center;
+}
+
+.header-right{
+  justify-self:end;
+}
+
 .logo{
   display:flex;
   align-items:center;
@@ -958,10 +971,15 @@ footer a:hover{
   }
 
   .logo{
-    justify-content:flex-start;
-    gap:10px;
-    min-width:0;
-  }
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  font-weight:700;
+  font-size:18px;
+  color:var(--textDark);
+  text-decoration:none;
+}
 
   .logo span{
     font-size:18px;
