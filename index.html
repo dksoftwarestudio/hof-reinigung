@@ -1058,42 +1058,36 @@ footer a:hover{
   color:var(--blue);
 }
 
+Вот исправь этот кусок:
+
 @media (max-width:700px){
   .header{
-    grid-template-columns:auto auto;
-    justify-content:space-between;
-    align-items:center;
-    text-align:left;
-    padding:14px 18px;
-    gap:12px;
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:14px 14px 18px;
+    gap:8px;
   }
 
   .logo{
-    justify-content:flex-start;
-    gap:10px;
-  }
-
-  .logo span{
-    font-size:18px;
-    white-space:nowrap;
+    justify-content:center;
   }
 
   .header-note{
-    display:none;
+    padding:0;
+    margin-top:-2px;
+    font-size:12px;
+    line-height:1.4;
   }
 
   .header-right{
-    justify-content:flex-end;
-    margin-top:0;
+    justify-content:center;
+    margin-top:2px;
   }
 
-  .header-right .btn,
-  .back-link{
-    width:auto;
-    max-width:none;
-    text-align:right;
-    white-space:nowrap;
-    font-size:14px;
+  .header-right .btn{
+    width:100%;
+    max-width:320px;
+    text-align:center;
   }
 
   .logo-mark{
@@ -1102,6 +1096,7 @@ footer a:hover{
     flex-basis:34px;
   }
 
+  /* главное исправление для карточки RUNIVO */
   .premium-top-split{
     display:block;
     min-height:auto;
@@ -1149,6 +1144,7 @@ footer a:hover{
     height:46px;
   }
 }
+
 </style>
 
 </head>
