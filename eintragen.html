@@ -23,21 +23,25 @@
 <body class="bg-gray-50 font-sans">
 
   <!-- Header (исправленный и единообразный с главной страницей) -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="tail-container px-6 py-4 flex items-center justify-between">
-      
-      <!-- Логотип + название -->
-      <a href="index.html" class="flex items-center gap-3">
+ <!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="tail-container px-6 py-4">
+
+    <!-- Верхняя строка -->
+    <div class="flex items-center justify-between gap-6">
+
+      <!-- Логотип -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-reinigung.png" 
              alt="hof-reinigung Logo"
-             class="w-20 h-20 rounded-2xl object-cover">
+             class="w-12 h-12 rounded-xl object-cover">
         <div>
-          <span class="text-2xl font-bold text-gray-700">hof-reinigung.de</span>
+          <span class="text-2xl font-bold text-gray-800">hof-reinigung.de</span>
           <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
 
-      <!-- Навигация -->
+      <!-- Навигация (desktop) -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="index.html" class="hover:text-blue-600 transition">Start</a>
         <a href="index.html#firmen" class="hover:text-blue-600 transition">Firmen finden</a>
@@ -45,20 +49,37 @@
         <a href="kontakt.html" class="hover:text-blue-600 transition">Kontakt</a>
       </nav>
 
-      <!-- Кнопки справа -->
-      <div class="flex items-center gap-4">
+      <!-- Кнопки (desktop) -->
+      <div class="hidden md:flex items-center gap-4">
         <a href="https://wa.me/491624012037" target="_blank" 
            class="flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-emerald-600 transition">
           <i class="fab fa-whatsapp text-xl"></i>
           <span>WhatsApp</span>
         </a>
+
         <a href="index.html#anfrage" 
            class="bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-blue-700 transition">
           Anfrage stellen
         </a>
       </div>
+
     </div>
-  </header>
+
+    <!-- Кнопки (mobile) -->
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
+        WhatsApp
+      </a>
+
+      <a href="index.html#anfrage"
+         class="text-center bg-blue-600 text-white py-3 rounded-2xl font-medium">
+        Anfrage
+      </a>
+    </div>
+
+  </div>
+</header>
 
   <!-- Остальной контент страницы (без изменений, только мелкие правки) -->
   <!-- Hero -->
