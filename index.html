@@ -22,42 +22,59 @@
 <body class="bg-gray-50 font-sans">
 
 <!-- Header -->
+<!-- Header -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="tail-container px-4 py-3">
+  <div class="tail-container px-6 py-4">
 
-    <!-- Верх: логотип -->
-    <div class="flex items-center justify-between">
-
-      <a href="index.html" class="flex items-center space-x-2">
+    <!-- Верхняя строка: логотип + меню -->
+    <div class="flex items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center space-x-3 shrink-0">
         <img src="logo-reinigung.png"
-             class="w-10 h-10 object-contain">
-
+             alt="hof-reinigung Logo"
+             class="w-12 h-12 rounded-xl object-cover">
         <div>
-          <h1 class="text-lg font-bold text-gray-800">hof-reinigung.de</h1>
+          <h1 class="text-2xl font-bold text-gray-800">hof-reinigung.de</h1>
           <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
 
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-600">Start</a>
+        <a href="#firmen" class="hover:text-blue-600">Firmen finden</a>
+        <a href="eintragen.html" class="hover:text-blue-600">Als Firma eintragen</a>
+        <a href="kontakt.html" class="hover:text-blue-600">Über uns</a>
+      </nav>
+
+      <!-- Desktop Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://wa.me/491624012037" target="_blank"
+           class="flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-green-600 transition">
+          <i class="fab fa-whatsapp text-xl"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <a href="#anfrage"
+           class="bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-blue-700 transition">
+          Anfrage stellen
+        </a>
+      </div>
     </div>
 
-    <!-- Низ: кнопки -->
-    <div class="flex gap-2 mt-3">
-
-      <a href="https://wa.me/491624012037"
-         class="flex-1 text-center bg-emerald-500 text-white py-2.5 rounded-xl font-medium">
+    <!-- Mobile Buttons -->
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
         WhatsApp
       </a>
 
-      <a href="index.html#anfrage"
-         class="flex-1 text-center bg-blue-600 text-white py-2.5 rounded-xl font-medium">
+      <a href="#anfrage"
+         class="text-center bg-blue-600 text-white py-3 rounded-2xl font-medium">
         Anfrage
       </a>
-
     </div>
 
   </div>
 </header>
-
   <!-- Hero -->
   <section class="hero-bg h-screen flex items-center text-white">
     <div class="tail-container px-6 max-w-4xl">
