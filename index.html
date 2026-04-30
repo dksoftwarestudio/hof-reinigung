@@ -16,16 +16,16 @@
     background-size: cover;
     background-position: center;
   }
-</style>
+  </style>
 </head>
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-<!-- Header -->
+ <!-- Header -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4">
 
-    <div class="grid grid-cols-[auto_1fr_auto] items-center gap-8">
+    <div class="flex items-center justify-between gap-4">   <!-- уменьшил отступ -->
 
       <!-- Лого -->
       <a href="index.html" class="flex items-center gap-3 shrink-0">
@@ -39,7 +39,7 @@
       </a>
 
       <!-- Навигация -->
-      <nav class="hidden md:flex items-center justify-center gap-7 text-sm font-medium">
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="index.html" class="text-blue-600 font-semibold">Start</a>
         <a href="#firmen" class="hover:text-blue-600 transition">Firmen finden</a>
         <a href="eintragen.html" class="hover:text-blue-600 transition">Als Firma eintragen</a>
@@ -47,20 +47,36 @@
       </nav>
 
       <!-- Кнопки -->
-      <div class="hidden md:flex items-center justify-end gap-3">
+      <div class="hidden md:flex items-center gap-3">   <!-- gap-3 вместо gap-4 -->
         <a href="https://wa.me/491624012037" target="_blank"
-           class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-2xl font-medium transition text-sm whitespace-nowrap">
+           class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-2xl font-medium transition whitespace-nowrap">
           <i class="fab fa-whatsapp text-lg"></i>
           <span>WhatsApp</span>
         </a>
 
         <a href="#anfrage"
-           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-5 py-2.5 rounded-2xl font-medium transition text-sm whitespace-nowrap">
+           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-6 py-2.5 rounded-2xl font-medium transition whitespace-nowrap">
           Anfrage stellen
         </a>
       </div>
 
     </div>
+
+    <!-- Mobile -->
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="text-center bg-[#25D366] text-white py-3 rounded-2xl font-medium">
+        WhatsApp
+      </a>
+
+      <a href="#anfrage"
+         class="text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-medium">
+        Anfrage
+      </a>
+    </div>
+
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="hero-bg min-h-screen flex items-center text-white py-20">
@@ -321,28 +337,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuButton = document.getElementById('menuButton');
-      const mobileMenu = document.getElementById('mobileMenu');
-
-      if (menuButton && mobileMenu) {
-        menuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          menuButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
-        });
-      }
-
-      const mobileLinks = document.querySelectorAll('#mobileMenu a');
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          if (menuButton) menuButton.textContent = '☰';
-        });
-      });
-    });
-  </script>
 
 </body>
 </html>
