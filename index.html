@@ -125,32 +125,67 @@
   </section>
 
   <!-- Firmen finden -->
-  <section id="firmen" class="py-20 bg-white">
-    <div class="tail-container px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">
-        Reinigungsfirmen in Hof finden
-      </h2>
+<section id="firmen" class="py-20 bg-white">
+  <div class="tail-container px-6">
 
-      <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-        Regionale Reinigungsanbieter aus Hof und Umgebung können sich hier eintragen.
-        Die Übersicht wird Schritt für Schritt erweitert.
+    <h2 class="text-4xl font-bold text-center mb-4">
+      Reinigungsfirmen in Hof
+    </h2>
+
+    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
+      Ausgewählte Anbieter aus Hof und Umgebung.
+    </p>
+
+    <!-- Карточки фирм -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+      <!-- Firma 1 -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-zinc-100 hover:shadow-md transition">
+        <div class="h-52 bg-cover bg-center" style="background-image: url('runivo-team.jpg')"></div>
+
+        <div class="p-6">
+          <h4 class="font-bold text-xl mb-1">RUNIVO Reinigung</h4>
+          <p class="text-blue-600 text-sm mb-2">Hof • Gebäudereinigung</p>
+
+          <p class="text-yellow-500 text-sm mb-3">★★★★★</p>
+
+          <p class="text-zinc-600 text-sm mb-5">
+            Reinigung für Büros, Praxen und Privathaushalte.
+          </p>
+
+          <a href="#anfrage"
+             class="block text-center bg-[#1A53AD] text-white py-2.5 rounded-xl text-sm font-medium hover:bg-[#163E82] transition">
+            Anfrage stellen
+          </a>
+        </div>
+      </div>
+
+      <!-- Пустые можно оставить или убрать -->
+      <div class="hidden md:block"></div>
+      <div class="hidden md:block"></div>
+
+    </div>
+
+    <!-- Блок для фирм -->
+    <div class="text-center py-12 border border-dashed border-zinc-200 rounded-3xl bg-[#F8FAFC]">
+
+      <p class="text-lg font-medium text-zinc-700">
+        Sie sind Reinigungsfirma in Hof?
       </p>
 
-      <div class="text-center text-zinc-500 py-16 border-2 border-dashed border-zinc-200 rounded-3xl bg-[#F8FAFC]">
-        <p class="text-lg font-medium text-zinc-700">
-          Reinigungsfirmen aus Hof können sich bereits eintragen.
-        </p>
-        <p class="text-sm mt-2">
-          Die Anbieterübersicht wird nach und nach aufgebaut.
-        </p>
+      <p class="text-sm text-zinc-500 mt-2">
+        Erhalten Sie direkte Kundenanfragen aus Ihrer Region.
+      </p>
 
-        <a href="eintragen.html"
-           class="inline-block mt-6 bg-blue-600 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-blue-700 transition">
-          Firma eintragen
-        </a>
-      </div>
+      <a href="eintragen.html"
+         class="inline-block mt-6 bg-[#1A53AD] text-white px-7 py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+        Jetzt Firma eintragen
+      </a>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- Leistungen -->
   <section id="leistungen" class="py-20 bg-[#F5F5F5]">
