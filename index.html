@@ -21,47 +21,63 @@
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-  <!-- Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+ <!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="tail-container px-6 py-4">
 
-      <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0">
-        <img src="logo-reinigung.png" alt="hof-reinigung" class="w-9 h-9 rounded-2xl">
-        <div class="leading-tight">
-          <span class="text-xl font-bold text-[#1A53AD]">hof-reinigung</span>
-          <p class="text-[10px] text-zinc-500 -mt-0.5">Hof (Saale)</p>
+    <!-- Верх -->
+    <div class="flex items-center justify-between gap-6">
+
+      <!-- Лого -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <img src="logo-reinigung.png" 
+             alt="hof-reinigung Logo"
+             class="w-12 h-12 rounded-xl object-cover">
+        <div>
+          <span class="text-2xl font-bold text-gray-800">hof-reinigung.de</span>
+          <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
 
-      <div class="flex items-center gap-2">
-        <a href="https://wa.me/491624012037" target="_blank"
-   class="hidden sm:flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-2xl font-medium transition text-sm whitespace-nowrap">
-  <i class="fab fa-whatsapp text-lg"></i>
-  <span>WhatsApp</span>
-</a>
+      <!-- Навигация -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="text-blue-600 font-semibold">Start</a>
+        <a href="#firmen" class="hover:text-blue-600 transition">Firmen finden</a>
+        <a href="eintragen.html" class="hover:text-blue-600 transition">Als Firma eintragen</a>
+        <a href="kontakt.html" class="hover:text-blue-600 transition">Kontakt</a>
+      </nav>
 
-<a href="#anfrage"
-   class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-5 py-2.5 rounded-2xl font-medium transition text-sm whitespace-nowrap">
-  Anfrage stellen
-</a>
+      <!-- Кнопки -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://wa.me/491624012037" target="_blank" 
+           class="flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-[#1ebe5d] transition">
+          <i class="fab fa-whatsapp text-xl"></i>
+          <span>WhatsApp</span>
+        </a>
 
-        <button id="menuButton" class="md:hidden text-3xl text-zinc-700 hover:text-zinc-900 transition pl-2" aria-label="Menü öffnen">
-          ☰
-        </button>
+        <a href="#anfrage" 
+           class="bg-[#1A53AD] text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-[#163E82] transition">
+          Anfrage stellen
+        </a>
       </div>
+
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
-      <div class="px-5 py-6 flex flex-col gap-5 text-base font-medium">
-        <a href="index.html" class="py-2">Start</a>
-        <a href="#firmen" class="py-2">Firmen finden</a>
-        <a href="#leistungen" class="py-2">Leistungen</a>
-        <a href="eintragen.html" class="py-2">Firma eintragen</a>
-        <a href="#anfrage" class="py-3 text-[#1A53AD] font-semibold">Kostenlose Anfrage stellen</a>
-      </div>
+    <!-- Mobile -->
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="text-center bg-[#25D366] text-white py-3 rounded-2xl font-medium">
+        WhatsApp
+      </a>
+
+      <a href="#anfrage"
+         class="text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-medium">
+        Anfrage
+      </a>
     </div>
-  </header>
+
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="hero-bg min-h-screen flex items-center text-white py-20">
