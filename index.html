@@ -16,16 +16,21 @@
     background-size: cover;
     background-position: center;
   }
+  .tail-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   </style>
 </head>
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
- <!-- Header -->
+ <!-- Header (сделан как в eintragen.html) -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4">
 
-    <div class="flex items-center justify-between gap-4">   <!-- уменьшил отступ -->
+    <div class="flex items-center justify-between gap-6">
 
       <!-- Лого -->
       <a href="index.html" class="flex items-center gap-3 shrink-0">
@@ -46,16 +51,16 @@
         <a href="kontakt.html" class="hover:text-blue-600 transition">Kontakt</a>
       </nav>
 
-      <!-- Кнопки -->
-      <div class="hidden md:flex items-center gap-3">   <!-- gap-3 вместо gap-4 -->
+      <!-- Кнопки Desktop -->
+      <div class="hidden md:flex items-center gap-4">
         <a href="https://wa.me/491624012037" target="_blank"
-           class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-2xl font-medium transition whitespace-nowrap">
-          <i class="fab fa-whatsapp text-lg"></i>
+           class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-medium transition">
+          <i class="fab fa-whatsapp text-xl"></i>
           <span>WhatsApp</span>
         </a>
 
         <a href="#anfrage"
-           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-6 py-2.5 rounded-2xl font-medium transition whitespace-nowrap">
+           class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-2xl font-medium transition">
           Anfrage stellen
         </a>
       </div>
@@ -65,12 +70,12 @@
     <!-- Mobile -->
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
       <a href="https://wa.me/491624012037" target="_blank"
-         class="text-center bg-[#25D366] text-white py-3 rounded-2xl font-medium">
+         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
         WhatsApp
       </a>
 
       <a href="#anfrage"
-         class="text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-medium">
+         class="text-center bg-blue-600 text-white py-3 rounded-2xl font-medium">
         Anfrage
       </a>
     </div>
@@ -80,7 +85,7 @@
 
   <!-- Hero -->
   <section class="hero-bg min-h-screen flex items-center text-white py-20">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="tail-container px-6">
       <div class="max-w-3xl">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
           Reinigung in Hof –<br>
@@ -121,7 +126,7 @@
 
   <!-- Firmen finden -->
   <section id="firmen" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="tail-container px-6">
       <h2 class="text-4xl font-bold text-center mb-4">
         Reinigungsfirmen in Hof finden
       </h2>
@@ -140,7 +145,7 @@
         </p>
 
         <a href="eintragen.html"
-           class="inline-block mt-6 bg-[#1A53AD] text-white px-7 py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+           class="inline-block mt-6 bg-blue-600 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-blue-700 transition">
           Firma eintragen
         </a>
       </div>
@@ -149,7 +154,7 @@
 
   <!-- Leistungen -->
   <section id="leistungen" class="py-20 bg-[#F5F5F5]">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="tail-container px-6">
       <h2 class="text-4xl font-bold text-center mb-4">
         Welche Reinigungen vermitteln wir?
       </h2>
@@ -194,7 +199,7 @@
 
   <!-- Warum über uns -->
   <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="tail-container px-6">
       <h2 class="text-4xl font-bold text-center mb-4">
         Warum über hof-reinigung.de?
       </h2>
@@ -227,7 +232,7 @@
 
   <!-- Anfrage Formular -->
   <section id="anfrage" class="py-20 bg-[#1A53AD] text-white">
-    <div class="max-w-3xl mx-auto px-6">
+    <div class="tail-container px-6 max-w-3xl mx-auto">
       <div class="text-center mb-10">
         <h2 class="text-4xl font-bold mb-4">
           Jetzt kostenlose Anfrage stellen
@@ -242,20 +247,20 @@
 
           <div class="grid md:grid-cols-2 gap-5">
             <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
 
             <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
           </div>
 
           <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
 
           <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
 
           <select name="service" required aria-label="Welche Reinigung brauchen Sie?"
-                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-[#1A53AD]">
+                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-blue-600">
             <option value="" disabled selected>Welche Reinigung brauchen Sie?</option>
             <option value="Haushaltsreinigung">Haushaltsreinigung</option>
             <option value="Treppenhausreinigung">Treppenhausreinigung</option>
@@ -267,10 +272,10 @@
           </select>
 
           <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was Sie brauchen."
-                    class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]"></textarea>
+                    class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600"></textarea>
 
           <button type="submit"
-                  class="w-full bg-[#1A53AD] text-white py-5 rounded-3xl font-semibold text-xl hover:bg-[#163E82] transition">
+                  class="w-full bg-blue-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-blue-700 transition">
             Anfrage absenden
           </button>
         </form>
@@ -284,12 +289,12 @@
 
   <!-- Footer -->
   <footer class="bg-zinc-900 text-zinc-400 py-16">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="tail-container px-6">
       <div class="grid md:grid-cols-4 gap-10">
 
         <div>
           <div class="flex items-center gap-3 text-white mb-6">
-            <div class="w-9 h-9 bg-[#1A53AD] rounded-2xl flex items-center justify-center text-xl">H</div>
+            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-xl">H</div>
             <span class="text-2xl font-bold">hof-reinigung</span>
           </div>
           <p class="text-sm">
