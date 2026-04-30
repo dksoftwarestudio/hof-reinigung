@@ -4,376 +4,346 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hof-reinigung.de | Reinigung in Hof – lokal & einfach</title>
+  <meta name="description" content="Reinigung in Hof finden – regionale Reinigungsanbieter für Haushalt, Büro, Fenster und Treppenhaus. Kostenlos und unverbindlich anfragen.">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
   <style>
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('reinigung.jpg');
+      background-image: linear-gradient(rgba(26,83,173,0.70), rgba(26,83,173,0.82)),
+                        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2000&q=80');
       background-size: cover;
       background-position: center;
     }
-    .tail-container {
-      max-width: 1280px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   </style>
 </head>
-<body class="bg-gray-50 font-sans">
 
-<!-- Header -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="tail-container px-6 py-4">
+<body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-    <!-- Верхняя строка: логотип + меню -->
-    <div class="flex items-center justify-between gap-6">
-      <a href="index.html" class="flex items-center space-x-3 shrink-0">
-        <img src="logo-reinigung.png"
-             alt="hof-reinigung Logo"
-             class="w-12 h-12 rounded-xl object-cover">
-        <div>
-          <h1 class="text-2xl font-bold text-gray-800">hof-reinigung.de</h1>
-          <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+      <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0">
+        <img src="logo-reinigung.png" alt="hof-reinigung" class="w-9 h-9 rounded-2xl">
+        <div class="leading-tight">
+          <span class="text-xl font-bold text-[#1A53AD]">hof-reinigung</span>
+          <p class="text-[10px] text-zinc-500 -mt-0.5">Hof (Saale)</p>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-blue-600">Start</a>
-        <a href="#firmen" class="hover:text-blue-600">Firmen finden</a>
-        <a href="eintragen.html" class="hover:text-blue-600">Als Firma eintragen</a>
-        <a href="kontakt.html" class="hover:text-blue-600">Kontakt</a>
-      </nav>
-
-      <!-- Desktop Buttons -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="flex items-center gap-2">
         <a href="https://wa.me/491624012037" target="_blank"
-           class="flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-green-600 transition">
-          <i class="fab fa-whatsapp text-xl"></i>
+           class="hidden sm:flex items-center gap-2 bg-[#1A53AD] hover:bg-[#163E82] text-white px-4 py-2.5 rounded-2xl font-medium transition text-sm">
+          <i class="fab fa-whatsapp text-lg"></i>
           <span>WhatsApp</span>
         </a>
 
         <a href="#anfrage"
-           class="bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-blue-700 transition">
+           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-5 py-2.5 rounded-2xl font-medium transition text-sm whitespace-nowrap">
           Anfrage stellen
         </a>
-      </div>
-    </div>
 
-    <!-- Mobile Buttons -->
-    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank"
-         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
-        WhatsApp
-      </a>
-
-      <a href="#anfrage"
-         class="text-center bg-blue-600 text-white py-3 rounded-2xl font-medium">
-        Anfrage
-      </a>
-    </div>
-
-  </div>
-</header>
-  <!-- Hero -->
-  <section class="hero-bg h-screen flex items-center text-white">
-    <div class="tail-container px-6 max-w-4xl">
-      <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-        Reinigung in Hof –<br>
-        <span class="text-blue-300">schnell, lokal und stressfrei</span>
-      </h2>
-      <p class="text-xl md:text-2xl mb-10 text-gray-100">
-        Lokale Reinigungsfirmen aus Hof und Umgebung melden sich bei Ihnen.<br>
-        Kostenlos • Unverbindlich • Mehrere Angebote in 24 Stunden
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#anfrage" 
-           class="bg-blue-500 hover:bg-blue-600 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
-          Kostenlose Anfrage stellen
-        </a>
-        <a href="#firmen" 
-           class="border-2 border-white hover:bg-white hover:text-blue-700 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
-          Firmen in Hof ansehen
-        </a>
-      </div>
-      <div class="flex gap-8 mt-12 text-sm">
-        <div class="flex items-center gap-3">
-          <i class="fas fa-map-marker-alt text-2xl"></i>
-          <div>Nur Anbieter aus Hof & Umgebung</div>
-        </div>
-        <div class="flex items-center gap-3">
-          <i class="fas fa-euro-sign text-2xl"></i>
-          <div>100 % kostenlos für Kunden</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Warum wir -->
-  <section class="py-20 bg-white">
-    <div class="tail-container px-6">
-      <h3 class="text-4xl font-bold text-center mb-4">Warum hof-reinigung.de?</h3>
-      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">Einfach, transparent und regional – so soll Vermittlung funktionieren.</p>
-      
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">⏱️</div>
-          <h4 class="font-semibold text-xl mb-3">Zeit sparen</h4>
-          <p class="text-gray-600">Statt 10 Anrufe – 3–5 passende Angebote direkt aus der Region.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">🏠</div>
-          <h4 class="font-semibold text-xl mb-3">Lokal</h4>
-          <p class="text-gray-600">Nur Reinigungsfirmen aus Hof (Saale) und näherer Umgebung.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">🔍</div>
-          <h4 class="font-semibold text-xl mb-3">Transparenz</h4>
-          <p class="text-gray-600">Vergleichen Sie Preise, Termine und Leistungen selbst.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">✅</div>
-          <h4 class="font-semibold text-xl mb-3">Kostenlos</h4>
-          <p class="text-gray-600">Keine Gebühren für Kunden – direkter Kontakt.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- So funktioniert's -->
-  <section class="py-20 bg-gray-100">
-    <div class="tail-container px-6">
-      <h3 class="text-4xl font-bold text-center mb-16">So funktioniert’s</h3>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-          <div class="text-5xl font-bold text-blue-200 mb-6">01</div>
-          <h4 class="font-semibold text-2xl mb-4">Anfrage stellen</h4>
-          <p class="text-gray-600">Beschreiben Sie kurz, was Sie brauchen (Wohnung, Büro, Fenster, Treppenhaus…).</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-          <div class="text-5xl font-bold text-blue-200 mb-6">02</div>
-          <h4 class="font-semibold text-2xl mb-4">Firmen melden sich</h4>
-          <p class="text-gray-600">Passende lokale Anbieter aus Hof erhalten Ihre Anfrage und kontaktieren Sie direkt.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-          <div class="text-5xl font-bold text-blue-200 mb-6">03</div>
-          <h4 class="font-semibold text-2xl mb-4">Angebote vergleichen</h4>
-          <p class="text-gray-600">Erhalten Sie Preise, Termine und Leistungen – ganz unverbindlich.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-          <div class="text-5xl font-bold text-blue-200 mb-6">04</div>
-          <h4 class="font-semibold text-2xl mb-4">Firma auswählen</h4>
-          <p class="text-gray-600">Entscheiden Sie selbst – ohne Druck und ohne Vermittlungsgebühr.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- Anfrage Formular -->
-<section id="anfrage" class="py-20 bg-white">
-  <div class="tail-container px-6">
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <h3 class="text-4xl font-bold mb-4">Kostenlose Anfrage stellen</h3>
-      <p class="text-gray-600 text-lg">
-        Beschreiben Sie kurz, welche Reinigung Sie benötigen.
-        Wir leiten Ihre Anfrage an passende lokale Anbieter aus Hof weiter.
-      </p>
-    </div>
-
-    <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
-          method="POST"
-          class="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-sm">
-
-      <input type="hidden" name="_subject" value="Neue Anfrage über hof-reinigung.de">
-      <input type="hidden" name="_language" value="de">
-
-      <div class="grid md:grid-cols-2 gap-5">
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-          <input type="text" name="Name" required placeholder="Ihr Name"
-                 class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">E-Mail</label>
-          <input type="email" name="E-Mail" required placeholder="ihre@email.de"
-                 class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">Ort</label>
-          <input type="text" name="Ort" required value="Hof"
-                 class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">Art der Reinigung</label>
-          <select name="Art der Reinigung"
-                  class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option>Wohnungsreinigung</option>
-            <option>Büroreinigung</option>
-            <option>Fensterreinigung</option>
-            <option>Treppenhausreinigung</option>
-            <option>Grundreinigung</option>
-            <option>Sonstiges</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="mt-5">
-        <label class="block text-sm font-semibold text-gray-700 mb-2">Ihre Anfrage</label>
-        <textarea name="Anfrage" required rows="5"
-                  placeholder="Zum Beispiel: Fensterreinigung für eine 3-Zimmer-Wohnung in Hof..."
-                  class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-4 mt-6">
-        <button type="submit"
-                class="flex-1 bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-blue-700 transition">
-          Anfrage senden
+        <button id="menuButton" class="md:hidden text-3xl text-zinc-700 hover:text-zinc-900 transition pl-2" aria-label="Menü öffnen">
+          ☰
         </button>
-
-        <a href="https://wa.me/491624012037"
-           target="_blank"
-           class="flex-1 text-center bg-emerald-500 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-green-600 transition">
-          WhatsApp
-        </a>
       </div>
+    </div>
 
-      <p class="text-xs text-gray-500 text-center mt-5">
-        Kostenlos & unverbindlich · Ihre Anfrage wird an passende lokale Anbieter weitergeleitet.
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
+      <div class="px-5 py-6 flex flex-col gap-5 text-base font-medium">
+        <a href="index.html" class="py-2">Start</a>
+        <a href="#firmen" class="py-2">Firmen finden</a>
+        <a href="#leistungen" class="py-2">Leistungen</a>
+        <a href="eintragen.html" class="py-2">Firma eintragen</a>
+        <a href="#anfrage" class="py-3 text-[#1A53AD] font-semibold">Kostenlose Anfrage stellen</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Reinigung in Hof –<br>
+          lokal & unkompliziert
+        </h1>
+
+        <p class="text-xl md:text-2xl mb-10 text-blue-50">
+          hof-reinigung.de verbindet Kunden mit Reinigungsanbietern aus Hof und Umgebung.<br>
+          <strong>Direkt • Unverbindlich • Kostenlos für Sie</strong>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#anfrage"
+             class="bg-white hover:bg-blue-50 text-[#1A53AD] text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
+            Kostenlose Anfrage stellen
+          </a>
+
+          <a href="#leistungen"
+             class="border-2 border-white hover:bg-white hover:text-[#1A53AD] text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
+            Leistungen ansehen
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-3 mt-10 text-sm">
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+            Regional aus Hof
+          </div>
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+            Kostenlos & unverbindlich
+          </div>
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+            Direkter Kontakt
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firmen finden -->
+  <section id="firmen" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">
+        Reinigungsfirmen in Hof finden
+      </h2>
+
+      <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
+        Regionale Reinigungsanbieter aus Hof und Umgebung können sich hier eintragen.
+        Die Übersicht wird Schritt für Schritt erweitert.
       </p>
-    </form>
-  </div>
-</section>
 
-  <!-- Hervorgehobene Firmen -->
-  <section id="firmen" class="py-20 bg-gray-100">
-    <div class="tail-container px-6">
-      <h3 class="text-4xl font-bold text-center mb-4">Hervorgehobene Anbieter in Hof</h3>
-      <p class="text-center text-gray-600 mb-16">Zuverlässige Partner aus der Region</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Карточка 1 -->
-       <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-  <div class="h-52 bg-cover" style="background-image: url('runivo-team.jpg')"></div>
+      <div class="text-center text-zinc-500 py-16 border-2 border-dashed border-zinc-200 rounded-3xl bg-[#F8FAFC]">
+        <p class="text-lg font-medium text-zinc-700">
+          Reinigungsfirmen aus Hof können sich bereits eintragen.
+        </p>
+        <p class="text-sm mt-2">
+          Die Anbieterübersicht wird nach und nach aufgebaut.
+        </p>
 
-  <div class="p-8">
-    <h4 class="font-bold text-2xl">RUNIVO Reinigung</h4>
-
-    <p class="text-blue-600 text-sm mb-2">Hof • Gebäudereinigung</p>
-
-    <!-- рейтинг -->
-    <p class="text-yellow-500 text-sm mb-4">
-      ★ 4.8 Bewertung auf Google
-    </p>
-
-    <p class="text-gray-600 text-sm mb-6">
-      Professionelle Reinigung für Büros, Praxen und Privathaushalte. Schnelle Antwortzeiten.
-    </p>
-
-    <!-- кнопки -->
-    <div class="flex gap-3">
-      <a href="#anfrage"
-         class="flex-1 text-center bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition">
-        Anfrage stellen
-      </a>
-
-      <a href="https://www.google.com/search?q=RUNIVO+Reinigung+Hof"
-         target="_blank"
-         class="flex-1 text-center border border-gray-300 py-3 rounded-xl font-medium text-gray-700 hover:bg-gray-100 transition">
-        Bewertungen
-      </a>
-    </div>
-  </div>
-</div>
-        <!-- Добавь ещё 2 карточки аналогично -->
+        <a href="eintragen.html"
+           class="inline-block mt-6 bg-[#1A53AD] text-white px-7 py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+          Firma eintragen
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Для фирм -->
-  <section class="py-20 bg-blue-700 text-white">
-    <div class="tail-container px-6 text-center">
-      <h3 class="text-4xl font-bold mb-6">Sie sind Reinigungsfirma in Hof?</h3>
-      <p class="text-xl max-w-2xl mx-auto mb-10">Erhalten Sie direkte Kundenanfragen aus der Region – kostenlos und ohne große Konkurrenz.</p>
-      <a href="eintragen.html" 
-         class="inline-block bg-white text-blue-700 px-12 py-5 rounded-3xl text-xl font-semibold hover:bg-emerald-50 transition">
-        Jetzt als Firma eintragen
-      </a>
+  <!-- Leistungen -->
+  <section id="leistungen" class="py-20 bg-[#F5F5F5]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">
+        Welche Reinigungen vermitteln wir?
+      </h2>
+
+      <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
+        Für private Haushalte, Treppenhäuser, Büros und Gewerbeobjekte in Hof und Umgebung.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Haushaltsreinigung</h3>
+          <p class="text-sm text-zinc-600">Für Wohnungen, Häuser und regelmäßige Unterstützung im Alltag.</p>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Treppenhausreinigung</h3>
+          <p class="text-sm text-zinc-600">Für Mehrfamilienhäuser, Hausverwaltungen und Eigentümer.</p>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Fensterreinigung</h3>
+          <p class="text-sm text-zinc-600">Für private und gewerbliche Fensterreinigung in Hof.</p>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Büroreinigung</h3>
+          <p class="text-sm text-zinc-600">Für Büros, Praxen und kleinere Geschäftsräume.</p>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Gewerbereinigung</h3>
+          <p class="text-sm text-zinc-600">Für gewerbliche Flächen, Betriebe und Dienstleister.</p>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl shadow-sm border border-zinc-100">
+          <h3 class="font-semibold text-xl mb-2">Grundreinigung</h3>
+          <p class="text-sm text-zinc-600">Für gründliche Reinigung nach Bedarf oder als einmaliger Auftrag.</p>
+        </div>
+      </div>
     </div>
   </section>
 
- <!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 py-16">
-  <div class="tail-container px-6">
-    <div class="grid md:grid-cols-4 gap-10">
+  <!-- Warum über uns -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">
+        Warum über hof-reinigung.de?
+      </h2>
 
-      <div>
-        <a href="index.html" class="flex items-center gap-3 text-white mb-6">
-          <img src="logo-reinigung.png"
-               alt="hof-reinigung Logo"
-               class="w-9 h-9 rounded-2xl object-cover">
-          <span class="text-2xl font-bold">hof-reinigung.de</span>
-        </a>
-        <p class="text-sm">
-          Lokale Plattform für Reinigungsaufträge in Hof (Saale) und Umgebung.
+      <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-16">
+        Statt lange zu suchen, senden Sie eine Anfrage – passende regionale Anbieter können sich direkt bei Ihnen melden.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center">
+          <div class="text-5xl mb-4">📍</div>
+          <h4 class="font-semibold text-xl mb-2">Regional</h4>
+          <p class="text-zinc-600">Fokus auf Hof und Umgebung.</p>
+        </div>
+
+        <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center">
+          <div class="text-5xl mb-4">⚡</div>
+          <h4 class="font-semibold text-xl mb-2">Einfach</h4>
+          <p class="text-zinc-600">Eine Anfrage statt viele einzelne Telefonate.</p>
+        </div>
+
+        <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center">
+          <div class="text-5xl mb-4">🤝</div>
+          <h4 class="font-semibold text-xl mb-2">Direkt</h4>
+          <p class="text-zinc-600">Kein Callcenter und keine komplizierten Prozesse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anfrage Formular -->
+  <section id="anfrage" class="py-20 bg-[#1A53AD] text-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold mb-4">
+          Jetzt kostenlose Anfrage stellen
+        </h2>
+        <p class="text-blue-100">
+          Beschreiben Sie kurz, welche Reinigung Sie benötigen.
         </p>
       </div>
 
-      <div>
-        <h5 class="font-semibold text-white mb-4">Navigation</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#anfrage" class="hover:text-white">Anfrage stellen</a></li>
-          <li><a href="#firmen" class="hover:text-white">Firmen finden</a></li>
-          <li><a href="eintragen.html" class="hover:text-white">Firma eintragen</a></li>
-        </ul>
+      <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
+        <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
+                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+
+            <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
+                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+          </div>
+
+          <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+
+          <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]">
+
+          <select name="service" required aria-label="Welche Reinigung brauchen Sie?"
+                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-[#1A53AD]">
+            <option value="" disabled selected>Welche Reinigung brauchen Sie?</option>
+            <option value="Haushaltsreinigung">Haushaltsreinigung</option>
+            <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+            <option value="Fensterreinigung">Fensterreinigung</option>
+            <option value="Büroreinigung">Büroreinigung</option>
+            <option value="Gewerbereinigung">Gewerbereinigung</option>
+            <option value="Grundreinigung">Grundreinigung</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+
+          <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was Sie brauchen."
+                    class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-[#1A53AD]"></textarea>
+
+          <button type="submit"
+                  class="w-full bg-[#1A53AD] text-white py-5 rounded-3xl font-semibold text-xl hover:bg-[#163E82] transition">
+            Anfrage absenden
+          </button>
+        </form>
+
+        <p class="text-center text-zinc-500 text-sm mt-6">
+          Unverbindlich • Kostenlos • Keine Abos
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-zinc-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <div>
+          <div class="flex items-center gap-3 text-white mb-6">
+            <div class="w-9 h-9 bg-[#1A53AD] rounded-2xl flex items-center justify-center text-xl">H</div>
+            <span class="text-2xl font-bold">hof-reinigung</span>
+          </div>
+          <p class="text-sm">
+            Lokale Vermittlungsplattform für Reinigungsaufträge in Hof (Saale).
+          </p>
+        </div>
+
+        <div>
+          <h5 class="font-semibold text-white mb-4">Navigation</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#firmen" class="hover:text-white">Firmen finden</a></li>
+            <li><a href="#leistungen" class="hover:text-white">Leistungen</a></li>
+            <li><a href="eintragen.html" class="hover:text-white">Firma eintragen</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-semibold text-white mb-4">Kontakt</h5>
+          <p class="text-sm mb-1">
+            WhatsApp:
+            <a href="https://wa.me/491624012037" class="text-blue-300 hover:text-white">
+              +49 162 4012037
+            </a>
+          </p>
+          <p class="text-sm">
+            E-Mail:
+            <a href="mailto:info@hof-reinigung.de" class="text-blue-300 hover:text-white">
+              info@hof-reinigung.de
+            </a>
+          </p>
+        </div>
+
+        <div>
+          <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+            <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div>
-        <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
-          <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
-        </ul>
+      <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
+        © 2026 hof-reinigung.de
       </div>
-
-     <div>
-  <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-  
-  <p class="text-sm mb-2">
-    WhatsApp: 
-    <a href="https://wa.me/491624012037" class="text-blue-400 hover:text-blue-300 transition">
-      +49 162 4012037
-    </a>
-  </p>
-  
-  <p class="text-sm mb-2">
-    E-Mail: 
-    <a href="mailto:info@hof-reinigung.de" class="text-blue-400 hover:text-blue-300 transition">
-      info@hof-reinigung.de
-    </a>
-  </p>
-  
-  <p class="text-sm mt-4 text-gray-400">Made with ❤️ in Hof</p>
-</div>
-
     </div>
+  </footer>
 
-    <div class="text-center text-xs mt-16 border-t border-gray-800 pt-8">
-      © 2026 hof-reinigung.de – Ein regionales Projekt
-    </div>
-  </div>
-</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
 
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#1A53AD'
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
       }
-    }
-  }
-}
-</script>
+
+      const mobileLinks = document.querySelectorAll('#mobileMenu a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuButton) menuButton.textContent = '☰';
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
