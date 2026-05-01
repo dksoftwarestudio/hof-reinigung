@@ -10,29 +10,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <style>
-  .hero-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)),
-                      url('reinigung.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .tail-container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)),
+                        url('reinigung.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .tail-container {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   </style>
 </head>
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
- <!-- Header (сделан как в eintragen.html) -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4">
 
     <div class="flex items-center justify-between gap-6">
-
-      <!-- Лого -->
       <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-reinigung.png" 
              alt="hof-reinigung Logo"
@@ -43,7 +60,6 @@
         </div>
       </a>
 
-      <!-- Навигация -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="index.html" class="text-blue-600 font-semibold">Start</a>
         <a href="#firmen" class="hover:text-blue-600 transition">Firmen finden</a>
@@ -51,7 +67,6 @@
         <a href="kontakt.html" class="hover:text-blue-600 transition">Kontakt</a>
       </nav>
 
-      <!-- Кнопки Desktop -->
       <div class="hidden md:flex items-center gap-4">
         <a href="https://wa.me/491624012037" target="_blank"
            class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-medium transition">
@@ -64,10 +79,8 @@
           Anfrage stellen
         </a>
       </div>
-
     </div>
 
-    <!-- Mobile -->
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
       <a href="https://wa.me/491624012037" target="_blank"
          class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
@@ -83,22 +96,21 @@
   </div>
 </header>
 
-  <!-- Hero -->
-  <section class="hero-bg min-h-screen flex items-center text-white py-20">
-    <div class="tail-container px-6">
-      <div class="max-w-3xl">
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-  Reinigung in Hof —
-  <span class="text-blue-300">
-    schnell, lokal und stressfrei
-  </span>
-</h1>
+<section class="hero-bg min-h-screen flex items-center text-white py-20">
+  <div class="tail-container px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+        Reinigung in Hof —
+        <span class="text-blue-300">
+          schnell, lokal und stressfrei
+        </span>
+      </h1>
 
-        <p class="text-xl md:text-2xl mb-10 text-green-50">
+      <p class="text-xl md:text-2xl mb-10 text-green-50">
         Wir verbinden Sie mit lokalen Reinigungsfirmen aus Hof und Umgebung.<br>
       </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+      <div class="flex flex-col sm:flex-row gap-4">
         <a href="#anfrage"
            class="bg-white hover:bg-blue-50 text-blue-600 text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
           Kostenlose Anfrage stellen
@@ -125,7 +137,6 @@
   </div>
 </section>
 
- <!-- Firmen finden -->
 <section id="firmen" class="py-20 bg-white">
   <div class="tail-container px-6">
 
@@ -139,8 +150,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- RUNIVO -->
-      <div class="bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:shadow-lg transition">
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:shadow-lg transition">
         <div class="relative h-52">
           <img src="runivo-team.jpg"
                alt="RUNIVO Reinigung"
@@ -182,8 +192,7 @@
         </div>
       </div>
 
-      <!-- Platzhalter 1 -->
-      <div class="bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
+      <div class="reveal bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
         <div class="text-4xl mb-4">🏢</div>
 
         <h4 class="font-semibold text-lg mb-2">
@@ -200,8 +209,7 @@
         </a>
       </div>
 
-      <!-- Platzhalter 2 -->
-      <div class="bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
+      <div class="reveal bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
         <div class="text-4xl mb-4">🧼</div>
 
         <h4 class="font-semibold text-lg mb-2">
@@ -220,7 +228,6 @@
 
     </div>
 
-    <!-- CTA für Firmen -->
     <div class="text-center mt-16">
       <p class="text-zinc-600 mb-4">
         Sie sind Reinigungsfirma in Hof?
@@ -235,8 +242,7 @@
   </div>
 </section>
 
-  <!-- Leistungen -->
- <section id="leistungen" class="py-20 bg-[#F5F5F5]">
+<section id="leistungen" class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6">
     
     <h2 class="text-4xl font-bold text-center mb-4">
@@ -249,32 +255,32 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Haushaltsreinigung</h3>
         <p class="text-sm text-zinc-600">Für Wohnungen, Häuser und regelmäßige Unterstützung im Alltag.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Treppenhausreinigung</h3>
         <p class="text-sm text-zinc-600">Für Mehrfamilienhäuser, Hausverwaltungen und Eigentümer.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Fensterreinigung</h3>
         <p class="text-sm text-zinc-600">Für private und gewerbliche Fensterreinigung in Hof.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Büroreinigung</h3>
         <p class="text-sm text-zinc-600">Für Büros, Praxen und kleinere Geschäftsräume.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Gewerbereinigung</h3>
         <p class="text-sm text-zinc-600">Für gewerbliche Flächen, Betriebe und Dienstleister.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Grundreinigung</h3>
         <p class="text-sm text-zinc-600">Für gründliche Reinigung nach Bedarf oder als einmaliger Auftrag.</p>
       </div>
@@ -283,8 +289,7 @@
   </div>
 </section>
 
-  <!-- Warum über uns -->
-  <section class="py-20 bg-white">
+<section class="py-20 bg-white">
   <div class="tail-container px-6">
     
     <h2 class="text-4xl font-bold text-center mb-4">
@@ -297,19 +302,19 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">📍</div>
         <h4 class="font-semibold text-xl mb-2">Regional</h4>
         <p class="text-zinc-600">Fokus auf Hof und Umgebung.</p>
       </div>
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">⚡</div>
         <h4 class="font-semibold text-xl mb-2">Einfach</h4>
         <p class="text-zinc-600">Eine Anfrage statt viele einzelne Telefonate.</p>
       </div>
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">🤝</div>
         <h4 class="font-semibold text-xl mb-2">Direkt</h4>
         <p class="text-zinc-600">Kein Callcenter und keine komplizierten Prozesse.</p>
@@ -319,70 +324,67 @@
   </div>
 </section>
 
-  <!-- Anfrage Formular -->
-  <section id="anfrage" class="py-20 bg-[#1A53AD] text-white">
-    <div class="tail-container px-6 max-w-3xl mx-auto">
-      <div class="text-center mb-10">
-        <h2 class="text-4xl font-bold mb-4">
-          Jetzt kostenlose Anfrage stellen
-        </h2>
-        <p class="text-blue-100">
-          Beschreiben Sie kurz, welche Reinigung Sie benötigen.
-        </p>
-      </div>
-
-      <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
-        <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
-
-          <div class="grid md:grid-cols-2 gap-5">
-            <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-
-            <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-          </div>
-
-          <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-
-          <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-
-          <select name="service" required aria-label="Welche Reinigung brauchen Sie?"
-                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-blue-600">
-            <option value="" disabled selected>Welche Reinigung brauchen Sie?</option>
-            <option value="Haushaltsreinigung">Haushaltsreinigung</option>
-            <option value="Treppenhausreinigung">Treppenhausreinigung</option>
-            <option value="Fensterreinigung">Fensterreinigung</option>
-            <option value="Büroreinigung">Büroreinigung</option>
-            <option value="Gewerbereinigung">Gewerbereinigung</option>
-            <option value="Grundreinigung">Grundreinigung</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </select>
-
-          <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was Sie brauchen."
-                    class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600"></textarea>
-
-          <button type="submit"
-                  class="w-full bg-blue-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-blue-700 transition">
-            Anfrage absenden
-          </button>
-        </form>
-
-        <p class="text-center text-zinc-500 text-sm mt-4">
-  Ihre Anfrage wird direkt an passende Anbieter aus Hof weitergeleitet.<br>
-  Unverbindlich • Kostenlos • Keine Abos
-</p>
-      </div>
+<section id="anfrage" class="py-20 bg-[#1A53AD] text-white">
+  <div class="tail-container px-6 max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-4">
+        Jetzt kostenlose Anfrage stellen
+      </h2>
+      <p class="text-blue-100">
+        Beschreiben Sie kurz, welche Reinigung Sie benötigen.
+      </p>
     </div>
-  </section>
 
- <!-- Footer -->
+    <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
+      <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
+
+          <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
+        </div>
+
+        <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
+               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
+
+        <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
+               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
+
+        <select name="service" required aria-label="Welche Reinigung brauchen Sie?"
+                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-blue-600">
+          <option value="" disabled selected>Welche Reinigung brauchen Sie?</option>
+          <option value="Haushaltsreinigung">Haushaltsreinigung</option>
+          <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+          <option value="Fensterreinigung">Fensterreinigung</option>
+          <option value="Büroreinigung">Büroreinigung</option>
+          <option value="Gewerbereinigung">Gewerbereinigung</option>
+          <option value="Grundreinigung">Grundreinigung</option>
+          <option value="Sonstiges">Sonstiges</option>
+        </select>
+
+        <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was Sie brauchen."
+                  class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600"></textarea>
+
+        <button type="submit"
+                class="w-full bg-blue-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-blue-700 transition">
+          Anfrage absenden
+        </button>
+      </form>
+
+      <p class="text-center text-zinc-500 text-sm mt-4">
+        Ihre Anfrage wird direkt an passende Anbieter aus Hof weitergeleitet.<br>
+        Unverbindlich • Kostenlos • Keine Abos
+      </p>
+    </div>
+  </div>
+</section>
+
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="tail-container px-6">
     <div class="grid md:grid-cols-5 gap-10">
 
-      <!-- Бренд -->
       <div>
         <div class="flex items-center gap-3 text-white mb-6">
           <img src="logo-reinigung.png"
@@ -400,7 +402,6 @@
         </p>
       </div>
 
-      <!-- Navigation -->
       <div>
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
@@ -410,31 +411,27 @@
         </ul>
       </div>
 
-      <!-- Partner Seiten -->
       <div>
-  <h5 class="font-semibold text-white mb-4">Partner Seiten</h5>
-  <ul class="space-y-2 text-sm">
+        <h5 class="font-semibold text-white mb-4">Partner Seiten</h5>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://hof-handwerker.de"
+               target="_blank"
+               class="text-orange-400 hover:text-orange-300 transition">
+              hof-handwerker.de
+            </a>
+          </li>
 
-    <li>
-      <a href="https://hof-handwerker.de"
-         target="_blank"
-         class="text-orange-400 hover:text-orange-300 transition">
-        hof-handwerker.de
-      </a>
-    </li>
+          <li>
+            <a href="https://hof-gartenservice.de"
+               target="_blank"
+               class="text-green-400 hover:text-green-300 transition">
+              hof-gartenservice.de
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    <li>
-      <a href="https://hof-gartenservice.de"
-         target="_blank"
-         class="text-green-400 hover:text-green-300 transition">
-        hof-gartenservice.de
-      </a>
-    </li>
-
-  </ul>
-</div>
-
-      <!-- Kontakt -->
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
         <p class="text-sm mb-1">
@@ -451,7 +448,6 @@
         </p>
       </div>
 
-      <!-- Rechtliches -->
       <div>
         <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
@@ -467,6 +463,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
 </body>
 </html>
