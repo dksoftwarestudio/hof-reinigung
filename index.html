@@ -11,6 +11,7 @@
 
   <style>
     .hero-bg {
+      background-color: #1a1a2e;
       background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)),
                         url('reinigung.jpg');
       background-size: cover;
@@ -82,7 +83,7 @@
     </div>
 
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank"
+      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
          class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
         WhatsApp
       </a>
@@ -118,7 +119,7 @@
 
         <a href="#firmen"
            class="border-2 border-white hover:bg-white hover:text-blue-600 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
-          Leistungen ansehen
+          Firmen ansehen
         </a>
       </div>
 
@@ -185,6 +186,7 @@
 
             <a href="https://www.google.com/search?q=RUNIVO+Reinigung+Hof"
                target="_blank"
+               rel="noopener noreferrer"
                class="flex-1 text-center border border-zinc-300 py-2.5 rounded-xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
               Bewertungen
             </a>
@@ -242,7 +244,7 @@
   </div>
 </section>
 
- <section class="py-20 bg-[#F5F5F5]">
+<section class="py-20 bg-[#F5F5F5] border-b border-zinc-200">
   <div class="tail-container px-6">
 
     <div class="text-center mb-12">
@@ -403,8 +405,8 @@
 
     <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
       <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
-  <input type="hidden" name="_redirect" value="https://hof-reinigung.de/danke.html">
-  <input type="hidden" name="source" value="hof-reinigung.de">
+        <input type="hidden" name="_redirect" value="https://hof-reinigung.de/danke.html">
+        <input type="hidden" name="source" value="hof-reinigung.de">
 
         <div class="grid md:grid-cols-2 gap-5">
           <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
@@ -420,7 +422,8 @@
         <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
 
-        <select name="service" required aria-label="Welche Reinigung brauchen Sie?"
+        <label for="service" class="sr-only">Welche Reinigung brauchen Sie?</label>
+        <select id="service" name="service" required
                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-blue-600">
           <option value="" disabled selected>Welche Reinigung brauchen Sie?</option>
           <option value="Haushaltsreinigung">Haushaltsreinigung</option>
@@ -474,7 +477,7 @@
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
           <li><a href="#firmen" class="hover:text-white">Firmen finden</a></li>
-          <li><a href="#leistungen" class="hover:text-white">Leistungen</a></li>
+          <li><a href="#firmen" class="hover:text-white">Leistungen</a></li>
           <li><a href="eintragen.html" class="hover:text-white">Firma eintragen</a></li>
         </ul>
       </div>
