@@ -22,27 +22,26 @@
       margin-left: auto;
       margin-right: auto;
     }
-  </style>
-  <style>
-  .reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
     .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-  }
-</style>
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 font-sans">
@@ -100,12 +99,12 @@
 <section class="hero-bg min-h-screen flex items-center text-white py-20">
   <div class="tail-container px-6">
     <div class="max-w-4xl">
-     <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-  Als Reinigungsfirma in Hof
-  <span class="text-blue-300">
-    eintragen
-  </span>
-</h1>
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+        Als Reinigungsfirma in Hof
+        <span class="text-blue-300">
+          eintragen
+        </span>
+      </h1>
 
       <p class="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl">
         Erhalten Sie direkte Anfragen von Kunden aus Hof und Umgebung.<br>
@@ -135,19 +134,19 @@
     </p>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 p-8 rounded-3xl text-center">
+      <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">📍</div>
         <h3 class="font-semibold text-xl mb-2">Lokale Kunden</h3>
         <p class="text-gray-600">Anfragen von Menschen aus Hof und Umgebung.</p>
       </div>
 
-      <div class="bg-gray-50 p-8 rounded-3xl text-center">
+      <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">📩</div>
         <h3 class="font-semibold text-xl mb-2">Direkte Anfragen</h3>
         <p class="text-gray-600">Kunden können Sie direkt über die Plattform finden.</p>
       </div>
 
-      <div class="bg-gray-50 p-8 rounded-3xl text-center">
+      <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">✅</div>
         <h3 class="font-semibold text-xl mb-2">Aktuell kostenlos</h3>
         <p class="text-gray-600">Der Basiseintrag ist aktuell kostenlos und unverbindlich.</p>
@@ -161,19 +160,19 @@
     <h2 class="text-4xl font-bold text-center mb-12">So funktioniert’s</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-3xl shadow-sm">
+      <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl font-bold text-blue-200 mb-6">01</div>
         <h3 class="font-semibold text-xl mb-3">Eintragen</h3>
         <p class="text-gray-600">Sie senden uns Ihre Firmendaten über das Formular.</p>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow-sm">
+      <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl font-bold text-blue-200 mb-6">02</div>
         <h3 class="font-semibold text-xl mb-3">Prüfen</h3>
         <p class="text-gray-600">Wir prüfen die Angaben und bereiten Ihren Eintrag vor.</p>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow-sm">
+      <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl font-bold text-blue-200 mb-6">03</div>
         <h3 class="font-semibold text-xl mb-3">Sichtbar werden</h3>
         <p class="text-gray-600">Ihr Unternehmen erscheint auf der Plattform für lokale Kunden.</p>
@@ -183,7 +182,7 @@
 </section>
 
 <section class="py-16 bg-blue-600 text-white">
-  <div class="tail-container px-6 text-center">
+  <div class="reveal tail-container px-6 text-center">
     <h2 class="text-3xl font-bold mb-4">Der Eintrag ist aktuell kostenlos</h2>
     <p class="text-blue-100 max-w-2xl mx-auto">
       Der Basiseintrag kostet aktuell nichts. Später können optionale Premium-Platzierungen dazukommen.
@@ -193,7 +192,7 @@
 
 <section id="formular" class="py-20 bg-gray-100">
   <div class="tail-container px-6 max-w-3xl">
-    <div class="bg-white rounded-3xl shadow-sm p-10 md:p-14">
+    <div class="reveal bg-white rounded-3xl shadow-sm p-10 md:p-14">
 
       <h2 class="text-4xl font-bold text-center mb-3">Unternehmen eintragen</h2>
       <p class="text-center text-gray-600 mb-12">
@@ -259,8 +258,8 @@
           </button>
 
           <p class="text-center text-sm text-gray-500 mt-4">
-            Wir melden uns innerhalb von 24 Stunden.
-Keine versteckten Kosten.
+            Wir melden uns innerhalb von 24 Stunden.<br>
+            Keine versteckten Kosten.
           </p>
         </div>
 
@@ -279,7 +278,7 @@ Keine versteckten Kosten.
 </section>
 
 <section class="py-20 bg-blue-700 text-white">
-  <div class="tail-container px-6 text-center">
+  <div class="reveal tail-container px-6 text-center">
     <h2 class="text-4xl font-bold mb-6">Noch Fragen?</h2>
     <p class="text-xl max-w-xl mx-auto mb-10">
       Wir beraten Sie gerne persönlich zu den Platzierungsmöglichkeiten auf hof-reinigung.de.
@@ -318,7 +317,7 @@ Keine versteckten Kosten.
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
           <li><a href="index.html#firmen" class="hover:text-white">Firmen finden</a></li>
-          <li><a href="index.html#leistungen" class="hover:text-white">Leistungen</a></li>
+          <li><a href="index.html#ablauf" class="hover:text-white">So funktioniert es</a></li>
           <li><a href="eintragen.html" class="hover:text-white">Firma eintragen</a></li>
         </ul>
       </div>
@@ -422,6 +421,7 @@ if (form && statusDiv) {
   });
 }
 </script>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
