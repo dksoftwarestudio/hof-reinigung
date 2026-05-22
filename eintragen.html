@@ -7,11 +7,10 @@
   <meta name="description" content="Reinigungsfirma in Hof eintragen und lokale Kundenanfragen erhalten. Aktuell kostenlos und unverbindlich.">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <style>
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), 
+      background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
                         url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
       background-position: center;
@@ -44,14 +43,14 @@
   </style>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4">
     <div class="flex items-center justify-between gap-6">
 
       <a href="index.html" class="flex items-center gap-3 shrink-0">
-        <img src="logo-reinigung.png" 
+        <img src="logo-reinigung.png"
              alt="hof-reinigung Logo"
              class="w-12 h-12 rounded-xl object-cover">
         <div>
@@ -61,20 +60,18 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-blue-600 transition">Start</a>
-        <a href="index.html#firmen" class="hover:text-blue-600 transition">Firmen finden</a>
+        <a href="index.html#firmen" class="hover:text-blue-600 transition">Reinigungsfirmen</a>
         <a href="eintragen.html" class="text-blue-600 font-semibold">Als Firma eintragen</a>
         <a href="kontakt.html" class="hover:text-blue-600 transition">Kontakt</a>
       </nav>
 
       <div class="hidden md:flex items-center gap-4">
-        <a href="https://wa.me/491624012037" target="_blank" 
-           class="flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-emerald-600 transition">
-          <i class="fab fa-whatsapp text-xl"></i>
-          <span>WhatsApp</span>
+        <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+           class="bg-emerald-500 text-white px-5 py-2.5 rounded-2xl font-medium hover:bg-emerald-600 transition">
+          WhatsApp
         </a>
 
-        <a href="index.html#anfrage" 
+        <a href="index.html#anfrage"
            class="bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-blue-700 transition">
           Anfrage stellen
         </a>
@@ -83,7 +80,7 @@
     </div>
 
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank"
+      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
          class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
         WhatsApp
       </a>
@@ -96,29 +93,29 @@
   </div>
 </header>
 
-<section class="hero-bg min-h-screen flex items-center text-white py-20">
+<section class="hero-bg min-h-[82vh] md:min-h-screen flex items-center text-white py-20">
   <div class="tail-container px-6">
     <div class="max-w-4xl">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
         Als Reinigungsfirma in Hof
         <span class="text-blue-300">
           eintragen
         </span>
       </h1>
 
-      <p class="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl">
+      <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl">
         Erhalten Sie direkte Anfragen von Kunden aus Hof und Umgebung.<br>
-        <strong>Lokal • Einfach • Aktuell kostenlos</strong>
+        <span class="font-medium">Lokal • Einfach • Aktuell kostenlos</span>
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#formular" 
-           class="bg-blue-600 hover:bg-blue-700 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
+        <a href="#formular"
+           class="bg-blue-600 hover:bg-blue-700 text-white text-lg sm:text-xl px-7 sm:px-10 py-4 sm:py-5 rounded-3xl font-semibold text-center transition">
           Jetzt kostenlos eintragen
         </a>
 
-        <a href="index.html" 
-           class="border-2 border-white hover:bg-white hover:text-blue-700 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
+        <a href="index.html"
+           class="border-2 border-white hover:bg-white hover:text-blue-700 text-white text-lg sm:text-xl px-7 sm:px-10 py-4 sm:py-5 rounded-3xl font-semibold text-center transition">
           Zurück zur Startseite
         </a>
       </div>
@@ -128,7 +125,7 @@
 
 <section class="py-20 bg-white">
   <div class="tail-container px-6">
-    <h2 class="text-4xl font-bold text-center mb-4">Warum eintragen?</h2>
+    <h2 class="text-4xl font-semibold text-center mb-4">Warum eintragen?</h2>
     <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
       Ihr Unternehmen wird für lokale Kunden aus Hof sichtbarer.
     </p>
@@ -143,7 +140,7 @@
       <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">📩</div>
         <h3 class="font-semibold text-xl mb-2">Direkte Anfragen</h3>
-        <p class="text-gray-600">Kunden können Sie direkt über die Plattform finden.</p>
+        <p class="text-gray-600">Kunden können Sie direkt über hof-reinigung.de finden.</p>
       </div>
 
       <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
@@ -155,48 +152,48 @@
   </div>
 </section>
 
-<section class="py-20 bg-gray-100">
+<section class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">So funktioniert’s</h2>
+    <h2 class="text-4xl font-semibold text-center mb-12">So funktioniert’s</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
       <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl font-bold text-blue-200 mb-6">01</div>
+        <div class="text-5xl font-semibold text-blue-200 mb-6">01</div>
         <h3 class="font-semibold text-xl mb-3">Eintragen</h3>
         <p class="text-gray-600">Sie senden uns Ihre Firmendaten über das Formular.</p>
       </div>
 
       <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl font-bold text-blue-200 mb-6">02</div>
+        <div class="text-5xl font-semibold text-blue-200 mb-6">02</div>
         <h3 class="font-semibold text-xl mb-3">Prüfen</h3>
         <p class="text-gray-600">Wir prüfen die Angaben und bereiten Ihren Eintrag vor.</p>
       </div>
 
       <div class="reveal bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl font-bold text-blue-200 mb-6">03</div>
+        <div class="text-5xl font-semibold text-blue-200 mb-6">03</div>
         <h3 class="font-semibold text-xl mb-3">Sichtbar werden</h3>
-        <p class="text-gray-600">Ihr Unternehmen erscheint auf der Plattform für lokale Kunden.</p>
+        <p class="text-gray-600">Ihr Unternehmen erscheint auf hof-reinigung.de für lokale Kunden.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-16 bg-blue-600 text-white">
+<section class="py-16 bg-white">
   <div class="reveal tail-container px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">Der Eintrag ist aktuell kostenlos</h2>
-    <p class="text-blue-100 max-w-2xl mx-auto">
-      Der Basiseintrag kostet aktuell nichts. Später können optionale Premium-Platzierungen dazukommen.
+    <h2 class="text-3xl font-semibold mb-4 text-zinc-900">Der Eintrag ist aktuell kostenlos</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto">
+      Der Basiseintrag kostet aktuell nichts. Später können optionale hervorgehobene Platzierungen dazukommen.
     </p>
   </div>
 </section>
 
-<section id="formular" class="py-20 bg-gray-100">
+<section id="formular" class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6 max-w-3xl">
     <div class="reveal bg-white rounded-3xl shadow-sm p-10 md:p-14">
 
-      <h2 class="text-4xl font-bold text-center mb-3">Unternehmen eintragen</h2>
+      <h2 class="text-4xl font-semibold text-center mb-3">Unternehmen eintragen</h2>
       <p class="text-center text-gray-600 mb-12">
-        Füllen Sie das Formular aus – wir melden uns schnellstmöglich bei Ihnen.
+        Füllen Sie das Formular aus – wir melden uns zeitnah bei Ihnen.
       </p>
 
       <form id="company-form" action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-8">
@@ -232,7 +229,7 @@
             <select name="Paket" aria-label="Paket auswählen"
                     class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white">
               <option value="Standard">Standard-Eintrag</option>
-              <option value="Premium">Premium (hervorgehoben)</option>
+              <option value="Hervorgehoben">Hervorgehobener Eintrag</option>
             </select>
           </div>
         </div>
@@ -253,20 +250,20 @@
 
         <div class="pt-6">
           <button type="submit"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xl py-6 rounded-3xl transition">
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg sm:text-xl py-5 sm:py-6 rounded-3xl transition">
             Kostenlos eintragen
           </button>
 
           <p class="text-center text-sm text-gray-500 mt-4">
-            Wir melden uns innerhalb von 24 Stunden.<br>
+            Wir melden uns in der Regel zeitnah bei Ihnen.<br>
             Keine versteckten Kosten.
           </p>
         </div>
 
         <div class="text-center text-sm text-gray-500">
-          Oder direkt per WhatsApp schreiben: 
-          <a href="https://wa.me/491624012037?text=Hallo,%20ich%20m%C3%B6chte%20mein%20Unternehmen%20bei%20hof-reinigung.de%20eintragen." 
-             target="_blank" class="text-emerald-600 font-medium hover:underline">
+          Oder direkt per WhatsApp schreiben:
+          <a href="https://wa.me/491624012037?text=Hallo,%20ich%20m%C3%B6chte%20mein%20Unternehmen%20bei%20hof-reinigung.de%20eintragen."
+             target="_blank" rel="noopener noreferrer" class="text-emerald-600 font-medium hover:underline">
             WhatsApp kontaktieren
           </a>
         </div>
@@ -279,14 +276,13 @@
 
 <section class="py-20 bg-blue-700 text-white">
   <div class="reveal tail-container px-6 text-center">
-    <h2 class="text-4xl font-bold mb-6">Noch Fragen?</h2>
-    <p class="text-xl max-w-xl mx-auto mb-10">
+    <h2 class="text-4xl font-semibold mb-6">Noch Fragen?</h2>
+    <p class="text-lg sm:text-xl max-w-xl mx-auto mb-10">
       Wir beraten Sie gerne persönlich zu den Platzierungsmöglichkeiten auf hof-reinigung.de.
     </p>
 
-    <a href="https://wa.me/491624012037" target="_blank"
-       class="inline-flex items-center gap-3 bg-white text-blue-700 px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-blue-50 transition">
-      <i class="fab fa-whatsapp text-2xl"></i>
+    <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-white text-blue-700 px-7 sm:px-10 py-4 sm:py-5 rounded-3xl text-lg sm:text-xl font-semibold hover:bg-blue-50 transition">
       Jetzt per WhatsApp fragen
     </a>
   </div>
@@ -408,7 +404,7 @@ if (form && statusDiv) {
 
       if (response.ok) {
         statusDiv.className = 'mt-4 text-center text-green-600 font-medium';
-        statusDiv.textContent = '✅ Vielen Dank! Wir melden uns schnellstmöglich.';
+        statusDiv.textContent = '✅ Vielen Dank! Wir melden uns zeitnah bei Ihnen.';
         form.reset();
       } else {
         throw new Error();
