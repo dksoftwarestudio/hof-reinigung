@@ -42,6 +42,14 @@
       transform: scale(1.04);
     }
 
+    .service-card img {
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.04);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -212,40 +220,76 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">🏠</div>
-        <h3 class="font-semibold text-xl mb-2">Haushaltsreinigung</h3>
-        <p class="text-zinc-600 text-sm leading-6">Regelmäßige oder einmalige Reinigung für Wohnungen, Häuser und private Räume.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/6224257/pexels-photo-6224257.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Reinigung einer Küche im Privathaushalt"
+               class="w-full h-full object-cover object-[center_40%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Haushaltsreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Regelmäßige oder einmalige Reinigung für Wohnungen, Häuser und private Räume.</p>
+        </div>
       </div>
 
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">🏢</div>
-        <h3 class="font-semibold text-xl mb-2">Büro- &amp; Praxisreinigung</h3>
-        <p class="text-zinc-600 text-sm leading-6">Saubere Arbeitsbereiche, Sanitärflächen, Wartezimmer und gewerbliche Räume.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/10567271/pexels-photo-10567271.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Reinigung eines Schreibtisches im Büro"
+               class="w-full h-full object-cover object-[center_45%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Büro- &amp; Praxisreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Saubere Arbeitsbereiche, Sanitärflächen, Wartezimmer und gewerbliche Räume.</p>
+        </div>
       </div>
 
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">🪟</div>
-        <h3 class="font-semibold text-xl mb-2">Fensterreinigung</h3>
-        <p class="text-zinc-600 text-sm leading-6">Fenster, Glasflächen, Rahmen und Schaufenster für Privat- und Gewerbekunden.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/31435403/pexels-photo-31435403.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Fensterreinigung mit Abzieher und Handschuhen"
+               class="w-full h-full object-cover object-[center_50%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Fensterreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Fenster, Glasflächen, Rahmen und Schaufenster für Privat- und Gewerbekunden.</p>
+        </div>
       </div>
 
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">🧹</div>
-        <h3 class="font-semibold text-xl mb-2">Treppenhausreinigung</h3>
-        <p class="text-zinc-600 text-sm leading-6">Reinigung von Eingängen, Treppen, Fluren und Gemeinschaftsflächen.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/14965464/pexels-photo-14965464.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Mann reinigt Treppen mit Wasser und Hochdruckschlauch"
+               class="w-full h-full object-cover object-[center_48%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Treppenhausreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Reinigung von Eingängen, Treppen, Fluren und Gemeinschaftsflächen.</p>
+        </div>
       </div>
 
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">✨</div>
-        <h3 class="font-semibold text-xl mb-2">Grundreinigung</h3>
-        <p class="text-zinc-600 text-sm leading-6">Intensive Reinigung nach Renovierung, Umzug, Leerstand oder starker Nutzung.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/4876669/pexels-photo-4876669.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Außenreinigung mit Hochdruckreiniger"
+               class="w-full h-full object-cover object-[center_60%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Außenflächenreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Reinigung von Einfahrten, Terrassen, Wegen und Außenbereichen rund um das Objekt.</p>
+        </div>
       </div>
 
-      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-3xl text-blue-600 mb-5" aria-hidden="true">📋</div>
-        <h3 class="font-semibold text-xl mb-2">Sonstiges</h3>
-        <p class="text-zinc-600 text-sm leading-6">Nicht sicher, welche Reinigung passt? Senden Sie die Anfrage mit kurzer Beschreibung.</p>
+      <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div class="aspect-video overflow-hidden">
+          <img src="https://images.pexels.com/photos/9462167/pexels-photo-9462167.jpeg?auto=compress&cs=tinysrgb&w=900"
+               alt="Intensive Bodenreinigung mit Wischmopp"
+               class="w-full h-full object-cover object-[center_50%]">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-semibold text-xl mb-2">Grundreinigung</h3>
+          <p class="text-zinc-600 text-sm leading-6">Intensive Reinigung nach Renovierung, Umzug, Leerstand oder starker Nutzung.</p>
+        </div>
       </div>
     </div>
   </div>
