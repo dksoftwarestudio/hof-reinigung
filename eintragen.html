@@ -33,6 +33,10 @@
       transform: translateY(0);
     }
 
+    .soft-card {
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -117,8 +121,8 @@
 
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#formular"
-             class="bg-white hover:bg-blue-50 text-blue-700 text-lg px-8 py-4 rounded-2xl font-semibold text-center transition">
-            Kostenlos eintragen
+             class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-2xl font-semibold text-center transition shadow-lg shadow-blue-950/20">
+            + Kostenlos eintragen
           </a>
 
           <a href="index.html"
@@ -129,13 +133,13 @@
 
         <div class="flex flex-wrap sm:grid sm:grid-cols-3 gap-3 mt-10 text-sm">
           <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Lokal in Hof
+            Aktuelle lokale Besucher
+          </div>
+          <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
+            Keine Provision
           </div>
           <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
             Basiseintrag kostenlos
-          </div>
-          <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Direkte Anfragen
           </div>
         </div>
       </div>
@@ -153,19 +157,51 @@
       <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">📍</div>
         <h3 class="font-semibold text-xl mb-2">Lokale Kunden</h3>
-        <p class="text-gray-600">Anfragen von Menschen aus Hof und Umgebung.</p>
+        <p class="text-gray-600">Mehr Sichtbarkeit genau dort, wo Ihre Kunden suchen: in Hof und Umgebung.</p>
       </div>
 
       <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">📩</div>
         <h3 class="font-semibold text-xl mb-2">Direkte Anfragen</h3>
-        <p class="text-gray-600">Kunden können Sie direkt über hof-reinigung.de finden.</p>
+        <p class="text-gray-600">Interessenten kontaktieren Sie direkt, ohne Plattform-Provision.</p>
       </div>
 
       <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-4xl mb-4">✅</div>
         <h3 class="font-semibold text-xl mb-2">Aktuell kostenlos</h3>
-        <p class="text-gray-600">Der Basiseintrag ist aktuell kostenlos und unverbindlich.</p>
+        <p class="text-gray-600">Keine versteckten Gebühren und kein Abo für den Basiseintrag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-[#F5F5F5]">
+  <div class="tail-container px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="text-sm font-semibold text-blue-600 mb-3">Konkreter Nutzen</p>
+      <h2 class="text-4xl font-semibold mb-4">Was bringt es Ihnen konkret?</h2>
+      <p class="text-gray-600">
+        Ein Eintrag soll nicht nur hübsch aussehen, sondern messbar mehr lokale Kontakte ermöglichen.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 soft-card hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <p class="text-4xl font-semibold text-blue-600 mb-3">Lokal</p>
+        <h3 class="font-semibold text-xl mb-2">Sichtbarkeit</h3>
+        <p class="text-gray-600 text-sm leading-6">Ihr Unternehmen erscheint dort, wo Kunden nach Reinigung in Hof suchen.</p>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 soft-card hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <p class="text-4xl font-semibold text-blue-600 mb-3">0%</p>
+        <h3 class="font-semibold text-xl mb-2">Provision</h3>
+        <p class="text-gray-600 text-sm leading-6">Kundenanfragen gehen direkt an Sie. Wir nehmen keine Umsatzbeteiligung.</p>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 soft-card hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <p class="text-4xl font-semibold text-blue-600 mb-3">Gratis</p>
+        <h3 class="font-semibold text-xl mb-2">Basiseintrag</h3>
+        <p class="text-gray-600 text-sm leading-6">Starten Sie kostenlos und entscheiden Sie später über optionale Platzierungen.</p>
       </div>
     </div>
   </div>
@@ -198,24 +234,44 @@
 </section>
 
 <section class="py-16 bg-white">
-  <div class="reveal tail-container px-6 text-center">
-    <h2 class="text-3xl font-semibold mb-4 text-zinc-900">Der Eintrag ist aktuell kostenlos</h2>
-    <p class="text-zinc-600 max-w-2xl mx-auto">
-      Der Basiseintrag kostet aktuell nichts. Später können optionale hervorgehobene Platzierungen dazukommen.
-    </p>
+  <div class="tail-container px-6">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="text-3xl font-semibold mb-4 text-zinc-900">Beispiele aus der Plattform</h2>
+      <p class="text-zinc-600">
+        So wirkt ein Eintrag für Betriebe, die lokal gefunden werden möchten.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div class="reveal bg-[#F8FAFC] border border-zinc-100 rounded-3xl p-8">
+        <p class="text-zinc-700 leading-7 mb-5">
+          "RUNIVO Reinigung wird sichtbar, wenn Kunden in Hof nach Büro-, Praxis- oder Gebäudereinigung suchen."
+        </p>
+        <p class="font-semibold text-zinc-900">RUNIVO Reinigung</p>
+        <p class="text-sm text-zinc-500">Reinigung in Hof und Umgebung</p>
+      </div>
+
+      <div class="reveal bg-[#F8FAFC] border border-zinc-100 rounded-3xl p-8">
+        <p class="text-zinc-700 leading-7 mb-5">
+          "Exclusiv Wohnen kann lokale Interessenten direkt auf Website, Telefon oder E-Mail führen."
+        </p>
+        <p class="font-semibold text-zinc-900">Exclusiv Wohnen</p>
+        <p class="text-sm text-zinc-500">Hausservice und Reinigung aus der Region</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="formular" class="py-20 bg-[#F5F5F5]">
-  <div class="tail-container px-6 max-w-3xl">
-    <div class="reveal bg-white rounded-3xl shadow-sm p-10 md:p-14">
+  <div class="tail-container px-6 max-w-3xl mx-auto">
+    <div class="reveal bg-white rounded-3xl soft-card p-8 md:p-12">
 
       <h2 class="text-4xl font-semibold text-center mb-3">Unternehmen eintragen</h2>
       <p class="text-center text-gray-600 mb-12">
         Füllen Sie das Formular aus – wir melden uns zeitnah bei Ihnen.
       </p>
 
-      <form id="company-form" action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-8">
+      <form id="company-form" action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-7">
         <input type="hidden" name="_subject" value="Neue Unternehmensanfrage über hof-reinigung.de">
         <input type="hidden" name="_language" value="de">
 
@@ -223,14 +279,14 @@
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Firmenname *</label>
             <input type="text" name="Firmenname" required autocomplete="organization"
-                   class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                   class="w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                    placeholder="z. B. RUNIVO Reinigung">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">E-Mail-Adresse *</label>
             <input type="email" name="E-Mail" required autocomplete="email" inputmode="email"
-                   class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                   class="w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                    placeholder="ihre@email.de">
           </div>
         </div>
@@ -239,14 +295,14 @@
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Telefonnummer</label>
             <input type="tel" name="Telefon" inputmode="tel" autocomplete="tel"
-                   class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                   class="w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                    placeholder="+49 162 4012037">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Paket</label>
             <select name="Paket" aria-label="Paket auswählen"
-                    class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white">
+                    class="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 bg-[#F8FAFC] transition">
               <option value="Standard">Standard-Eintrag</option>
               <option value="Hervorgehoben">Hervorgehobener Eintrag</option>
             </select>
@@ -256,21 +312,21 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Google-Profil oder Website</label>
           <input type="url" name="Google-Profil" inputmode="url" autocomplete="url"
-                 class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                 class="w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                  placeholder="https://...">
         </div>
 
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Kurze Beschreibung Ihres Unternehmens</label>
           <textarea name="Nachricht" rows="5"
-                    class="resize-none w-full px-5 py-4 border border-gray-300 rounded-3xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    class="resize-none w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-3xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                     placeholder="Welche Leistungen bieten Sie an? (Wohnungsreinigung, Büroreinigung, Fensterreinigung usw.)"></textarea>
         </div>
 
         <div class="pt-6">
           <button type="submit"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg sm:text-xl py-5 sm:py-6 rounded-3xl transition">
-            Kostenlos eintragen
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg sm:text-xl py-5 sm:py-6 rounded-3xl transition shadow-lg shadow-blue-200">
+            + Kostenlos eintragen
           </button>
 
           <p class="text-center text-sm text-gray-500 mt-4">
@@ -293,6 +349,32 @@
   </div>
 </section>
 
+<section class="py-20 bg-white">
+  <div class="tail-container px-6 max-w-4xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-semibold mb-4">Häufige Fragen</h2>
+      <p class="text-gray-600">Kurze Antworten, bevor Sie Ihr Unternehmen eintragen.</p>
+    </div>
+
+    <div class="space-y-4">
+      <details class="reveal bg-[#F8FAFC] border border-zinc-100 rounded-2xl p-6">
+        <summary class="cursor-pointer font-semibold text-lg">Wie schnell wird mein Eintrag freigeschaltet?</summary>
+        <p class="text-gray-600 mt-3 leading-7">In der Regel prüfen wir neue Angaben zeitnah und melden uns, falls etwas fehlt.</p>
+      </details>
+
+      <details class="reveal bg-[#F8FAFC] border border-zinc-100 rounded-2xl p-6">
+        <summary class="cursor-pointer font-semibold text-lg">Was kostet ein Eintrag?</summary>
+        <p class="text-gray-600 mt-3 leading-7">Der Basiseintrag ist aktuell kostenlos. Optionale hervorgehobene Platzierungen können später separat angeboten werden.</p>
+      </details>
+
+      <details class="reveal bg-[#F8FAFC] border border-zinc-100 rounded-2xl p-6">
+        <summary class="cursor-pointer font-semibold text-lg">Kann ich meinen Eintrag später ändern?</summary>
+        <p class="text-gray-600 mt-3 leading-7">Ja. Schreiben Sie uns einfach, wenn sich Telefonnummer, Leistungen, Website oder Beschreibung ändern.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="py-20 bg-blue-700 text-white">
   <div class="reveal tail-container px-6 text-center">
     <h2 class="text-4xl font-semibold mb-6">Noch Fragen?</h2>
@@ -311,7 +393,7 @@
 
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="tail-container px-6">
-    <div class="grid md:grid-cols-5 gap-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
 
       <div>
         <div class="flex items-center gap-3 text-white mb-6">
