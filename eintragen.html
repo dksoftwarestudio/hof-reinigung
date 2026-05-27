@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Als Reinigungsfirma eintragen – hof-reinigung.de</title>
-  <meta name="description" content="Reinigungsfirma in Hof eintragen und lokale Kundenanfragen erhalten. Aktuell kostenlos und unverbindlich.">
+  <meta name="description" content="Reinigungsfirma in Hof eintragen und für lokale Kundenanfragen sichtbar werden. Aktuell kostenlos und unverbindlich.">
+  <link rel="canonical" href="https://hof-reinigung.de/eintragen.html">
+  <meta property="og:title" content="Als Reinigungsfirma eintragen | hof-reinigung.de">
+  <meta property="og:description" content="Reinigungsfirma in Hof eintragen und für lokale Kundenanfragen sichtbar werden. Aktuell kostenlos und unverbindlich.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hof-reinigung.de/eintragen.html">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -37,6 +42,31 @@
       box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
     }
 
+    .mobile-menu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-8px);
+      transition: max-height 0.28s ease, opacity 0.2s ease, transform 0.28s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 560px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-menu-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .mobile-menu-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -49,16 +79,19 @@
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header id="siteHeader" class="bg-white shadow-sm sticky top-0 z-50">
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop fixed inset-x-0 bottom-0 top-[var(--header-height,80px)] bg-zinc-950/25 md:hidden" aria-hidden="true"></div>
+
   <div class="tail-container px-6 py-4">
     <div class="flex items-center justify-between gap-6">
 
       <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-reinigung.png"
-             alt="hof-reinigung Logo"
+             alt="Logo von hof-reinigung.de"
+             onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2212%22 fill=%22%231A53AD%22/%3E%3Ctext x=%2224%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Arial,sans-serif%22 font-size=%2212%22 font-weight=%22700%22 fill=%22white%22%3EHOF%3C/text%3E%3C/svg%3E';"
              class="w-12 h-12 rounded-xl object-cover">
-        <div>
-          <span class="text-2xl font-bold text-gray-800">hof-reinigung.de</span>
+        <div class="min-w-0">
+          <span class="block text-xl sm:text-2xl font-bold text-gray-800 leading-tight truncate">hof-reinigung.de</span>
           <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
@@ -83,18 +116,67 @@
         </a>
       </div>
 
+      <button id="mobileMenuButton"
+              type="button"
+              class="md:hidden inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-zinc-800 shadow-sm transition hover:bg-blue-50 focus:outline-none focus:ring-4 focus:ring-blue-100"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Menü öffnen">
+        <span class="sr-only">Menü</span>
+        <svg class="menu-icon h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+        <svg class="close-icon hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </button>
+
     </div>
 
-    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
-        WhatsApp
-      </a>
+    <div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
+      <div class="mt-4 rounded-3xl border border-blue-100 bg-white p-3 shadow-xl shadow-blue-950/10">
+        <nav class="grid gap-1 text-sm font-semibold text-zinc-800">
+          <a href="index.html" class="mobile-menu-link flex items-center justify-between rounded-2xl px-4 py-3 hover:bg-blue-50 hover:text-blue-700 transition">
+            <span>Start</span>
+            <span class="text-blue-500">→</span>
+          </a>
+          <a href="index.html#leistungen" class="mobile-menu-link flex items-center justify-between rounded-2xl px-4 py-3 hover:bg-blue-50 hover:text-blue-700 transition">
+            <span>Leistungen</span>
+            <span class="text-blue-500">→</span>
+          </a>
+          <a href="index.html#firmen" class="mobile-menu-link flex items-center justify-between rounded-2xl px-4 py-3 hover:bg-blue-50 hover:text-blue-700 transition">
+            <span>Reinigungsfirmen</span>
+            <span class="text-blue-500">→</span>
+          </a>
+          <a href="index.html#ablauf" class="mobile-menu-link flex items-center justify-between rounded-2xl px-4 py-3 hover:bg-blue-50 hover:text-blue-700 transition">
+            <span>So funktioniert es</span>
+            <span class="text-blue-500">→</span>
+          </a>
+          <a href="eintragen.html" class="mobile-menu-link flex items-center justify-between rounded-2xl bg-blue-50 px-4 py-3 text-blue-700 transition">
+            <span>Als Firma eintragen</span>
+            <span>→</span>
+          </a>
+          <a href="kontakt.html" class="mobile-menu-link flex items-center justify-between rounded-2xl px-4 py-3 hover:bg-blue-50 hover:text-blue-700 transition">
+            <span>Kontakt</span>
+            <span class="text-blue-500">→</span>
+          </a>
+        </nav>
 
-      <a href="index.html#anfrage"
-         class="text-center bg-blue-600 text-white py-3 rounded-2xl font-medium">
-        Anfrage
-      </a>
+        <div class="grid grid-cols-2 gap-3 border-t border-zinc-100 pt-3 mt-3">
+          <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+             class="mobile-menu-link text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium shadow-sm shadow-emerald-100">
+            WhatsApp
+          </a>
+
+          <a href="index.html#anfrage"
+             class="mobile-menu-link text-center bg-blue-600 text-white py-3 rounded-2xl font-medium shadow-sm shadow-blue-100">
+            Anfrage
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -116,7 +198,7 @@
         </h1>
 
         <p class="text-lg md:text-2xl mb-9 text-orange-50 max-w-2xl leading-relaxed">
-          Erhalten Sie direkte Anfragen von Kunden aus Hof und Umgebung. Der Basiseintrag ist aktuell kostenlos.
+          Erhöhen Sie Ihre Sichtbarkeit für Kunden aus Hof und Umgebung. Der Basiseintrag ist aktuell kostenlos.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -152,7 +234,7 @@
       <p class="text-sm font-semibold text-blue-600 mb-3">Konkreter Nutzen</p>
       <h2 class="text-4xl font-semibold mb-4">Was bringt es Ihnen konkret?</h2>
       <p class="text-gray-600">
-        Ein Eintrag soll nicht nur hübsch aussehen, sondern messbar mehr lokale Kontakte ermöglichen.
+        Ein Eintrag soll nicht nur hübsch aussehen, sondern Ihre lokale Sichtbarkeit und Kontaktmöglichkeiten verbessern.
       </p>
     </div>
 
@@ -264,6 +346,14 @@
                     class="resize-none w-full px-5 py-4 border border-gray-200 bg-[#F8FAFC] rounded-3xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition"
                     placeholder="Welche Leistungen bieten Sie an? (Wohnungsreinigung, Büroreinigung, Fensterreinigung usw.)"></textarea>
         </div>
+
+        <label class="flex items-start gap-3 text-sm leading-6 text-zinc-600">
+          <input type="checkbox" name="privacy" required
+                 class="mt-1 h-4 w-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500">
+          <span>
+            Ich habe die <a href="datenschutz.html" class="text-[#1A53AD] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.
+          </span>
+        </label>
 
         <div class="pt-6">
           <button type="submit"
@@ -466,6 +556,50 @@ if (form && statusDiv) {
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
+    const siteHeader = document.getElementById('siteHeader');
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBackdrop = document.getElementById('mobileMenuBackdrop');
+    const menuIcon = menuButton?.querySelector('.menu-icon');
+    const closeIcon = menuButton?.querySelector('.close-icon');
+
+    const updateHeaderHeight = () => {
+      if (!siteHeader) return;
+      document.documentElement.style.setProperty('--header-height', `${siteHeader.offsetHeight}px`);
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+
+    const setMobileMenu = (isOpen) => {
+      if (!menuButton || !mobileMenu || !menuBackdrop || !menuIcon || !closeIcon) return;
+
+      updateHeaderHeight();
+      mobileMenu.classList.toggle('open', isOpen);
+      menuBackdrop.classList.toggle('open', isOpen);
+      menuIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    };
+
+    menuButton?.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      setMobileMenu(!isOpen);
+    });
+
+    menuBackdrop?.addEventListener('click', () => setMobileMenu(false));
+
+    mobileMenu?.querySelectorAll('.mobile-menu-link').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMobileMenu(false);
+      }
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
