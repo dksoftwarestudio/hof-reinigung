@@ -1,3 +1,4 @@
+Проверь:
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hof-reinigung.de | Reinigungsfirma in Hof finden</title>
   <meta name="description" content="Reinigungsfirma in Hof finden – kostenlose Anfrage für Haushalt, Büro, Fenster, Treppenhaus und Gebäudereinigung. Anbieter aus Hof und Umgebung erhalten.">
+  <link rel="canonical" href="https://hof-reinigung.de/">
+  <meta property="og:title" content="Reinigungsfirma in Hof finden | hof-reinigung.de">
+  <meta property="og:description" content="Kostenlose Anfrage für Reinigung in Hof und Umgebung stellen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hof-reinigung.de/">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -69,6 +75,11 @@
       pointer-events: auto;
     }
 
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -81,15 +92,16 @@
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop fixed inset-0 top-[88px] bg-zinc-950/25 md:hidden" aria-hidden="true"></div>
+<header id="siteHeader" class="bg-white shadow-sm sticky top-0 z-50">
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop fixed inset-x-0 bottom-0 top-[var(--header-height,80px)] bg-zinc-950/25 md:hidden" aria-hidden="true"></div>
 
   <div class="tail-container px-6 py-4">
 
     <div class="flex items-center justify-between gap-6">
       <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-reinigung.png"
-             alt="hof-reinigung Logo"
+             alt="Logo von hof-reinigung.de"
+             onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2212%22 fill=%22%231A53AD%22/%3E%3Ctext x=%2224%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Arial,sans-serif%22 font-size=%2212%22 font-weight=%22700%22 fill=%22white%22%3EHOF%3C/text%3E%3C/svg%3E';"
              class="w-12 h-12 rounded-xl object-cover">
         <div class="min-w-0">
           <span class="block text-xl sm:text-2xl font-bold text-gray-800 leading-tight truncate">hof-reinigung.de</span>
@@ -247,7 +259,7 @@
         </div>
         <h3 class="font-semibold text-xl mb-3">Anbieter prüfen</h3>
         <p class="text-zinc-600">
-          Ihre Anfrage wird an passende Anbieter aus Hof und Umgebung weitergeleitet.
+          Ihre Anfrage kann an passende Anbieter aus Hof und Umgebung weitergeleitet werden.
         </p>
       </div>
 
@@ -281,7 +293,7 @@
         Für viele Reinigungsarbeiten rund um Haushalt, Büro und Betrieb
       </h2>
       <p class="text-zinc-600">
-        Beschreiben Sie kurz Ihren Bedarf. Wir leiten die Anfrage passend weiter oder stellen den direkten Kontakt her.
+        Beschreiben Sie kurz Ihren Bedarf. Wir können die Anfrage passend weiterleiten oder den direkten Kontakt herstellen.
       </p>
     </div>
 
@@ -325,6 +337,7 @@
       <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
         <div class="aspect-video overflow-hidden">
           <img src="treppenreinigung.jpg"
+               alt="Treppenhausreinigung in einem gepflegten Hausflur"
                class="w-full h-full object-cover object-[center_48%]">
         </div>
         <div class="p-7 flex flex-col flex-1">
@@ -348,6 +361,7 @@
       <div class="reveal service-card bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
         <div class="aspect-video overflow-hidden">
           <img src="grundreinigung.jpg"
+               alt="Grundreinigung nach starker Nutzung oder Renovierung"
                class="w-full h-full object-cover object-[center_50%]">
         </div>
         <div class="p-7 flex flex-col flex-1">
@@ -382,7 +396,7 @@
           <p class="text-[#1A53AD] text-sm font-medium mb-3 leading-relaxed">Gebäudereinigung • Praxisreinigung • Büroreinigung</p>
           <div class="flex items-center gap-2 text-sm mb-5">
             <span class="text-yellow-500">★ ★ ★ ★ ★</span>
-            <span class="text-zinc-600">4.8 bei Google</span>
+            <span class="text-zinc-600">Bewertungen bei Google</span>
           </div>
           <p class="text-zinc-600 text-sm leading-6 mb-6 min-h-[72px]">Zuverlässige Reinigung für Büros, Praxen und Privathaushalte in Hof und Umgebung.</p>
           <div class="space-y-3 text-sm mb-6">
@@ -431,7 +445,7 @@
           <p class="text-[#1A53AD] text-sm font-medium mb-3 leading-relaxed">Reinigung • Winterdienst • Hausmeisterservice</p>
           <div class="flex items-center gap-2 text-sm mb-5">
             <span class="text-yellow-500">★ ★ ★ ★ ★</span>
-            <span class="text-zinc-600">5,0 bei Google</span>
+            <span class="text-zinc-600">Bewertungen bei Google</span>
           </div>
           <p class="text-zinc-600 text-sm leading-6 mb-6 min-h-[72px]">Reinigung, Außenflächenpflege, Winterdienst und Hausmeisterservice in Hof und Umgebung.</p>
           <div class="space-y-3 text-sm mb-6">
@@ -456,7 +470,7 @@
           <p class="text-[#1A53AD] text-sm font-medium mb-3 leading-relaxed">Außenflächenreinigung • Objektpflege • Gartenpflege</p>
           <div class="flex items-center gap-2 text-sm mb-5">
             <span class="text-yellow-500">★ ★ ★ ★ ★</span>
-            <span class="text-zinc-600">5,0 bei Google</span>
+            <span class="text-zinc-600">Bewertungen bei Google</span>
           </div>
           <p class="text-zinc-600 text-sm leading-6 mb-6 min-h-[72px]">Objekt- und Außenflächenpflege für Privat- und Gewerbeobjekte in Hof und Umgebung.</p>
           <div class="space-y-3 text-sm mb-6">
@@ -475,7 +489,7 @@
         <div class="relative aspect-video bg-gradient-to-br from-blue-50 via-white to-emerald-50 flex items-center justify-center">
           <div class="text-center px-6">
             <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white shadow-sm flex items-center justify-center">
-              <img src="logo-reinigung.png" alt="hof-reinigung Logo" class="w-10 h-10 rounded-xl object-cover">
+              <img src="logo-reinigung.png" alt="Logo von hof-reinigung.de" class="w-10 h-10 rounded-xl object-cover">
             </div>
             <p class="text-sm font-semibold text-[#1A53AD]">Platz für weitere Anbieter</p>
           </div>
@@ -484,7 +498,7 @@
         <div class="p-6 flex flex-col flex-1">
           <h4 class="font-semibold text-2xl text-zinc-800 mb-3">Weitere Anbieter folgen</h4>
           <p class="text-[#1A53AD] text-sm font-medium mb-3 leading-relaxed">Haushalt • Büro • Fenster • Treppenhaus</p>
-          <p class="text-zinc-600 text-sm leading-6 mb-6 min-h-[72px]">Hier können künftig zusätzliche Anbieter aus Hof und Umgebung erscheinen. Stellen Sie schon jetzt eine Anfrage und erreichen Sie passende Firmen direkt.</p>
+          <p class="text-zinc-600 text-sm leading-6 mb-6 min-h-[72px]">Hier können künftig zusätzliche Anbieter aus Hof und Umgebung erscheinen. Stellen Sie schon jetzt eine Anfrage, damit passende Firmen direkt erreicht werden können.</p>
           <div class="space-y-3 text-sm mb-6 min-h-[72px]">
             <div class="flex items-center gap-3 text-zinc-700"><span>📍</span><span>Hof und Umgebung</span></div>
             <div class="flex items-center gap-3 text-zinc-700"><span>📞</span><span>Kontakt über Anfrage</span></div>
@@ -603,7 +617,7 @@
         <input type="email" name="email" placeholder="✉️ E-Mail (optional)" inputmode="email" autocomplete="email"
                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition">
 
-        <input type="text" name="address" placeholder="🏠 PLZ / Ort / Straße (optional)" autocomplete="street-address"
+        <input type="text" name="address" placeholder="🏠 PLZ / Ort / Straße (optional)" autocomplete="address-line1"
                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition">
 
         <label for="service" class="sr-only">Welche Reinigung brauchen Sie?</label>
@@ -633,6 +647,14 @@
         <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was Sie brauchen."
                   class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition"></textarea>
 
+        <label class="flex items-start gap-3 text-sm leading-6 text-zinc-600">
+          <input type="checkbox" name="privacy" required
+                 class="mt-1 h-4 w-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500">
+          <span>
+            Ich habe die <a href="datenschutz.html" class="text-[#1A53AD] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.
+          </span>
+        </label>
+
         <button type="submit"
                 class="w-full bg-blue-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200">
           Anfrage absenden
@@ -640,7 +662,7 @@
       </form>
 
       <p class="text-center text-zinc-500 text-sm mt-4">
-        Ihre Anfrage wird an passende Anbieter aus Hof weitergeleitet.<br>
+        Ihre Anfrage kann an passende Anbieter aus Hof und Umgebung weitergeleitet werden.<br>
         Unverbindlich • Kostenlos • Keine Abos
       </p>
     </div>
@@ -669,7 +691,7 @@
 
       <div>
         <div class="flex items-center gap-3 text-white mb-6">
-          <img src="logo-reinigung.png" alt="hof-reinigung Logo" class="w-10 h-10 rounded-2xl object-cover">
+          <img src="logo-reinigung.png" alt="Logo von hof-reinigung.de" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2212%22 fill=%22%231A53AD%22/%3E%3Ctext x=%2220%22 y=%2225%22 text-anchor=%22middle%22 font-family=%22Arial,sans-serif%22 font-size=%2210%22 font-weight=%22700%22 fill=%22white%22%3EHOF%3C/text%3E%3C/svg%3E';" class="w-10 h-10 rounded-2xl object-cover">
           <div class="leading-tight">
             <span class="text-xl font-bold">hof-reinigung.de</span>
             <p class="text-xs text-zinc-400 -mt-1">Hof (Saale)</p>
@@ -721,15 +743,25 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
+    const siteHeader = document.getElementById('siteHeader');
     const menuButton = document.getElementById('mobileMenuButton');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuBackdrop = document.getElementById('mobileMenuBackdrop');
     const menuIcon = menuButton?.querySelector('.menu-icon');
     const closeIcon = menuButton?.querySelector('.close-icon');
 
+    const updateHeaderHeight = () => {
+      if (!siteHeader) return;
+      document.documentElement.style.setProperty('--header-height', `${siteHeader.offsetHeight}px`);
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+
     const setMobileMenu = (isOpen) => {
       if (!menuButton || !mobileMenu || !menuBackdrop || !menuIcon || !closeIcon) return;
 
+      updateHeaderHeight();
       mobileMenu.classList.toggle('open', isOpen);
       menuBackdrop.classList.toggle('open', isOpen);
       menuIcon.classList.toggle('hidden', isOpen);
